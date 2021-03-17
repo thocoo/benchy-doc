@@ -1,0 +1,7 @@
+gdesk.dialogs.filedialog module
+===============================
+
+.. automodule:: gdesk.dialogs.filedialog
+   :members:
+   :undoc-members:
+   :show-inheritance:

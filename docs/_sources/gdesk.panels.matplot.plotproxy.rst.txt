@@ -1,0 +1,7 @@
+gdesk.panels.matplot.plotproxy module
+=====================================
+
+.. automodule:: gdesk.panels.matplot.plotproxy
+   :members:
+   :undoc-members:
+   :show-inheritance:

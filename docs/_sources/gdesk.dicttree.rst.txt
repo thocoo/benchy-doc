@@ -1,0 +1,19 @@
+gdesk.dicttree package
+======================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   gdesk.dicttree.node
+   gdesk.dicttree.widgets
+
+Module contents
+---------------
+
+.. automodule:: gdesk.dicttree
+   :members:
+   :undoc-members:
+   :show-inheritance:

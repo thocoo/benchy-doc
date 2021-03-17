@@ -1,0 +1,7 @@
+gdesk.rectable.htmlclip module
+==============================
+
+.. automodule:: gdesk.rectable.htmlclip
+   :members:
+   :undoc-members:
+   :show-inheritance:

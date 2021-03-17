@@ -1,0 +1,7 @@
+gdesk.graphics.functions module
+===============================
+
+.. automodule:: gdesk.graphics.functions
+   :members:
+   :undoc-members:
+   :show-inheritance:

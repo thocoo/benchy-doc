@@ -1,0 +1,7 @@
+gdesk.dialogs.main module
+=========================
+
+.. automodule:: gdesk.dialogs.main
+   :members:
+   :undoc-members:
+   :show-inheritance:

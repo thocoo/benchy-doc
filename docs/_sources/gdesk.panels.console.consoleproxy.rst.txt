@@ -1,0 +1,7 @@
+gdesk.panels.console.consoleproxy module
+========================================
+
+.. automodule:: gdesk.panels.console.consoleproxy
+   :members:
+   :undoc-members:
+   :show-inheritance:

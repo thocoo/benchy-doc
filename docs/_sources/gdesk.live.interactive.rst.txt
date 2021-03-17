@@ -1,0 +1,7 @@
+gdesk.live.interactive module
+=============================
+
+.. automodule:: gdesk.live.interactive
+   :members:
+   :undoc-members:
+   :show-inheritance:

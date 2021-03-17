@@ -1,0 +1,7 @@
+gdesk.dialogs.colormap module
+=============================
+
+.. automodule:: gdesk.dialogs.colormap
+   :members:
+   :undoc-members:
+   :show-inheritance:

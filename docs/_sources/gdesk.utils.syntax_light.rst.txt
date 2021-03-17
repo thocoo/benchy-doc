@@ -1,0 +1,7 @@
+gdesk.utils.syntax\_light module
+================================
+
+.. automodule:: gdesk.utils.syntax_light
+   :members:
+   :undoc-members:
+   :show-inheritance:

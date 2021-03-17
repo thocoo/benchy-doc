@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gdesk.panels.imgview.demosaic module &#8212; gdesk 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="gdesk.panels.imgview.dimensions module" href="gdesk.panels.imgview.dimensions.html" />
+    <link rel="prev" title="gdesk.panels.imgview.blueprint module" href="gdesk.panels.imgview.blueprint.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.panels.imgview.dimensions.html" title="gdesk.panels.imgview.dimensions module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.panels.imgview.blueprint.html" title="gdesk.panels.imgview.blueprint module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.panels.html" >gdesk.panels package</a> &#187;</li>
+          <li class="nav-item nav-item-4"><a href="gdesk.panels.imgview.html" accesskey="U">gdesk.panels.imgview package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.panels.imgview.demosaic module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-gdesk.panels.imgview.demosaic">
+<span id="gdesk-panels-imgview-demosaic-module"></span><h1>gdesk.panels.imgview.demosaic module<a class="headerlink" href="#module-gdesk.panels.imgview.demosaic" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="gdesk.panels.imgview.demosaic.as_float_array">
+<code class="sig-prename descclassname">gdesk.panels.imgview.demosaic.</code><code class="sig-name descname">as_float_array</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">array</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.imgview.demosaic.as_float_array" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.panels.imgview.demosaic.bayer_split">
+<code class="sig-prename descclassname">gdesk.panels.imgview.demosaic.</code><code class="sig-name descname">bayer_split</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">array</span></em>, <em class="sig-param"><span class="n">pattern</span><span class="o">=</span><span class="default_value">'RGGB'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.imgview.demosaic.bayer_split" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.panels.imgview.demosaic.demosaicing_CFA_Bayer_bilinear">
+<code class="sig-prename descclassname">gdesk.panels.imgview.demosaic.</code><code class="sig-name descname">demosaicing_CFA_Bayer_bilinear</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">CFA</span></em>, <em class="sig-param"><span class="n">pattern</span><span class="o">=</span><span class="default_value">'RGGB'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.imgview.demosaic.demosaicing_CFA_Bayer_bilinear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the demosaiced <em>RGB</em> colourspace array from given <em>Bayer</em> CFA using
+bilinear interpolation.</p>
+<dl class="simple">
+<dt>CFA<span class="classifier">array_like</span></dt><dd><p><em>Bayer</em> CFA.</p>
+</dd>
+<dt>pattern<span class="classifier">unicode, optional</span></dt><dd><p><strong>{‘RGGB’, ‘BGGR’, ‘GRBG’, ‘GBRG’}</strong>,
+Arrangement of the colour filters on the pixel array.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>ndarray</dt><dd><p><em>RGB</em> colourspace array.</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>The definition output is not clipped in range [0, 1] : this allows for
+direct HDRI / radiance image generation on <em>Bayer</em> CFA data and post
+demosaicing of the high dynamic range data as showcased in this
+<a class="reference external" href="https://github.com/colour-science/colour-hdri/blob/develop/colour_hdri/examples/examples_merge_from_raw_files_with_post_demosaicing.ipynb">Jupyter Notebook</a>.</p></li>
+</ul>
+<p><a href="#id1"><span class="problematic" id="id2">:cite:`Losson2010c`</span></a></p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">CFA</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="p">[[</span><span class="mf">0.30980393</span><span class="p">,</span> <span class="mf">0.36078432</span><span class="p">,</span> <span class="mf">0.30588236</span><span class="p">,</span> <span class="mf">0.3764706</span><span class="p">],</span>
+<span class="gp">... </span>     <span class="p">[</span><span class="mf">0.35686275</span><span class="p">,</span> <span class="mf">0.39607844</span><span class="p">,</span> <span class="mf">0.36078432</span><span class="p">,</span> <span class="mf">0.40000001</span><span class="p">]])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">demosaicing_CFA_Bayer_bilinear</span><span class="p">(</span><span class="n">CFA</span><span class="p">)</span>
+<span class="go">array([[[ 0.69705884,  0.17941177,  0.09901961],</span>
+<span class="go">        [ 0.46176472,  0.4509804 ,  0.19803922],</span>
+<span class="go">        [ 0.45882354,  0.27450981,  0.19901961],</span>
+<span class="go">        [ 0.22941177,  0.5647059 ,  0.30000001]],</span>
+
+<span class="go">       [[ 0.23235295,  0.53529412,  0.29705883],</span>
+<span class="go">        [ 0.15392157,  0.26960785,  0.59411766],</span>
+<span class="go">        [ 0.15294118,  0.4509804 ,  0.59705884],</span>
+<span class="go">        [ 0.07647059,  0.18431373,  0.90000002]]])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">CFA</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="p">[[</span><span class="mf">0.3764706</span><span class="p">,</span> <span class="mf">0.360784320</span><span class="p">,</span> <span class="mf">0.40784314</span><span class="p">,</span> <span class="mf">0.3764706</span><span class="p">],</span>
+<span class="gp">... </span>     <span class="p">[</span><span class="mf">0.35686275</span><span class="p">,</span> <span class="mf">0.30980393</span><span class="p">,</span> <span class="mf">0.36078432</span><span class="p">,</span> <span class="mf">0.29803923</span><span class="p">]])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">demosaicing_CFA_Bayer_bilinear</span><span class="p">(</span><span class="n">CFA</span><span class="p">,</span> <span class="s1">&#39;BGGR&#39;</span><span class="p">)</span>
+<span class="go">array([[[ 0.07745098,  0.17941177,  0.84705885],</span>
+<span class="go">        [ 0.15490197,  0.4509804 ,  0.5882353 ],</span>
+<span class="go">        [ 0.15196079,  0.27450981,  0.61176471],</span>
+<span class="go">        [ 0.22352942,  0.5647059 ,  0.30588235]],</span>
+
+<span class="go">       [[ 0.23235295,  0.53529412,  0.28235295],</span>
+<span class="go">        [ 0.4647059 ,  0.26960785,  0.19607843],</span>
+<span class="go">        [ 0.45588237,  0.4509804 ,  0.20392157],</span>
+<span class="go">        [ 0.67058827,  0.18431373,  0.10196078]]])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.panels.imgview.demosaic.masks_CFA_Bayer">
+<code class="sig-prename descclassname">gdesk.panels.imgview.demosaic.</code><code class="sig-name descname">masks_CFA_Bayer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">shape</span></em>, <em class="sig-param"><span class="n">pattern</span><span class="o">=</span><span class="default_value">'RGGB'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.imgview.demosaic.masks_CFA_Bayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the <em>Bayer</em> CFA red, green and blue masks for given pattern.</p>
+<dl class="simple">
+<dt>shape<span class="classifier">array_like</span></dt><dd><p>Dimensions of the <em>Bayer</em> CFA.</p>
+</dd>
+<dt>pattern<span class="classifier">unicode, optional</span></dt><dd><p><strong>{‘RGGB’, ‘BGGR’, ‘GRBG’, ‘GBRG’}</strong>,
+Arrangement of the colour filters on the pixel array.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>tuple</dt><dd><p><em>Bayer</em> CFA red, green and blue masks.</p>
+</dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pprint</span><span class="p">(</span><span class="n">masks_CFA_Bayer</span><span class="p">(</span><span class="n">shape</span><span class="p">))</span>
+<span class="go">(array([[ True, False,  True],</span>
+<span class="go">       [False, False, False],</span>
+<span class="go">       [ True, False,  True]], dtype=bool),</span>
+<span class="go"> array([[False,  True, False],</span>
+<span class="go">       [ True, False,  True],</span>
+<span class="go">       [False,  True, False]], dtype=bool),</span>
+<span class="go"> array([[False, False, False],</span>
+<span class="go">       [False,  True, False],</span>
+<span class="go">       [False, False, False]], dtype=bool))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pprint</span><span class="p">(</span><span class="n">masks_CFA_Bayer</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="s1">&#39;BGGR&#39;</span><span class="p">))</span>
+<span class="go">(array([[False, False, False],</span>
+<span class="go">       [False,  True, False],</span>
+<span class="go">       [False, False, False]], dtype=bool),</span>
+<span class="go"> array([[False,  True, False],</span>
+<span class="go">       [ True, False,  True],</span>
+<span class="go">       [False,  True, False]], dtype=bool),</span>
+<span class="go"> array([[ True, False,  True],</span>
+<span class="go">       [False, False, False],</span>
+<span class="go">       [ True, False,  True]], dtype=bool))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="gdesk.panels.imgview.blueprint.html"
+                        title="previous chapter">gdesk.panels.imgview.blueprint module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="gdesk.panels.imgview.dimensions.html"
+                        title="next chapter">gdesk.panels.imgview.dimensions module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/gdesk.panels.imgview.demosaic.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.panels.imgview.dimensions.html" title="gdesk.panels.imgview.dimensions module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.panels.imgview.blueprint.html" title="gdesk.panels.imgview.blueprint module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.panels.html" >gdesk.panels package</a> &#187;</li>
+          <li class="nav-item nav-item-4"><a href="gdesk.panels.imgview.html" >gdesk.panels.imgview package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.panels.imgview.demosaic module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Thomas Cools.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

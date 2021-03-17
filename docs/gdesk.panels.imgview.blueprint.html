@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gdesk.panels.imgview.blueprint module &#8212; gdesk 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="gdesk.panels.imgview.demosaic module" href="gdesk.panels.imgview.demosaic.html" />
+    <link rel="prev" title="gdesk.panels.imgview package" href="gdesk.panels.imgview.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.panels.imgview.demosaic.html" title="gdesk.panels.imgview.demosaic module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.panels.imgview.html" title="gdesk.panels.imgview package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.panels.html" >gdesk.panels package</a> &#187;</li>
+          <li class="nav-item nav-item-4"><a href="gdesk.panels.imgview.html" accesskey="U">gdesk.panels.imgview package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.panels.imgview.blueprint module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-gdesk.panels.imgview.blueprint">
+<span id="gdesk-panels-imgview-blueprint-module"></span><h1>gdesk.panels.imgview.blueprint module<a class="headerlink" href="#module-gdesk.panels.imgview.blueprint" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="gdesk.panels.imgview.blueprint.get_blue_print">
+<code class="sig-prename descclassname">gdesk.panels.imgview.blueprint.</code><code class="sig-name descname">get_blue_print</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">array</span></em>, <em class="sig-param"><span class="n">xkern</span><span class="o">=</span><span class="default_value">8</span></em>, <em class="sig-param"><span class="n">ykern</span><span class="o">=</span><span class="default_value">8</span></em>, <em class="sig-param"><span class="n">hfg</span><span class="o">=</span><span class="default_value">8</span></em>, <em class="sig-param"><span class="n">bayer</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.imgview.blueprint.get_blue_print" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.panels.imgview.blueprint.make_blueprint">
+<code class="sig-prename descclassname">gdesk.panels.imgview.blueprint.</code><code class="sig-name descname">make_blueprint</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">array</span></em>, <em class="sig-param"><span class="n">xkern</span><span class="o">=</span><span class="default_value">8</span></em>, <em class="sig-param"><span class="n">ykern</span><span class="o">=</span><span class="default_value">8</span></em>, <em class="sig-param"><span class="n">hfg</span><span class="o">=</span><span class="default_value">8</span></em>, <em class="sig-param"><span class="n">bayer</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.imgview.blueprint.make_blueprint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make a so called blueprint thumbnail.
+The 16-bitgrey image is converted to a downscaled color version.
+The downscale kernel is tyical 8x8. So the statiscs of 64 pixels is used
+to derive 3 8-bit numbers. So the RGB values are based on the average,
+the minimum and the maximum.
+Green for the average of the kernel.
+Blue for the difference of the minumum to average.
+Red for the difference of maximum to average.
+The min-max differences are typical gained up.
+The final result is an image of 1/100 of the original data.
+It blows-up high frequency artifacts, making them much more visible.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>array</strong> (<em>np.ndarray</em><em> or </em><em>PyBix</em>) – A 2d Image</p></li>
+<li><p><strong>xkern</strong> (<em>int</em>) – width of the kernel</p></li>
+<li><p><strong>ykern</strong> (<em>int</em>) – height of the kernel</p></li>
+<li><p><strong>hfg</strong> (<em>float</em>) – high frequency gain</p></li>
+<li><p><strong>bayer</strong> (<em>bool</em>) – Does it contains a bayer pattern (color sensor?)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.panels.imgview.blueprint.make_thumbnail">
+<code class="sig-prename descclassname">gdesk.panels.imgview.blueprint.</code><code class="sig-name descname">make_thumbnail</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">array</span></em>, <em class="sig-param"><span class="n">max_long_side</span><span class="o">=</span><span class="default_value">240</span></em>, <em class="sig-param"><span class="n">hfg</span><span class="o">=</span><span class="default_value">8</span></em>, <em class="sig-param"><span class="n">bayer</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.imgview.blueprint.make_thumbnail" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="gdesk.panels.imgview.html"
+                        title="previous chapter">gdesk.panels.imgview package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="gdesk.panels.imgview.demosaic.html"
+                        title="next chapter">gdesk.panels.imgview.demosaic module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/gdesk.panels.imgview.blueprint.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.panels.imgview.demosaic.html" title="gdesk.panels.imgview.demosaic module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.panels.imgview.html" title="gdesk.panels.imgview package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.panels.html" >gdesk.panels package</a> &#187;</li>
+          <li class="nav-item nav-item-4"><a href="gdesk.panels.imgview.html" >gdesk.panels.imgview package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.panels.imgview.blueprint module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Thomas Cools.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

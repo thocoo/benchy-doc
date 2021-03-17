@@ -1,0 +1,23 @@
+gdesk.ezdock package
+====================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   gdesk.ezdock.boxes
+   gdesk.ezdock.docks
+   gdesk.ezdock.dockwidgets
+   gdesk.ezdock.ezdock
+   gdesk.ezdock.laystruct
+   gdesk.ezdock.overlay
+
+Module contents
+---------------
+
+.. automodule:: gdesk.ezdock
+   :members:
+   :undoc-members:
+   :show-inheritance:

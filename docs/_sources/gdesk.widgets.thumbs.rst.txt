@@ -1,0 +1,7 @@
+gdesk.widgets.thumbs module
+===========================
+
+.. automodule:: gdesk.widgets.thumbs
+   :members:
+   :undoc-members:
+   :show-inheritance:

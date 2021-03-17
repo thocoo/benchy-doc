@@ -1,0 +1,7 @@
+gdesk.utils.z\_order module
+===========================
+
+.. automodule:: gdesk.utils.z_order
+   :members:
+   :undoc-members:
+   :show-inheritance:

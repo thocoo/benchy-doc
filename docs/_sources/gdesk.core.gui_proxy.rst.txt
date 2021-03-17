@@ -1,0 +1,7 @@
+gdesk.core.gui\_proxy module
+============================
+
+.. automodule:: gdesk.core.gui_proxy
+   :members:
+   :undoc-members:
+   :show-inheritance:

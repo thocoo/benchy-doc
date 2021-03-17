@@ -1,0 +1,394 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gdesk.panels.dialog.proxy module &#8212; gdesk 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="gdesk.panels.imgview package" href="gdesk.panels.imgview.html" />
+    <link rel="prev" title="gdesk.panels.dialog package" href="gdesk.panels.dialog.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.panels.imgview.html" title="gdesk.panels.imgview package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.panels.dialog.html" title="gdesk.panels.dialog package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.panels.html" >gdesk.panels package</a> &#187;</li>
+          <li class="nav-item nav-item-4"><a href="gdesk.panels.dialog.html" accesskey="U">gdesk.panels.dialog package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.panels.dialog.proxy module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-gdesk.panels.dialog.proxy">
+<span id="gdesk-panels-dialog-proxy-module"></span><h1>gdesk.panels.dialog.proxy module<a class="headerlink" href="#module-gdesk.panels.dialog.proxy" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="gdesk.panels.dialog.proxy.DialogGuiProxy">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.panels.dialog.proxy.</code><code class="sig-name descname">DialogGuiProxy</code><a class="headerlink" href="#gdesk.panels.dialog.proxy.DialogGuiProxy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="gdesk.core.gui_proxy.html#gdesk.core.gui_proxy.GuiProxyBase" title="gdesk.core.gui_proxy.GuiProxyBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">gdesk.core.gui_proxy.GuiProxyBase</span></code></a></p>
+<dl class="py method">
+<dt id="gdesk.panels.dialog.proxy.DialogGuiProxy.attach">
+<code class="sig-name descname">attach</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">gui</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.dialog.proxy.DialogGuiProxy.attach" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gdesk.panels.dialog.proxy.DialogGuiProxy.category">
+<code class="sig-name descname">category</code><em class="property"> = 'values'</em><a class="headerlink" href="#gdesk.panels.dialog.proxy.DialogGuiProxy.category" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.dialog.proxy.DialogGuiProxy.fedit">
+<em class="property">static </em><code class="sig-name descname">fedit</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.dialog.proxy.DialogGuiProxy.fedit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create form dialog and return result
+(if Cancel button is pressed, return None)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>tuple</em>) – datalist, datagroup (see below)</p></li>
+<li><p><strong>title</strong> (<em>str</em>) – form title</p></li>
+<li><p><strong>comment</strong> (<em>str</em>) – header comment</p></li>
+<li><p><strong>icon</strong> (<em>QIcon</em>) – dialog box icon</p></li>
+<li><p><strong>parent</strong> (<em>QWidget</em>) – parent widget</p></li>
+<li><p><strong>ok</strong> (<em>str</em>) – customized ok button label</p></li>
+<li><p><strong>cancel</strong> (<em>str</em>) – customized cancel button label</p></li>
+<li><p><strong>apply</strong> (<em>function</em>) – (label, function) customized button label and callback</p></li>
+<li><p><strong>apply</strong> – function taking two arguments (result, widgets)</p></li>
+<li><p><strong>result</strong> (<em>str</em>) – result serialization (‘list’, ‘dict’, ‘OrderedDict’,
+‘JSON’ or ‘XML’)</p></li>
+<li><p><strong>outfile</strong> (<em>str</em>) – write result to the file outfile.[py|json|xml]</p></li>
+<li><p><strong>type</strong> (<em>str</em>) – layout type (‘form’ or ‘questions’)</p></li>
+<li><p><strong>scrollbar</strong> (<em>bool</em>) – vertical scrollbar</p></li>
+<li><p><strong>background_color</strong> (<em>str</em>) – color of the background</p></li>
+<li><p><strong>widget_color</strong> (<em>str</em>) – color of the widgets</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Serialized result (data type depends on <cite>result</cite> parameter)</p>
+</dd>
+</dl>
+<p>datalist: list/tuple of (field_name, field_value)
+datagroup: list/tuple of (datalist <em>or</em> datagroup, title, comment)</p>
+<dl class="simple">
+<dt>Tips:</dt><dd><ul class="simple">
+<li><p>one field for each member of a datalist</p></li>
+<li><p>one tab for each member of a top-level datagroup</p></li>
+<li><p>one page (of a multipage widget, each page can be selected with a 
+combo box) for each member of a datagroup inside a datagroup</p></li>
+</ul>
+</dd>
+<dt>Supported types for field_value:</dt><dd><ul class="simple">
+<li><p>int, float, str, unicode, bool</p></li>
+<li><dl class="simple">
+<dt>colors: in Qt-compatible text form, i.e. in hex format or name (red,…)</dt><dd><p>(automatically detected from a string)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>list/tuple:</dt><dd><ul>
+<li><p>the first element will be the selected index (or value)</p></li>
+<li><p>the other elements can be couples (key, value) or only values</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.dialog.proxy.DialogGuiProxy.filterlist">
+<em class="property">static </em><code class="sig-name descname">filterlist</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.dialog.proxy.DialogGuiProxy.filterlist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open a items filter dialog.
+The user have to select items from it.</p>
+<dl class="simple">
+<dt>selection = None<span class="classifier">select nothing</span></dt><dd><p>= one_item : select the one item
+= []: use checkable items
+= [str1, str2] : check items on string value</p>
+</dd>
+<dt>filter    = None: check nothing</dt><dd><p>= False: check everything
+= <code class="docutils literal notranslate"><span class="pre">\w*01\w*</span></code>: use re to match string</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.dialog.proxy.DialogGuiProxy.getdir">
+<em class="property">static </em><code class="sig-name descname">getdir</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.dialog.proxy.DialogGuiProxy.getdir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show a directory dialog to choose a dir</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The directory</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.dialog.proxy.DialogGuiProxy.getfile">
+<em class="property">static </em><code class="sig-name descname">getfile</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.dialog.proxy.DialogGuiProxy.getfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show a file dialog to open a file.
+Return a string tuple of  file path and choosen filter</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filter</strong> (<em>str</em>) – a filter of the form *.tif</p></li>
+<li><p><strong>title</strong> (<em>str</em>) – the window title</p></li>
+<li><p><strong>file</strong> (<em>str</em>) – default file path</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The file path and choosen filter</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple(str, str)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.dialog.proxy.DialogGuiProxy.getfilename">
+<em class="property">static </em><code class="sig-name descname">getfilename</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filter</span><span class="o">=</span><span class="default_value">'*.*'</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">'open'</span></em>, <em class="sig-param"><span class="n">file</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.dialog.proxy.DialogGuiProxy.getfilename" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.dialog.proxy.DialogGuiProxy.getfilenames">
+<em class="property">static </em><code class="sig-name descname">getfilenames</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filter</span><span class="o">=</span><span class="default_value">'*.*'</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">'open'</span></em>, <em class="sig-param"><span class="n">file</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.dialog.proxy.DialogGuiProxy.getfilenames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multi file selection version of getfilename</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.dialog.proxy.DialogGuiProxy.getfiles">
+<em class="property">static </em><code class="sig-name descname">getfiles</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.dialog.proxy.DialogGuiProxy.getfiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multi file selection version of getfile</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.dialog.proxy.DialogGuiProxy.getpath">
+<em class="property">static </em><code class="sig-name descname">getpath</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">startpath</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">'select a Directory'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.dialog.proxy.DialogGuiProxy.getpath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show a directory dialog to choose a dir
+:return: The directory
+:rtype: pathlib.Path</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.dialog.proxy.DialogGuiProxy.getstring">
+<em class="property">static </em><code class="sig-name descname">getstring</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.dialog.proxy.DialogGuiProxy.getstring" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show a popup-window to ask the user some textual input.</p>
+<p>Makes use of QtWidgets.QInputDialog.getText; see
+<a class="reference external" href="https://srinikom.github.io/pyside-docs/PySide/QtGui/QInputDialog.html#PySide.QtGui.PySide.QtGui.QInputDialog.getText">https://srinikom.github.io/pyside-docs/PySide/QtGui/QInputDialog.html#PySide.QtGui.PySide.QtGui.QInputDialog.getText</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>prompt</strong> (<em>str</em>) – The explanation that is visible just above the text input field.</p></li>
+<li><p><strong>default</strong> (<em>str</em>) – The text that is already present in the editable input field.</p></li>
+<li><p><strong>title</strong> (<em>str</em>) – The name of the pop-window (shown in its title bar).</p></li>
+<li><p><strong>echo</strong> (<em>str</em>) – ‘Normal’ for normal text entry; ‘Password’ for password entry. See
+<a class="reference external" href="http://doc.qt.io/qt-4.8/qlineedit.html#EchoMode-enum">http://doc.qt.io/qt-4.8/qlineedit.html#EchoMode-enum</a></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.dialog.proxy.DialogGuiProxy.inputdlg">
+<em class="property">static </em><code class="sig-name descname">inputdlg</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.dialog.proxy.DialogGuiProxy.inputdlg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open a input dialog. The user can enter a string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>prompt</strong> (<em>str</em>) – The prompt</p></li>
+<li><p><strong>default</strong> (<em>str</em>) – The default string</p></li>
+<li><p><strong>title</strong> (<em>str</em>) – The title of the dialog</p></li>
+<li><p><strong>masked</strong> (<em>bool</em>) – Mask the string as stars <cite>******</cite></p></li>
+<li><p><strong>timeout</strong> (<em>None</em><em> or </em><em>float</em>) – After time, continue the flow. Expressed in miliseconds</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The user string</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p>Timeout can not be combined with mask.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.dialog.proxy.DialogGuiProxy.msgbox">
+<em class="property">static </em><code class="sig-name descname">msgbox</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.dialog.proxy.DialogGuiProxy.msgbox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a message box</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>message</strong> (<em>str</em>) – the message</p></li>
+<li><p><strong>title</strong> (<em>str</em>) – the title</p></li>
+<li><p><strong>icon</strong> (<em>str</em>) – ‘none’, ‘help, ‘info’, ‘warn’, ‘error’</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.dialog.proxy.DialogGuiProxy.putfile">
+<em class="property">static </em><code class="sig-name descname">putfile</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.dialog.proxy.DialogGuiProxy.putfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open a save file dialog and return a file name selected by the user.
+The file does not have to exist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filter</strong> (<em>str</em>) – File type filter, filters are seperated by <code class="docutils literal notranslate"><span class="pre">;;</span></code>
+e.g.: *.tif, Image (*.tif *.png), Text(*.txt);;Image (*.tif *.png)</p></li>
+<li><p><strong>title</strong> (<em>str</em>) – Title of the dialog</p></li>
+<li><p><strong>file</strong> (<em>str</em><em> or </em><em>None</em>) – Propose of file name</p></li>
+<li><p><strong>defaultfilter</strong> (<em>str</em>) – Default filter to use</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The filename and used filter</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str, str</p>
+</dd>
+</dl>
+<p>Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">filename</span><span class="p">,</span> <span class="nb">filter</span> <span class="o">=</span> <span class="n">gui</span><span class="o">.</span><span class="n">putfile</span><span class="p">(</span><span class="s1">&#39;Text(*.txt);;Image (*.tif *.png)&#39;</span><span class="p">,</span> <span class="s2">&quot;Give it a filename&quot;</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;C:\temp\default.tif&quot;</span><span class="p">,</span> <span class="s2">&quot;Image (*.tif *.png)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.dialog.proxy.DialogGuiProxy.putfilename">
+<em class="property">static </em><code class="sig-name descname">putfilename</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filter</span><span class="o">=</span><span class="default_value">'*.*'</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">'save'</span></em>, <em class="sig-param"><span class="n">file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">defaultfilter</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.dialog.proxy.DialogGuiProxy.putfilename" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open a save file dialog and return a file name selected by the user.
+The file does not have to exist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filter</strong> (<em>str</em>) – File type filter, filters are seperated by <code class="docutils literal notranslate"><span class="pre">;;</span></code>
+e.g.: *.tif, Image (*.tif *.png), Text(*.txt);;Image (*.tif *.png)</p></li>
+<li><p><strong>title</strong> (<em>str</em>) – Title of the dialog</p></li>
+<li><p><strong>file</strong> (<em>str</em><em> or </em><em>None</em>) – Propose of file name</p></li>
+<li><p><strong>defaultfilter</strong> (<em>str</em>) – Default filter to use</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The filename</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p>Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">filename</span> <span class="o">=</span> <span class="n">gui</span><span class="o">.</span><span class="n">putfile</span><span class="p">(</span><span class="s1">&#39;Text(*.txt);;Image (*.tif *.png)&#39;</span><span class="p">,</span> <span class="s2">&quot;Give it a filename&quot;</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;C:\temp\default.tif&quot;</span><span class="p">,</span> <span class="s2">&quot;Image (*.tif *.png)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.dialog.proxy.DialogGuiProxy.question">
+<em class="property">static </em><code class="sig-name descname">question</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.dialog.proxy.DialogGuiProxy.question" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yes/No question</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.dialog.proxy.DialogGuiProxy.selectfile">
+<em class="property">static </em><code class="sig-name descname">selectfile</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.dialog.proxy.DialogGuiProxy.selectfile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="gdesk.panels.dialog.html"
+                        title="previous chapter">gdesk.panels.dialog package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="gdesk.panels.imgview.html"
+                        title="next chapter">gdesk.panels.imgview package</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/gdesk.panels.dialog.proxy.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.panels.imgview.html" title="gdesk.panels.imgview package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.panels.dialog.html" title="gdesk.panels.dialog package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.panels.html" >gdesk.panels package</a> &#187;</li>
+          <li class="nav-item nav-item-4"><a href="gdesk.panels.dialog.html" >gdesk.panels.dialog package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.panels.dialog.proxy module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Thomas Cools.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

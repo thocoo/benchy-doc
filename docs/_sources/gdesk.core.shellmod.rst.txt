@@ -1,0 +1,7 @@
+gdesk.core.shellmod module
+==========================
+
+.. automodule:: gdesk.core.shellmod
+   :members:
+   :undoc-members:
+   :show-inheritance:

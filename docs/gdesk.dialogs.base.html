@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gdesk.dialogs.base module &#8212; gdesk 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="gdesk.dialogs.colormap module" href="gdesk.dialogs.colormap.html" />
+    <link rel="prev" title="gdesk.dialogs.about module" href="gdesk.dialogs.about.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.dialogs.colormap.html" title="gdesk.dialogs.colormap module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.dialogs.about.html" title="gdesk.dialogs.about module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.dialogs.html" accesskey="U">gdesk.dialogs package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.dialogs.base module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-gdesk.dialogs.base">
+<span id="gdesk-dialogs-base-module"></span><h1>gdesk.dialogs.base module<a class="headerlink" href="#module-gdesk.dialogs.base" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="gdesk.dialogs.base.ExecTimeout">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.dialogs.base.</code><code class="sig-name descname">ExecTimeout</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dialog</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.dialogs.base.ExecTimeout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="gdesk.dialogs.base.ExecTimeout.check_user_input_and_close">
+<code class="sig-name descname">check_user_input_and_close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.dialogs.base.ExecTimeout.check_user_input_and_close" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.dialogs.base.ExecTimeout.exec_">
+<code class="sig-name descname">exec_</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.dialogs.base.ExecTimeout.exec_" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.dialogs.base.LASTINPUTINFO">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.dialogs.base.</code><code class="sig-name descname">LASTINPUTINFO</code><a class="headerlink" href="#gdesk.dialogs.base.LASTINPUTINFO" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">_ctypes.Structure</span></code></p>
+<dl class="py attribute">
+<dt id="gdesk.dialogs.base.LASTINPUTINFO.cbSize">
+<code class="sig-name descname">cbSize</code><a class="headerlink" href="#gdesk.dialogs.base.LASTINPUTINFO.cbSize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="gdesk.dialogs.base.LASTINPUTINFO.dwTime">
+<code class="sig-name descname">dwTime</code><a class="headerlink" href="#gdesk.dialogs.base.LASTINPUTINFO.dwTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.dialogs.base.MultiString">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.dialogs.base.</code><code class="sig-name descname">MultiString</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prompt</span><span class="o">=</span><span class="default_value">[]</span></em>, <em class="sig-param"><span class="n">default</span><span class="o">=</span><span class="default_value">[]</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">'Input'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.dialogs.base.MultiString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QDialog</span></code></p>
+<dl class="py method">
+<dt id="gdesk.dialogs.base.MultiString.finish">
+<code class="sig-name descname">finish</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.dialogs.base.MultiString.finish" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.dialogs.base.MultiString.initui">
+<code class="sig-name descname">initui</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prompt</span></em>, <em class="sig-param"><span class="n">default</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">'Input'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.dialogs.base.MultiString.initui" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gdesk.dialogs.base.MultiString.staticMetaObject">
+<code class="sig-name descname">staticMetaObject</code><em class="property"> = &lt;PySide2.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#gdesk.dialogs.base.MultiString.staticMetaObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="gdesk.dialogs.base.PLASTINPUTINFO">
+<code class="sig-prename descclassname">gdesk.dialogs.base.</code><code class="sig-name descname">PLASTINPUTINFO</code><a class="headerlink" href="#gdesk.dialogs.base.PLASTINPUTINFO" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">gdesk.dialogs.base.LP_LASTINPUTINFO</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.dialogs.base.TopMessageBox">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.dialogs.base.</code><code class="sig-name descname">TopMessageBox</code><a class="headerlink" href="#gdesk.dialogs.base.TopMessageBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></p>
+<dl class="py attribute">
+<dt id="gdesk.dialogs.base.TopMessageBox.staticMetaObject">
+<code class="sig-name descname">staticMetaObject</code><em class="property"> = &lt;PySide2.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#gdesk.dialogs.base.TopMessageBox.staticMetaObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.dialogs.base.getFile">
+<code class="sig-prename descclassname">gdesk.dialogs.base.</code><code class="sig-name descname">getFile</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filter</span><span class="o">=</span><span class="default_value">'*.*'</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">'open'</span></em>, <em class="sig-param"><span class="n">defaultFile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hideFilterDetails</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.dialogs.base.getFile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.dialogs.base.getFiles">
+<code class="sig-prename descclassname">gdesk.dialogs.base.</code><code class="sig-name descname">getFiles</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filter</span><span class="o">=</span><span class="default_value">'*.*'</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">'open'</span></em>, <em class="sig-param"><span class="n">defaultFile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hideFilterDetails</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.dialogs.base.getFiles" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.dialogs.base.getMap">
+<code class="sig-prename descclassname">gdesk.dialogs.base.</code><code class="sig-name descname">getMap</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">startPath</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">'select a Directory'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.dialogs.base.getMap" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.dialogs.base.getMultiString">
+<code class="sig-prename descclassname">gdesk.dialogs.base.</code><code class="sig-name descname">getMultiString</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prompt</span></em>, <em class="sig-param"><span class="n">default</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">'Input'</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.dialogs.base.getMultiString" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.dialogs.base.getString">
+<code class="sig-prename descclassname">gdesk.dialogs.base.</code><code class="sig-name descname">getString</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prompt</span></em>, <em class="sig-param"><span class="n">default</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">'Input'</span></em>, <em class="sig-param"><span class="n">echo</span><span class="o">=</span><span class="default_value">'Normal'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.dialogs.base.getString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show a popup-window to ask the user some textual input.</p>
+<p>Makes use of QtWidgets.QInputDialog.getText; see
+<a class="reference external" href="https://srinikom.github.io/pyside-docs/PySide/QtGui/QInputDialog.html#PySide.QtGui.PySide.QtGui.QInputDialog.getText">https://srinikom.github.io/pyside-docs/PySide/QtGui/QInputDialog.html#PySide.QtGui.PySide.QtGui.QInputDialog.getText</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>prompt</strong> (<em>str</em>) – The explanation that is visible just above the text input field.</p></li>
+<li><p><strong>default</strong> (<em>str</em>) – The text that is already present in the editable input field.</p></li>
+<li><p><strong>title</strong> (<em>str</em>) – The name of the pop-window (shown in its title bar).</p></li>
+<li><p><strong>echo</strong> (<em>str</em>) – ‘Normal’ for normal text entry; ‘Password’ for password entry.  See
+<a class="reference external" href="http://doc.qt.io/qt-4.8/qlineedit.html#EchoMode-enum">http://doc.qt.io/qt-4.8/qlineedit.html#EchoMode-enum</a></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.dialogs.base.getStringTimeout">
+<code class="sig-prename descclassname">gdesk.dialogs.base.</code><code class="sig-name descname">getStringTimeout</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prompt</span></em>, <em class="sig-param"><span class="n">default</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">'Input'</span></em>, <em class="sig-param"><span class="n">echo</span><span class="o">=</span><span class="default_value">'Normal'</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="o">=</span><span class="default_value">10000</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.dialogs.base.getStringTimeout" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.dialogs.base.get_last_input_moment">
+<code class="sig-prename descclassname">gdesk.dialogs.base.</code><code class="sig-name descname">get_last_input_moment</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.dialogs.base.get_last_input_moment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.dialogs.base.messageBox">
+<code class="sig-prename descclassname">gdesk.dialogs.base.</code><code class="sig-name descname">messageBox</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">icon</span><span class="o">=</span><span class="default_value">'none'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.dialogs.base.messageBox" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.dialogs.base.putFile">
+<code class="sig-prename descclassname">gdesk.dialogs.base.</code><code class="sig-name descname">putFile</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filter</span><span class="o">=</span><span class="default_value">'*.*'</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">'save'</span></em>, <em class="sig-param"><span class="n">defaultFile</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">defaultFilter</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.dialogs.base.putFile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.dialogs.base.questionBox">
+<code class="sig-prename descclassname">gdesk.dialogs.base.</code><code class="sig-name descname">questionBox</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">question</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.dialogs.base.questionBox" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.dialogs.base.selectFiles">
+<code class="sig-prename descclassname">gdesk.dialogs.base.</code><code class="sig-name descname">selectFiles</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filter</span><span class="o">=</span><span class="default_value">'*.*'</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">'Select'</span></em>, <em class="sig-param"><span class="n">defaultPath</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.dialogs.base.selectFiles" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.dialogs.base.using_pyqt">
+<code class="sig-prename descclassname">gdesk.dialogs.base.</code><code class="sig-name descname">using_pyqt</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.dialogs.base.using_pyqt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.dialogs.base.using_pyside">
+<code class="sig-prename descclassname">gdesk.dialogs.base.</code><code class="sig-name descname">using_pyside</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.dialogs.base.using_pyside" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="gdesk.dialogs.about.html"
+                        title="previous chapter">gdesk.dialogs.about module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="gdesk.dialogs.colormap.html"
+                        title="next chapter">gdesk.dialogs.colormap module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/gdesk.dialogs.base.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.dialogs.colormap.html" title="gdesk.dialogs.colormap module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.dialogs.about.html" title="gdesk.dialogs.about module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.dialogs.html" >gdesk.dialogs package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.dialogs.base module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Thomas Cools.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

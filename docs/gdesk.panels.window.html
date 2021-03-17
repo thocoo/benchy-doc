@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gdesk.panels.window module &#8212; gdesk 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="gdesk.rectable package" href="gdesk.rectable.html" />
+    <link rel="prev" title="gdesk.panels.panels module" href="gdesk.panels.panels.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.rectable.html" title="gdesk.rectable package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.panels.panels.html" title="gdesk.panels.panels module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.panels.html" accesskey="U">gdesk.panels package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.panels.window module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-gdesk.panels.window">
+<span id="gdesk-panels-window-module"></span><h1>gdesk.panels.window module<a class="headerlink" href="#module-gdesk.panels.window" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="gdesk.panels.window.DragState">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.panels.window.</code><code class="sig-name descname">DragState</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.window.DragState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt id="gdesk.panels.window.DragState.dragging">
+<code class="sig-name descname">dragging</code><em class="property"> = 3</em><a class="headerlink" href="#gdesk.panels.window.DragState.dragging" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gdesk.panels.window.DragState.placed">
+<code class="sig-name descname">placed</code><em class="property"> = 1</em><a class="headerlink" href="#gdesk.panels.window.DragState.placed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gdesk.panels.window.DragState.titlePressed">
+<code class="sig-name descname">titlePressed</code><em class="property"> = 2</em><a class="headerlink" href="#gdesk.panels.window.DragState.titlePressed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.panels.window.MainWindow">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.panels.window.</code><code class="sig-name descname">MainWindow</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">qapp</span></em>, <em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">parentWinName</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.window.MainWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QMainWindow</span></code></p>
+<p>The Main QT Window.</p>
+<dl class="py method">
+<dt id="gdesk.panels.window.MainWindow.asToolWindow">
+<code class="sig-name descname">asToolWindow</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">windowName</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.window.MainWindow.asToolWindow" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.window.MainWindow.closeEvent">
+<code class="sig-name descname">closeEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">event</span><span class="p">:</span> <span class="n">PySide2.QtGui.QCloseEvent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.window.MainWindow.closeEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.window.MainWindow.createMenus">
+<code class="sig-name descname">createMenus</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.window.MainWindow.createMenus" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.window.MainWindow.createStatusBar">
+<code class="sig-name descname">createStatusBar</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.window.MainWindow.createStatusBar" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.window.MainWindow.cycle_tag_level">
+<code class="sig-name descname">cycle_tag_level</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.window.MainWindow.cycle_tag_level" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.window.MainWindow.event">
+<code class="sig-name descname">event</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">event</span><span class="p">:</span> <span class="n">PySide2.QtCore.QEvent</span></em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#gdesk.panels.window.MainWindow.event" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.window.MainWindow.fullScreen">
+<code class="sig-name descname">fullScreen</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.window.MainWindow.fullScreen" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.window.MainWindow.getWidgetUnderMouse">
+<code class="sig-name descname">getWidgetUnderMouse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.window.MainWindow.getWidgetUnderMouse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the widget outside this window under the current mouse position.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.window.MainWindow.isToolWindow">
+<code class="sig-name descname">isToolWindow</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.window.MainWindow.isToolWindow" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.window.MainWindow.keyPressEvent">
+<code class="sig-name descname">keyPressEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">event</span><span class="p">:</span> <span class="n">PySide2.QtGui.QKeyEvent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.window.MainWindow.keyPressEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.window.MainWindow.moveEvent">
+<code class="sig-name descname">moveEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">event</span><span class="p">:</span> <span class="n">PySide2.QtGui.QMoveEvent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.window.MainWindow.moveEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gdesk.panels.window.MainWindow.moveQueued">
+<code class="sig-name descname">moveQueued</code><em class="property"> = &lt;PySide2.QtCore.Signal object&gt;</em><a class="headerlink" href="#gdesk.panels.window.MainWindow.moveQueued" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.window.MainWindow.moveWindow">
+<code class="sig-name descname">moveWindow</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pos</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.window.MainWindow.moveWindow" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.window.MainWindow.newPanelMenuPopup">
+<code class="sig-name descname">newPanelMenuPopup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.window.MainWindow.newPanelMenuPopup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.window.MainWindow.remove_panel_menu">
+<code class="sig-name descname">remove_panel_menu</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.window.MainWindow.remove_panel_menu" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.window.MainWindow.screenShot">
+<code class="sig-name descname">screenShot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.window.MainWindow.screenShot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.window.MainWindow.setPanelInfo">
+<code class="sig-name descname">setPanelInfo</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">panel</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.window.MainWindow.setPanelInfo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.window.MainWindow.showPanelMenu">
+<code class="sig-name descname">showPanelMenu</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">point</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.window.MainWindow.showPanelMenu" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.window.MainWindow.startMoving">
+<code class="sig-name descname">startMoving</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">allWindows</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.window.MainWindow.startMoving" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gdesk.panels.window.MainWindow.staticMetaObject">
+<code class="sig-name descname">staticMetaObject</code><em class="property"> = &lt;PySide2.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#gdesk.panels.window.MainWindow.staticMetaObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.window.MainWindow.toggleMenuStatusbar">
+<code class="sig-name descname">toggleMenuStatusbar</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.window.MainWindow.toggleMenuStatusbar" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.window.MainWindow.unregister">
+<code class="sig-name descname">unregister</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.window.MainWindow.unregister" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.window.MainWindow.winActionLabel">
+<code class="sig-name descname">winActionLabel</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.window.MainWindow.winActionLabel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.window.MainWindow.windowName">
+<em class="property">property </em><code class="sig-name descname">windowName</code><a class="headerlink" href="#gdesk.panels.window.MainWindow.windowName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.window.MainWindow.windowPlaced">
+<code class="sig-name descname">windowPlaced</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">canceled</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.window.MainWindow.windowPlaced" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.panels.window.debug_print">
+<code class="sig-prename descclassname">gdesk.panels.window.</code><code class="sig-name descname">debug_print</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.window.debug_print" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="gdesk.panels.panels.html"
+                        title="previous chapter">gdesk.panels.panels module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="gdesk.rectable.html"
+                        title="next chapter">gdesk.rectable package</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/gdesk.panels.window.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.rectable.html" title="gdesk.rectable package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.panels.panels.html" title="gdesk.panels.panels module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.panels.html" >gdesk.panels package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.panels.window module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Thomas Cools.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

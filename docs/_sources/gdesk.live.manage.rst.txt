@@ -1,0 +1,7 @@
+gdesk.live.manage module
+========================
+
+.. automodule:: gdesk.live.manage
+   :members:
+   :undoc-members:
+   :show-inheritance:

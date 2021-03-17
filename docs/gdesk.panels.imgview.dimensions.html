@@ -1,0 +1,336 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gdesk.panels.imgview.dimensions module &#8212; gdesk 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="gdesk.panels.imgview.fasthist module" href="gdesk.panels.imgview.fasthist.html" />
+    <link rel="prev" title="gdesk.panels.imgview.demosaic module" href="gdesk.panels.imgview.demosaic.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.panels.imgview.fasthist.html" title="gdesk.panels.imgview.fasthist module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.panels.imgview.demosaic.html" title="gdesk.panels.imgview.demosaic module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.panels.html" >gdesk.panels package</a> &#187;</li>
+          <li class="nav-item nav-item-4"><a href="gdesk.panels.imgview.html" accesskey="U">gdesk.panels.imgview package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.panels.imgview.dimensions module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-gdesk.panels.imgview.dimensions">
+<span id="gdesk-panels-imgview-dimensions-module"></span><h1>gdesk.panels.imgview.dimensions module<a class="headerlink" href="#module-gdesk.panels.imgview.dimensions" title="Permalink to this headline">¶</a></h1>
+<p>multiple dimension range and slicing</p>
+<p>virtual sequence of numbers defined by start to stop by step
+functions to</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>modify the range by applying slices</p></li>
+<li><p>reset to full range</p></li>
+<li><p>get default python range object</p></li>
+<li><p>partial ranges for representations</p></li>
+</ul>
+</div></blockquote>
+<p>start = first number; 0 by default
+stop = all numbers are lower then stop, so not included in sequence
+step = stepping of the sequence; 1 by default
+maxstop = stop can never be set larger than maxstop</p>
+<p>DimRange: single dimension
+DimRanges: multiple dimensions</p>
+<dl class="py class">
+<dt id="gdesk.panels.imgview.dimensions.DimRange">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.panels.imgview.dimensions.</code><code class="sig-name descname">DimRange</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">maxstop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.imgview.dimensions.DimRange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>range info of a single dimension</p>
+<p>maxstop = the size of the dimension</p>
+<p>apply slices to a range to get a new range
+slices can be applied cumulatively
+range can be reset to the original range</p>
+<dl class="py method">
+<dt id="gdesk.panels.imgview.dimensions.DimRange.applyslice">
+<code class="sig-name descname">applyslice</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">aslice</span></em>, <em class="sig-param"><span class="n">full</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.imgview.dimensions.DimRange.applyslice" title="Permalink to this definition">¶</a></dt>
+<dd><p>return a range based on another range and a range definition</p>
+<dl class="simple">
+<dt>ex:</dt><dd><p>bslice = slice(3,None,2) or [3::2] on the __getitem__ or __setitem__
+brange = (0,50,2)
+return range(6,50,4)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.imgview.dimensions.DimRange.clip">
+<code class="sig-name descname">clip</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.imgview.dimensions.DimRange.clip" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.imgview.dimensions.DimRange.clone">
+<code class="sig-name descname">clone</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.imgview.dimensions.DimRange.clone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.imgview.dimensions.DimRange.copy">
+<code class="sig-name descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.imgview.dimensions.DimRange.copy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.imgview.dimensions.DimRange.count">
+<em class="property">property </em><code class="sig-name descname">count</code><a class="headerlink" href="#gdesk.panels.imgview.dimensions.DimRange.count" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.imgview.dimensions.DimRange.getrange">
+<code class="sig-name descname">getrange</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.imgview.dimensions.DimRange.getrange" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.imgview.dimensions.DimRange.getslice">
+<code class="sig-name descname">getslice</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.imgview.dimensions.DimRange.getslice" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.imgview.dimensions.DimRange.getstartrange">
+<code class="sig-name descname">getstartrange</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">count</span><span class="o">=</span><span class="default_value">7</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.imgview.dimensions.DimRange.getstartrange" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.imgview.dimensions.DimRange.getstoprange">
+<code class="sig-name descname">getstoprange</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">count</span><span class="o">=</span><span class="default_value">7</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.imgview.dimensions.DimRange.getstoprange" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.imgview.dimensions.DimRange.inherite">
+<code class="sig-name descname">inherite</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">source</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.imgview.dimensions.DimRange.inherite" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.imgview.dimensions.DimRange.isfullrange">
+<code class="sig-name descname">isfullrange</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.imgview.dimensions.DimRange.isfullrange" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.imgview.dimensions.DimRange.range">
+<em class="property">property </em><code class="sig-name descname">range</code><a class="headerlink" href="#gdesk.panels.imgview.dimensions.DimRange.range" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.imgview.dimensions.DimRange.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.imgview.dimensions.DimRange.reset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.imgview.dimensions.DimRange.setfromslice">
+<code class="sig-name descname">setfromslice</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">aslice</span></em>, <em class="sig-param"><span class="n">full</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.imgview.dimensions.DimRange.setfromslice" title="Permalink to this definition">¶</a></dt>
+<dd><p>slice the current range by the slice aslice</p>
+<dl class="simple">
+<dt>a slice is e.g. created from item[0:10:2]</dt><dd><p>or by slice(0,10,2)</p>
+</dd>
+</dl>
+<p>if full == True: don’t build on the current roi</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.imgview.dimensions.DimRange.size">
+<code class="sig-name descname">size</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.imgview.dimensions.DimRange.size" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.imgview.dimensions.DimRange.slice">
+<em class="property">property </em><code class="sig-name descname">slice</code><a class="headerlink" href="#gdesk.panels.imgview.dimensions.DimRange.slice" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.imgview.dimensions.DimRange.splitstarts">
+<code class="sig-name descname">splitstarts</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">count</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.imgview.dimensions.DimRange.splitstarts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.panels.imgview.dimensions.DimRanges">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.panels.imgview.dimensions.</code><code class="sig-name descname">DimRanges</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sizes</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.imgview.dimensions.DimRanges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>range info of a multiple dimensions</p>
+<p>sizes = tuple of the sizes of the dimensions</p>
+<dl class="py method">
+<dt id="gdesk.panels.imgview.dimensions.DimRanges.accslices">
+<code class="sig-name descname">accslices</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">index</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.imgview.dimensions.DimRanges.accslices" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.imgview.dimensions.DimRanges.clip">
+<code class="sig-name descname">clip</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.imgview.dimensions.DimRanges.clip" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.imgview.dimensions.DimRanges.clone">
+<code class="sig-name descname">clone</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.imgview.dimensions.DimRanges.clone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.imgview.dimensions.DimRanges.copy">
+<code class="sig-name descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.imgview.dimensions.DimRanges.copy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.imgview.dimensions.DimRanges.fullshape">
+<em class="property">property </em><code class="sig-name descname">fullshape</code><a class="headerlink" href="#gdesk.panels.imgview.dimensions.DimRanges.fullshape" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.imgview.dimensions.DimRanges.getfullshape">
+<code class="sig-name descname">getfullshape</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.imgview.dimensions.DimRanges.getfullshape" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.imgview.dimensions.DimRanges.getshape">
+<code class="sig-name descname">getshape</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.imgview.dimensions.DimRanges.getshape" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.imgview.dimensions.DimRanges.getslices">
+<code class="sig-name descname">getslices</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">swap_row_columns</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.imgview.dimensions.DimRanges.getslices" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.imgview.dimensions.DimRanges.inherite">
+<code class="sig-name descname">inherite</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">source</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.imgview.dimensions.DimRanges.inherite" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.imgview.dimensions.DimRanges.isfullrange">
+<code class="sig-name descname">isfullrange</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.imgview.dimensions.DimRanges.isfullrange" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.imgview.dimensions.DimRanges.maketuple">
+<code class="sig-name descname">maketuple</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">index</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.imgview.dimensions.DimRanges.maketuple" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.imgview.dimensions.DimRanges.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.imgview.dimensions.DimRanges.reset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.imgview.dimensions.DimRanges.setslices">
+<code class="sig-name descname">setslices</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">index</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.imgview.dimensions.DimRanges.setslices" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.imgview.dimensions.DimRanges.shape">
+<em class="property">property </em><code class="sig-name descname">shape</code><a class="headerlink" href="#gdesk.panels.imgview.dimensions.DimRanges.shape" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.panels.imgview.dimensions.SetSlices">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.panels.imgview.dimensions.</code><code class="sig-name descname">SetSlices</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.imgview.dimensions.SetSlices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>to set the roi, use the slices syntax on set
+example:</p>
+<blockquote>
+<div><p>b = pybix.ones(100,80) * 12000
+b.roi
+&gt;&gt;&gt;[dim:100 slice:0:100:1, dim:80 slice:0:80:1]
+b.roi.set[20:60,::2]
+b.roi
+&gt;&gt;&gt;[dim:100 slice:20:60:1, dim:80 slice:0:80:2]</p>
+</div></blockquote>
+</dd></dl>
+
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="gdesk.panels.imgview.demosaic.html"
+                        title="previous chapter">gdesk.panels.imgview.demosaic module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="gdesk.panels.imgview.fasthist.html"
+                        title="next chapter">gdesk.panels.imgview.fasthist module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/gdesk.panels.imgview.dimensions.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.panels.imgview.fasthist.html" title="gdesk.panels.imgview.fasthist module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.panels.imgview.demosaic.html" title="gdesk.panels.imgview.demosaic module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.panels.html" >gdesk.panels package</a> &#187;</li>
+          <li class="nav-item nav-item-4"><a href="gdesk.panels.imgview.html" >gdesk.panels.imgview package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.panels.imgview.dimensions module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Thomas Cools.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

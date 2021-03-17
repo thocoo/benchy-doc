@@ -1,0 +1,7 @@
+gdesk.panels.matplot.plotpanel module
+=====================================
+
+.. automodule:: gdesk.panels.matplot.plotpanel
+   :members:
+   :undoc-members:
+   :show-inheritance:

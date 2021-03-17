@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gdesk.panels.panels module &#8212; gdesk 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="gdesk.panels.window module" href="gdesk.panels.window.html" />
+    <link rel="prev" title="gdesk.panels.base module" href="gdesk.panels.base.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.panels.window.html" title="gdesk.panels.window module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.panels.base.html" title="gdesk.panels.base module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.panels.html" accesskey="U">gdesk.panels package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.panels.panels module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-gdesk.panels.panels">
+<span id="gdesk-panels-panels-module"></span><h1>gdesk.panels.panels module<a class="headerlink" href="#module-gdesk.panels.panels" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="gdesk.panels.panels.Panels">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.panels.panels.</code><code class="sig-name descname">Panels</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">qapp</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.panels.Panels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="gdesk.panels.panels.Panels.classes_of_category">
+<code class="sig-name descname">classes_of_category</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">category</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.panels.Panels.classes_of_category" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.panels.Panels.get_active_panid">
+<code class="sig-name descname">get_active_panid</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">category</span></em>, <em class="sig-param"><span class="n">panidpos</span><span class="o">=</span><span class="default_value">- 1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.panels.Panels.get_active_panid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.panels.Panels.get_menu_action">
+<code class="sig-name descname">get_menu_action</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">category</span></em>, <em class="sig-param"><span class="n">panid</span></em>, <em class="sig-param"><span class="n">menutrace</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.panels.Panels.get_menu_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Trigger a menu action of a panel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>category</strong> (<em>str</em>) – Example ‘image’</p></li>
+<li><p><strong>id</strong> (<em>int</em>) – Example 1</p></li>
+<li><p><strong>menutrace</strong> (<em>list</em>) – Example [‘File’, ‘New Image’]</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.panels.Panels.id_exists">
+<code class="sig-name descname">id_exists</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">category</span></em>, <em class="sig-param"><span class="n">panid</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.panels.Panels.id_exists" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.panels.Panels.items">
+<code class="sig-name descname">items</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.panels.Panels.items" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.panels.Panels.keys">
+<code class="sig-name descname">keys</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.panels.Panels.keys" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.panels.Panels.move_to_end">
+<code class="sig-name descname">move_to_end</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">widget</span></em>, <em class="sig-param"><span class="n">category</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.panels.Panels.move_to_end" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.panels.Panels.new_id">
+<code class="sig-name descname">new_id</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">category</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.panels.Panels.new_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.panels.Panels.new_panel">
+<code class="sig-name descname">new_panel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">PanelClass</span></em>, <em class="sig-param"><span class="n">parentName</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">panid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">floating</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">position</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">args</span><span class="o">=</span><span class="default_value">()</span></em>, <em class="sig-param"><span class="n">kwargs</span><span class="o">=</span><span class="default_value">{}</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.panels.Panels.new_panel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.panels.Panels.place_window">
+<code class="sig-name descname">place_window</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">window</span></em>, <em class="sig-param"><span class="n">category</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.panels.Panels.place_window" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.panels.Panels.removeBindingsTo">
+<code class="sig-name descname">removeBindingsTo</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">category</span></em>, <em class="sig-param"><span class="n">panid</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.panels.Panels.removeBindingsTo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.panels.Panels.reselect_all">
+<code class="sig-name descname">reselect_all</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.panels.Panels.reselect_all" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.panels.Panels.restore_state_from_config">
+<code class="sig-name descname">restore_state_from_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">layout_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.panels.Panels.restore_state_from_config" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.panels.Panels.select_or_new">
+<code class="sig-name descname">select_or_new</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">category</span></em>, <em class="sig-param"><span class="n">panid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">defaulttype</span><span class="o">=</span><span class="default_value">'basic'</span></em>, <em class="sig-param"><span class="n">parentName</span><span class="o">=</span><span class="default_value">'main'</span></em>, <em class="sig-param"><span class="n">args</span><span class="o">=</span><span class="default_value">()</span></em>, <em class="sig-param"><span class="n">kwargs</span><span class="o">=</span><span class="default_value">{}</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.panels.Panels.select_or_new" title="Permalink to this definition">¶</a></dt>
+<dd><p>If panid &lt; 0, -1: select the active panel, -2: selected before that, …
+panid &gt; 0: select the panel if exists, otherwise a new with that number</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.panels.Panels.selected">
+<code class="sig-name descname">selected</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">category</span></em>, <em class="sig-param"><span class="n">panidpos</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">panel</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.panels.Panels.selected" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.panels.Panels.selected_category">
+<code class="sig-name descname">selected_category</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.panels.Panels.selected_category" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="gdesk.panels.base.html"
+                        title="previous chapter">gdesk.panels.base module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="gdesk.panels.window.html"
+                        title="next chapter">gdesk.panels.window module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/gdesk.panels.panels.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.panels.window.html" title="gdesk.panels.window module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.panels.base.html" title="gdesk.panels.base module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.panels.html" >gdesk.panels package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.panels.panels module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Thomas Cools.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

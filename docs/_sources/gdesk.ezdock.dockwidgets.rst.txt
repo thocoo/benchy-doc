@@ -1,0 +1,7 @@
+gdesk.ezdock.dockwidgets module
+===============================
+
+.. automodule:: gdesk.ezdock.dockwidgets
+   :members:
+   :undoc-members:
+   :show-inheritance:

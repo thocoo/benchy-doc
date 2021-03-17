@@ -1,0 +1,28 @@
+gdesk.utils package
+===================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   gdesk.utils.ansi_code_processor
+   gdesk.utils.funccom
+   gdesk.utils.imconvert
+   gdesk.utils.keypress
+   gdesk.utils.namedmutex
+   gdesk.utils.names
+   gdesk.utils.numba_func
+   gdesk.utils.shared
+   gdesk.utils.syntax_light
+   gdesk.utils.ticks
+   gdesk.utils.z_order
+
+Module contents
+---------------
+
+.. automodule:: gdesk.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:

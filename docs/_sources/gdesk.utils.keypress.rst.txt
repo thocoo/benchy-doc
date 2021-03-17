@@ -1,0 +1,7 @@
+gdesk.utils.keypress module
+===========================
+
+.. automodule:: gdesk.utils.keypress
+   :members:
+   :undoc-members:
+   :show-inheritance:

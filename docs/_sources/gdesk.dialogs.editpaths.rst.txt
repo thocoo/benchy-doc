@@ -1,0 +1,7 @@
+gdesk.dialogs.editpaths module
+==============================
+
+.. automodule:: gdesk.dialogs.editpaths
+   :members:
+   :undoc-members:
+   :show-inheritance:

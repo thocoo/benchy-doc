@@ -1,0 +1,7 @@
+gdesk.core.stdinout module
+==========================
+
+.. automodule:: gdesk.core.stdinout
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+gdesk.panels.levels.panel module
+================================
+
+.. automodule:: gdesk.panels.levels.panel
+   :members:
+   :undoc-members:
+   :show-inheritance:

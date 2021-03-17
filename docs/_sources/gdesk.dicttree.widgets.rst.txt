@@ -1,0 +1,7 @@
+gdesk.dicttree.widgets module
+=============================
+
+.. automodule:: gdesk.dicttree.widgets
+   :members:
+   :undoc-members:
+   :show-inheritance:

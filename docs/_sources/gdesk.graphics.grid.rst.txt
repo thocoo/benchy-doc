@@ -1,0 +1,7 @@
+gdesk.graphics.grid module
+==========================
+
+.. automodule:: gdesk.graphics.grid
+   :members:
+   :undoc-members:
+   :show-inheritance:

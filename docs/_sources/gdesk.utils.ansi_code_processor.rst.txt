@@ -1,0 +1,7 @@
+gdesk.utils.ansi\_code\_processor module
+========================================
+
+.. automodule:: gdesk.utils.ansi_code_processor
+   :members:
+   :undoc-members:
+   :show-inheritance:

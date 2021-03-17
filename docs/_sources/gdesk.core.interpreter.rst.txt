@@ -1,0 +1,7 @@
+gdesk.core.interpreter module
+=============================
+
+.. automodule:: gdesk.core.interpreter
+   :members:
+   :undoc-members:
+   :show-inheritance:

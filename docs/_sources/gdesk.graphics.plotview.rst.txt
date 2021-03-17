@@ -1,0 +1,7 @@
+gdesk.graphics.plotview module
+==============================
+
+.. automodule:: gdesk.graphics.plotview
+   :members:
+   :undoc-members:
+   :show-inheritance:

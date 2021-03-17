@@ -1,0 +1,415 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gdesk.ezdock.boxes module &#8212; gdesk 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="gdesk.ezdock.docks module" href="gdesk.ezdock.docks.html" />
+    <link rel="prev" title="gdesk.ezdock package" href="gdesk.ezdock.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.ezdock.docks.html" title="gdesk.ezdock.docks module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.ezdock.html" title="gdesk.ezdock package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.ezdock.html" accesskey="U">gdesk.ezdock package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.ezdock.boxes module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-gdesk.ezdock.boxes">
+<span id="gdesk-ezdock-boxes-module"></span><h1>gdesk.ezdock.boxes module<a class="headerlink" href="#module-gdesk.ezdock.boxes" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="gdesk.ezdock.boxes.AreaSplitterHandle">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.ezdock.boxes.</code><code class="sig-name descname">AreaSplitterHandle</code><a class="headerlink" href="#gdesk.ezdock.boxes.AreaSplitterHandle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QSplitterHandle</span></code></p>
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.AreaSplitterHandle.mouseDoubleClickEvent">
+<code class="sig-name descname">mouseDoubleClickEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">event</span><span class="p">:</span> <span class="n">PySide2.QtGui.QMouseEvent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.AreaSplitterHandle.mouseDoubleClickEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gdesk.ezdock.boxes.AreaSplitterHandle.staticMetaObject">
+<code class="sig-name descname">staticMetaObject</code><em class="property"> = &lt;PySide2.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#gdesk.ezdock.boxes.AreaSplitterHandle.staticMetaObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.ezdock.boxes.DockBox">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.ezdock.boxes.</code><code class="sig-name descname">DockBox</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">orientation</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.DockBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QSplitter</span></code>, <a class="reference internal" href="gdesk.ezdock.docks.html#gdesk.ezdock.docks.DockBase" title="gdesk.ezdock.docks.DockBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">gdesk.ezdock.docks.DockBase</span></code></a></p>
+<dl class="py attribute">
+<dt id="gdesk.ezdock.boxes.DockBox.PinArea">
+<code class="sig-name descname">PinArea</code><em class="property"> = 1</em><a class="headerlink" href="#gdesk.ezdock.boxes.DockBox.PinArea" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gdesk.ezdock.boxes.DockBox.ScrollArea">
+<code class="sig-name descname">ScrollArea</code><em class="property"> = 2</em><a class="headerlink" href="#gdesk.ezdock.boxes.DockBox.ScrollArea" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gdesk.ezdock.boxes.DockBox.SplitArea">
+<code class="sig-name descname">SplitArea</code><em class="property"> = 0</em><a class="headerlink" href="#gdesk.ezdock.boxes.DockBox.SplitArea" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.DockBox.addWidget">
+<code class="sig-name descname">addWidget</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">widget</span><span class="p">:</span> <span class="n">PySide2.QtWidgets.QWidget</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.DockBox.addWidget" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.DockBox.count">
+<code class="sig-name descname">count</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#gdesk.ezdock.boxes.DockBox.count" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.DockBox.createHandle">
+<code class="sig-name descname">createHandle</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span> &#x2192; PySide2.QtWidgets.QSplitterHandle<a class="headerlink" href="#gdesk.ezdock.boxes.DockBox.createHandle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.DockBox.currentIndex">
+<code class="sig-name descname">currentIndex</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.DockBox.currentIndex" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.DockBox.distributeWidgets">
+<code class="sig-name descname">distributeWidgets</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.DockBox.distributeWidgets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.DockBox.moveToOtherArea">
+<code class="sig-name descname">moveToOtherArea</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">widget</span></em>, <em class="sig-param"><span class="n">area</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.DockBox.moveToOtherArea" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.DockBox.setCurrentIndex">
+<code class="sig-name descname">setCurrentIndex</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">index</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.DockBox.setCurrentIndex" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.DockBox.setSizes">
+<code class="sig-name descname">setSizes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">list</span><span class="p">:</span> <span class="n">typing.Sequence</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.DockBox.setSizes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.DockBox.show">
+<code class="sig-name descname">show</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.DockBox.show" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.DockBox.sizes">
+<code class="sig-name descname">sizes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span> &#x2192; typing.List<a class="headerlink" href="#gdesk.ezdock.boxes.DockBox.sizes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gdesk.ezdock.boxes.DockBox.staticMetaObject">
+<code class="sig-name descname">staticMetaObject</code><em class="property"> = &lt;PySide2.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#gdesk.ezdock.boxes.DockBox.staticMetaObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.DockBox.widget">
+<code class="sig-name descname">widget</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">index</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; PySide2.QtWidgets.QWidget<a class="headerlink" href="#gdesk.ezdock.boxes.DockBox.widget" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.ezdock.boxes.DockHBox">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.ezdock.boxes.</code><code class="sig-name descname">DockHBox</code><a class="headerlink" href="#gdesk.ezdock.boxes.DockHBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#gdesk.ezdock.boxes.DockBox" title="gdesk.ezdock.boxes.DockBox"><code class="xref py py-class docutils literal notranslate"><span class="pre">gdesk.ezdock.boxes.DockBox</span></code></a></p>
+<dl class="py attribute">
+<dt id="gdesk.ezdock.boxes.DockHBox.staticMetaObject">
+<code class="sig-name descname">staticMetaObject</code><em class="property"> = &lt;PySide2.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#gdesk.ezdock.boxes.DockHBox.staticMetaObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.ezdock.boxes.DockVBox">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.ezdock.boxes.</code><code class="sig-name descname">DockVBox</code><a class="headerlink" href="#gdesk.ezdock.boxes.DockVBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#gdesk.ezdock.boxes.DockBox" title="gdesk.ezdock.boxes.DockBox"><code class="xref py py-class docutils literal notranslate"><span class="pre">gdesk.ezdock.boxes.DockBox</span></code></a></p>
+<dl class="py attribute">
+<dt id="gdesk.ezdock.boxes.DockVBox.staticMetaObject">
+<code class="sig-name descname">staticMetaObject</code><em class="property"> = &lt;PySide2.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#gdesk.ezdock.boxes.DockVBox.staticMetaObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.ezdock.boxes.PinnedBox">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.ezdock.boxes.</code><code class="sig-name descname">PinnedBox</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">orientation</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.PinnedBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QSplitter</span></code></p>
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.PinnedBox.collapse">
+<code class="sig-name descname">collapse</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">widget</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.PinnedBox.collapse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.PinnedBox.createHandle">
+<code class="sig-name descname">createHandle</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span> &#x2192; PySide2.QtWidgets.QSplitterHandle<a class="headerlink" href="#gdesk.ezdock.boxes.PinnedBox.createHandle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.PinnedBox.distributeWidgets">
+<code class="sig-name descname">distributeWidgets</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">handle</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.PinnedBox.distributeWidgets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.PinnedBox.moveToOtherArea">
+<code class="sig-name descname">moveToOtherArea</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">widget</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.PinnedBox.moveToOtherArea" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gdesk.ezdock.boxes.PinnedBox.staticMetaObject">
+<code class="sig-name descname">staticMetaObject</code><em class="property"> = &lt;PySide2.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#gdesk.ezdock.boxes.PinnedBox.staticMetaObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.ezdock.boxes.PinnedSplitterHandle">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.ezdock.boxes.</code><code class="sig-name descname">PinnedSplitterHandle</code><a class="headerlink" href="#gdesk.ezdock.boxes.PinnedSplitterHandle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QSplitterHandle</span></code></p>
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.PinnedSplitterHandle.mouseDoubleClickEvent">
+<code class="sig-name descname">mouseDoubleClickEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">event</span><span class="p">:</span> <span class="n">PySide2.QtGui.QMouseEvent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.PinnedSplitterHandle.mouseDoubleClickEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gdesk.ezdock.boxes.PinnedSplitterHandle.staticMetaObject">
+<code class="sig-name descname">staticMetaObject</code><em class="property"> = &lt;PySide2.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#gdesk.ezdock.boxes.PinnedSplitterHandle.staticMetaObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.ezdock.boxes.ScrollBox">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.ezdock.boxes.</code><code class="sig-name descname">ScrollBox</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">orientation</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.ScrollBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QScrollArea</span></code></p>
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.ScrollBox.addWidget">
+<code class="sig-name descname">addWidget</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">widget</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.ScrollBox.addWidget" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.ScrollBox.count">
+<code class="sig-name descname">count</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.ScrollBox.count" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.ScrollBox.removeWidget">
+<code class="sig-name descname">removeWidget</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">widget</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.ScrollBox.removeWidget" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gdesk.ezdock.boxes.ScrollBox.staticMetaObject">
+<code class="sig-name descname">staticMetaObject</code><em class="property"> = &lt;PySide2.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#gdesk.ezdock.boxes.ScrollBox.staticMetaObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.ezdock.boxes.SplitBox">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.ezdock.boxes.</code><code class="sig-name descname">SplitBox</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">orientation</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.SplitBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></p>
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.SplitBox.addWidget">
+<code class="sig-name descname">addWidget</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">widget</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.SplitBox.addWidget" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.SplitBox.changeWidgetSize">
+<code class="sig-name descname">changeWidgetSize</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pos_or_widget</span></em>, <em class="sig-param"><span class="n">size</span></em>, <em class="sig-param"><span class="n">delta</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">fixed</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.SplitBox.changeWidgetSize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the widget at pos to size.
+Adapt the size of the splitbox so no other widgets resizes</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.SplitBox.collapse">
+<code class="sig-name descname">collapse</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">widget</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.SplitBox.collapse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.SplitBox.count">
+<code class="sig-name descname">count</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.SplitBox.count" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.SplitBox.distributeWidgets">
+<code class="sig-name descname">distributeWidgets</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">handle</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.SplitBox.distributeWidgets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.SplitBox.indexOf">
+<code class="sig-name descname">indexOf</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">widget</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.SplitBox.indexOf" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.SplitBox.insertWidget">
+<code class="sig-name descname">insertWidget</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pos</span></em>, <em class="sig-param"><span class="n">widget</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.SplitBox.insertWidget" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.SplitBox.orientation">
+<code class="sig-name descname">orientation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.SplitBox.orientation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.SplitBox.removeWidget">
+<code class="sig-name descname">removeWidget</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">widget</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.SplitBox.removeWidget" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.SplitBox.resizeWidget">
+<code class="sig-name descname">resizeWidget</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">widget</span></em>, <em class="sig-param"><span class="n">size</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.SplitBox.resizeWidget" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.SplitBox.setSizes">
+<code class="sig-name descname">setSizes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sizes</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.SplitBox.setSizes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.SplitBox.sizes">
+<code class="sig-name descname">sizes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.SplitBox.sizes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gdesk.ezdock.boxes.SplitBox.staticMetaObject">
+<code class="sig-name descname">staticMetaObject</code><em class="property"> = &lt;PySide2.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#gdesk.ezdock.boxes.SplitBox.staticMetaObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.SplitBox.stretches">
+<code class="sig-name descname">stretches</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.SplitBox.stretches" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.SplitBox.widget">
+<code class="sig-name descname">widget</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">index</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.SplitBox.widget" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.ezdock.boxes.SplitterHandle">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.ezdock.boxes.</code><code class="sig-name descname">SplitterHandle</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">orientation</span></em>, <em class="sig-param"><span class="n">space</span><span class="o">=</span><span class="default_value">5</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.SplitterHandle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></p>
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.SplitterHandle.mouseDoubleClickEvent">
+<code class="sig-name descname">mouseDoubleClickEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">event</span><span class="p">:</span> <span class="n">PySide2.QtGui.QMouseEvent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.SplitterHandle.mouseDoubleClickEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.SplitterHandle.mouseMoveEvent">
+<code class="sig-name descname">mouseMoveEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">event</span><span class="p">:</span> <span class="n">PySide2.QtGui.QMouseEvent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.SplitterHandle.mouseMoveEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.ezdock.boxes.SplitterHandle.orientation">
+<code class="sig-name descname">orientation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.ezdock.boxes.SplitterHandle.orientation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gdesk.ezdock.boxes.SplitterHandle.staticMetaObject">
+<code class="sig-name descname">staticMetaObject</code><em class="property"> = &lt;PySide2.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#gdesk.ezdock.boxes.SplitterHandle.staticMetaObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="gdesk.ezdock.html"
+                        title="previous chapter">gdesk.ezdock package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="gdesk.ezdock.docks.html"
+                        title="next chapter">gdesk.ezdock.docks module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/gdesk.ezdock.boxes.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.ezdock.docks.html" title="gdesk.ezdock.docks module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.ezdock.html" title="gdesk.ezdock package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.ezdock.html" >gdesk.ezdock package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.ezdock.boxes module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Thomas Cools.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

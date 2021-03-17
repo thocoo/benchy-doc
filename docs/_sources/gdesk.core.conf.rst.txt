@@ -1,0 +1,7 @@
+gdesk.core.conf module
+======================
+
+.. automodule:: gdesk.core.conf
+   :members:
+   :undoc-members:
+   :show-inheritance:

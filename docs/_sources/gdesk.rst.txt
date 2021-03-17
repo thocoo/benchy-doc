@@ -1,0 +1,39 @@
+gdesk package
+=============
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   gdesk.core
+   gdesk.dialogs
+   gdesk.dicttree
+   gdesk.ezdock
+   gdesk.gcore
+   gdesk.graphics
+   gdesk.live
+   gdesk.matplotbe
+   gdesk.panels
+   gdesk.rectable
+   gdesk.test
+   gdesk.utils
+   gdesk.widgets
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   gdesk.console
+   gdesk.version
+
+Module contents
+---------------
+
+.. automodule:: gdesk
+   :members:
+   :undoc-members:
+   :show-inheritance:

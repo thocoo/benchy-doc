@@ -1,0 +1,25 @@
+gdesk.dialogs package
+=====================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   gdesk.dialogs.about
+   gdesk.dialogs.base
+   gdesk.dialogs.colormap
+   gdesk.dialogs.editpaths
+   gdesk.dialogs.filedialog
+   gdesk.dialogs.filterlist
+   gdesk.dialogs.formlayout
+   gdesk.dialogs.main
+
+Module contents
+---------------
+
+.. automodule:: gdesk.dialogs
+   :members:
+   :undoc-members:
+   :show-inheritance:

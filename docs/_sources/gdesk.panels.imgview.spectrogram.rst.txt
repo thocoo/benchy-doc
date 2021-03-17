@@ -1,0 +1,7 @@
+gdesk.panels.imgview.spectrogram module
+=======================================
+
+.. automodule:: gdesk.panels.imgview.spectrogram
+   :members:
+   :undoc-members:
+   :show-inheritance:

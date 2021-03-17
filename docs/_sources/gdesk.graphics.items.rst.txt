@@ -1,0 +1,7 @@
+gdesk.graphics.items module
+===========================
+
+.. automodule:: gdesk.graphics.items
+   :members:
+   :undoc-members:
+   :show-inheritance:

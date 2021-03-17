@@ -1,0 +1,7 @@
+gdesk.utils.imconvert module
+============================
+
+.. automodule:: gdesk.utils.imconvert
+   :members:
+   :undoc-members:
+   :show-inheritance:

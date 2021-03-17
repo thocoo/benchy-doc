@@ -1,0 +1,7 @@
+gdesk.panels.imgview.imgdata module
+===================================
+
+.. automodule:: gdesk.panels.imgview.imgdata
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gdesk.utils.names module &#8212; gdesk 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="gdesk.utils.numba_func module" href="gdesk.utils.numba_func.html" />
+    <link rel="prev" title="gdesk.utils.namedmutex module" href="gdesk.utils.namedmutex.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.utils.numba_func.html" title="gdesk.utils.numba_func module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.utils.namedmutex.html" title="gdesk.utils.namedmutex module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.utils.html" accesskey="U">gdesk.utils package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.utils.names module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-gdesk.utils.names">
+<span id="gdesk-utils-names-module"></span><h1>gdesk.utils.names module<a class="headerlink" href="#module-gdesk.utils.names" title="Permalink to this headline">¶</a></h1>
+<p>Provide OrderedStruct and DictStruct classes.</p>
+<p>Also, provide two utility functions: current_code_path() and force2bytes().</p>
+<dl class="py class">
+<dt id="gdesk.utils.names.DictStruct">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.utils.names.</code><code class="sig-name descname">DictStruct</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dictionary</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.names.DictStruct" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Object that mimics a classic structure type for holding data.</p>
+<p>You can consider it to be a dict with all the key/value pairs as object
+attributes, making it easier to do auto-completion on.</p>
+<p>Regular dict methods such as keys(), values() and get() are all present.</p>
+<p>Usage:
+.. code :: Python</p>
+<blockquote>
+<div><p>from iskutil.names import DictStruct
+d = DictStruct(x=50)
+d.a = ‘new attribute a on first level’
+d.b = 508
+print(d.a, d.b)</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.utils.names.OrderedStruct">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.utils.names.</code><code class="sig-name descname">OrderedStruct</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">argv</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.names.OrderedStruct" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Object that mimics a classic structure type for holding data and retains the order
+of the elements.</p>
+<p>You can think of this as an ordered DictStruct, but the name is ‘OrderedStruct’
+because that is shorter ;-)</p>
+<p>All the methods of the dict class are supported, but they will return
+their values NOT ordered.  Instead, call _keys(), _values(), _items() and friends
+prepended with an underscore.</p>
+<p>Usage:
+.. code :: Python</p>
+<blockquote>
+<div><p>os = OrderedStruct(a=20)
+os.b = ‘new attribute b’
+[key_value for key_value in os]
+&gt;&gt;&gt; [(‘a’, 20), (‘b’, ‘new attribute b’)]</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.utils.names.addprop">
+<code class="sig-prename descclassname">gdesk.utils.names.</code><code class="sig-name descname">addprop</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">inst</span></em>, <em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">getter</span></em>, <em class="sig-param"><span class="n">setter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">doc</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.names.addprop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.utils.names.current_code_path">
+<code class="sig-prename descclassname">gdesk.utils.names.</code><code class="sig-name descname">current_code_path</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.names.current_code_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the path of the caller’s source code file.</p>
+<p>If the caller is the shell (interactive scripting), None is returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Path object or None.</p>
+</dd>
+</dl>
+<dl>
+<dt>Example:</dt><dd><p># works only when used from a .py file, not when used
+# in a shell (on standard input):
+from iskutil.names import current_code_path
+folder = current_code_path().parent</p>
+<p># in a shell this is what happens:
+current_code_path() is None
+&gt;&gt;&gt; True</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.utils.names.find_names">
+<code class="sig-prename descclassname">gdesk.utils.names.</code><code class="sig-name descname">find_names</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">obj</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.names.find_names" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.utils.names.force2bytes">
+<code class="sig-prename descclassname">gdesk.utils.names.</code><code class="sig-name descname">force2bytes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">s</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.names.force2bytes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert the given string to bytes by encoding it.</p>
+<p>If the given argument is not a string (already bytes?), then return it verbatim.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>s</strong> – Data to encode in bytes, or any other object.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Bytes-encoded variant of the string, or the given argument verbatim.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.utils.names.fromfilename">
+<code class="sig-prename descclassname">gdesk.utils.names.</code><code class="sig-name descname">fromfilename</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fileName</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.names.fromfilename" title="Permalink to this definition">¶</a></dt>
+<dd><p>parse a filename to a valid identifier
+extension is removed</p>
+</dd></dl>
+
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="gdesk.utils.namedmutex.html"
+                        title="previous chapter">gdesk.utils.namedmutex module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="gdesk.utils.numba_func.html"
+                        title="next chapter">gdesk.utils.numba_func module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/gdesk.utils.names.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.utils.numba_func.html" title="gdesk.utils.numba_func module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.utils.namedmutex.html" title="gdesk.utils.namedmutex module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.utils.html" >gdesk.utils package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.utils.names module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Thomas Cools.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

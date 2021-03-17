@@ -1,0 +1,7 @@
+gdesk.core.history module
+=========================
+
+.. automodule:: gdesk.core.history
+   :members:
+   :undoc-members:
+   :show-inheritance:

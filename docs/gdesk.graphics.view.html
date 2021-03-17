@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gdesk.graphics.view module &#8212; gdesk 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="gdesk.live package" href="gdesk.live.html" />
+    <link rel="prev" title="gdesk.graphics.rulers module" href="gdesk.graphics.rulers.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.live.html" title="gdesk.live package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.graphics.rulers.html" title="gdesk.graphics.rulers module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.graphics.html" accesskey="U">gdesk.graphics package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.graphics.view module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-gdesk.graphics.view">
+<span id="gdesk-graphics-view-module"></span><h1>gdesk.graphics.view module<a class="headerlink" href="#module-gdesk.graphics.view" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="gdesk.graphics.view.SceneView">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.graphics.view.</code><code class="sig-name descname">SceneView</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.view.SceneView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QGraphicsView</span></code></p>
+<dl class="py method">
+<dt id="gdesk.graphics.view.SceneView.limitRefreshRange">
+<code class="sig-name descname">limitRefreshRange</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.view.SceneView.limitRefreshRange" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.view.SceneView.mouseDoubleClickEvent">
+<code class="sig-name descname">mouseDoubleClickEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">event</span><span class="p">:</span> <span class="n">PySide2.QtGui.QMouseEvent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.view.SceneView.mouseDoubleClickEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.view.SceneView.mouseMoveEvent">
+<code class="sig-name descname">mouseMoveEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">event</span><span class="p">:</span> <span class="n">PySide2.QtGui.QMouseEvent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.view.SceneView.mouseMoveEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.view.SceneView.mousePressEvent">
+<code class="sig-name descname">mousePressEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">event</span><span class="p">:</span> <span class="n">PySide2.QtGui.QMouseEvent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.view.SceneView.mousePressEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.view.SceneView.pixelSize">
+<code class="sig-name descname">pixelSize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.view.SceneView.pixelSize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return vector with the length and width of one view pixel in scene coordinates</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.view.SceneView.refresh">
+<code class="sig-name descname">refresh</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.view.SceneView.refresh" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.view.SceneView.resizeEvent">
+<code class="sig-name descname">resizeEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">event</span><span class="p">:</span> <span class="n">PySide2.QtGui.QResizeEvent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.view.SceneView.resizeEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gdesk.graphics.view.SceneView.scale_ended">
+<code class="sig-name descname">scale_ended</code><em class="property"> = &lt;PySide2.QtCore.Signal object&gt;</em><a class="headerlink" href="#gdesk.graphics.view.SceneView.scale_ended" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gdesk.graphics.view.SceneView.scaled">
+<code class="sig-name descname">scaled</code><em class="property"> = &lt;PySide2.QtCore.Signal object&gt;</em><a class="headerlink" href="#gdesk.graphics.view.SceneView.scaled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.view.SceneView.setRange">
+<code class="sig-name descname">setRange</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">scene_width</span></em>, <em class="sig-param"><span class="n">scene_height</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.view.SceneView.setRange" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.view.SceneView.setXLimits">
+<code class="sig-name descname">setXLimits</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">low</span></em>, <em class="sig-param"><span class="n">high</span></em>, <em class="sig-param"><span class="n">left_border</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">right_border</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.view.SceneView.setXLimits" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.view.SceneView.setXPosScale">
+<code class="sig-name descname">setXPosScale</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pos</span></em>, <em class="sig-param"><span class="n">scale</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.view.SceneView.setXPosScale" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.view.SceneView.setYLimits">
+<code class="sig-name descname">setYLimits</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">low</span></em>, <em class="sig-param"><span class="n">high</span></em>, <em class="sig-param"><span class="n">bottom_border</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">top_border</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.view.SceneView.setYLimits" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.view.SceneView.setYPosScale">
+<code class="sig-name descname">setYPosScale</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pos</span></em>, <em class="sig-param"><span class="n">scale</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.view.SceneView.setYPosScale" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gdesk.graphics.view.SceneView.staticMetaObject">
+<code class="sig-name descname">staticMetaObject</code><em class="property"> = &lt;PySide2.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#gdesk.graphics.view.SceneView.staticMetaObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.view.SceneView.translate">
+<code class="sig-name descname">translate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">dx</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">dy</span><span class="p">:</span> <span class="n">float</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.view.SceneView.translate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gdesk.graphics.view.SceneView.translate_ended">
+<code class="sig-name descname">translate_ended</code><em class="property"> = &lt;PySide2.QtCore.Signal object&gt;</em><a class="headerlink" href="#gdesk.graphics.view.SceneView.translate_ended" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gdesk.graphics.view.SceneView.translated">
+<code class="sig-name descname">translated</code><em class="property"> = &lt;PySide2.QtCore.Signal object&gt;</em><a class="headerlink" href="#gdesk.graphics.view.SceneView.translated" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.view.SceneView.updateMatrix">
+<code class="sig-name descname">updateMatrix</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">propagate</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.view.SceneView.updateMatrix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.view.SceneView.useOpenGL">
+<code class="sig-name descname">useOpenGL</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">b</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.view.SceneView.useOpenGL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.view.SceneView.viewRectCoord">
+<code class="sig-name descname">viewRectCoord</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.view.SceneView.viewRectCoord" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.view.SceneView.wheelEvent">
+<code class="sig-name descname">wheelEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">event</span><span class="p">:</span> <span class="n">PySide2.QtGui.QWheelEvent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.view.SceneView.wheelEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gdesk.graphics.view.SceneView.zoom_full">
+<code class="sig-name descname">zoom_full</code><em class="property"> = &lt;PySide2.QtCore.Signal object&gt;</em><a class="headerlink" href="#gdesk.graphics.view.SceneView.zoom_full" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="gdesk.graphics.rulers.html"
+                        title="previous chapter">gdesk.graphics.rulers module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="gdesk.live.html"
+                        title="next chapter">gdesk.live package</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/gdesk.graphics.view.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.live.html" title="gdesk.live package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.graphics.rulers.html" title="gdesk.graphics.rulers module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.graphics.html" >gdesk.graphics package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.graphics.view module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Thomas Cools.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

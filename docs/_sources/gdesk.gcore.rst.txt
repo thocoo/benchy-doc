@@ -1,0 +1,21 @@
+gdesk.gcore package
+===================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   gdesk.gcore.guiapp
+   gdesk.gcore.qgc
+   gdesk.gcore.threadcom
+   gdesk.gcore.utils
+
+Module contents
+---------------
+
+.. automodule:: gdesk.gcore
+   :members:
+   :undoc-members:
+   :show-inheritance:

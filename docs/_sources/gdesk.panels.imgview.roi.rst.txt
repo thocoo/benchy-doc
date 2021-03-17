@@ -1,0 +1,7 @@
+gdesk.panels.imgview.roi module
+===============================
+
+.. automodule:: gdesk.panels.imgview.roi
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+gdesk.rectable.utils module
+===========================
+
+.. automodule:: gdesk.rectable.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:

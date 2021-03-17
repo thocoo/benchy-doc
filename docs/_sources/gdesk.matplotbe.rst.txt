@@ -1,0 +1,10 @@
+gdesk.matplotbe package
+=======================
+
+Module contents
+---------------
+
+.. automodule:: gdesk.matplotbe
+   :members:
+   :undoc-members:
+   :show-inheritance:

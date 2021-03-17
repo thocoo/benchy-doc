@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gdesk.rectable.htmlclip module &#8212; gdesk 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="gdesk.rectable.styles module" href="gdesk.rectable.styles.html" />
+    <link rel="prev" title="gdesk.rectable.base module" href="gdesk.rectable.base.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.rectable.styles.html" title="gdesk.rectable.styles module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.rectable.base.html" title="gdesk.rectable.base module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.rectable.html" accesskey="U">gdesk.rectable package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.rectable.htmlclip module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-gdesk.rectable.htmlclip">
+<span id="gdesk-rectable-htmlclip-module"></span><h1>gdesk.rectable.htmlclip module<a class="headerlink" href="#module-gdesk.rectable.htmlclip" title="Permalink to this headline">¶</a></h1>
+<p>Edit on Jan 02, 2020
+&#64;author: the_RR
+Adapted for python 3.4+</p>
+<p>Requires pywin32
+original: <a class="reference external" href="http://code.activestate.com/recipes/474121/">http://code.activestate.com/recipes/474121/</a></p>
+<blockquote>
+<div><p># HtmlClipboard
+# An interface to the “HTML Format” clipboard data format</p>
+<p>__author__ = “Phillip Piper (jppx1[at]bigfoot.com)”
+__date__ = “2006-02-21”
+__version__ = “0.1”</p>
+</div></blockquote>
+<dl class="py function">
+<dt id="gdesk.rectable.htmlclip.DumpHtml">
+<code class="sig-prename descclassname">gdesk.rectable.htmlclip.</code><code class="sig-name descname">DumpHtml</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.rectable.htmlclip.DumpHtml" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.rectable.htmlclip.GetHtml">
+<code class="sig-prename descclassname">gdesk.rectable.htmlclip.</code><code class="sig-name descname">GetHtml</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.rectable.htmlclip.GetHtml" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Html fragment from the clipboard or None if there is no Html in the clipboard.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.rectable.htmlclip.HasHtml">
+<code class="sig-prename descclassname">gdesk.rectable.htmlclip.</code><code class="sig-name descname">HasHtml</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.rectable.htmlclip.HasHtml" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if there is a Html fragment in the clipboard..</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.rectable.htmlclip.HtmlClipboard">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.rectable.htmlclip.</code><code class="sig-name descname">HtmlClipboard</code><a class="headerlink" href="#gdesk.rectable.htmlclip.HtmlClipboard" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt id="gdesk.rectable.htmlclip.HtmlClipboard.CF_HTML">
+<code class="sig-name descname">CF_HTML</code><em class="property"> = None</em><a class="headerlink" href="#gdesk.rectable.htmlclip.HtmlClipboard.CF_HTML" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gdesk.rectable.htmlclip.HtmlClipboard.DEFAULT_HTML_BODY">
+<code class="sig-name descname">DEFAULT_HTML_BODY</code><em class="property"> = '&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0 Transitional//EN&quot;&gt;&lt;HTML&gt;&lt;HEAD&gt;&lt;/HEAD&gt;&lt;BODY&gt;&lt;!--StartFragment--&gt;%s&lt;!--EndFragment--&gt;&lt;/BODY&gt;&lt;/HTML&gt;'</em><a class="headerlink" href="#gdesk.rectable.htmlclip.HtmlClipboard.DEFAULT_HTML_BODY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.rectable.htmlclip.HtmlClipboard.DecodeClipboardSource">
+<code class="sig-name descname">DecodeClipboardSource</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">src</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.rectable.htmlclip.HtmlClipboard.DecodeClipboardSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decode the given string to figure out the details of the HTML that’s on the string</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.rectable.htmlclip.HtmlClipboard.EncodeClipboardSource">
+<code class="sig-name descname">EncodeClipboardSource</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">html</span></em>, <em class="sig-param"><span class="n">fragmentStart</span></em>, <em class="sig-param"><span class="n">fragmentEnd</span></em>, <em class="sig-param"><span class="n">selectionStart</span></em>, <em class="sig-param"><span class="n">selectionEnd</span></em>, <em class="sig-param"><span class="n">source</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.rectable.htmlclip.HtmlClipboard.EncodeClipboardSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Join all our bits of information into a string formatted as per the HTML format specs.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.rectable.htmlclip.HtmlClipboard.GetAvailableFormats">
+<code class="sig-name descname">GetAvailableFormats</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.rectable.htmlclip.HtmlClipboard.GetAvailableFormats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a possibly empty list of formats available on the clipboard</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.rectable.htmlclip.HtmlClipboard.GetCfHtml">
+<code class="sig-name descname">GetCfHtml</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.rectable.htmlclip.HtmlClipboard.GetCfHtml" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the FORMATID of the HTML format</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.rectable.htmlclip.HtmlClipboard.GetFragment">
+<code class="sig-name descname">GetFragment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">refresh</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.rectable.htmlclip.HtmlClipboard.GetFragment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Html fragment. A fragment is well-formated HTML enclosing the selected text</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.rectable.htmlclip.HtmlClipboard.GetFromClipboard">
+<code class="sig-name descname">GetFromClipboard</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.rectable.htmlclip.HtmlClipboard.GetFromClipboard" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read and decode the HTML from the clipboard</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.rectable.htmlclip.HtmlClipboard.GetHtml">
+<code class="sig-name descname">GetHtml</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">refresh</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.rectable.htmlclip.HtmlClipboard.GetHtml" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the entire Html document</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.rectable.htmlclip.HtmlClipboard.GetSelection">
+<code class="sig-name descname">GetSelection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">refresh</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.rectable.htmlclip.HtmlClipboard.GetSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the part of the HTML that was selected. It might not be well-formed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.rectable.htmlclip.HtmlClipboard.GetSource">
+<code class="sig-name descname">GetSource</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">refresh</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.rectable.htmlclip.HtmlClipboard.GetSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the URL of the source of this HTML</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.rectable.htmlclip.HtmlClipboard.HasHtmlFormat">
+<code class="sig-name descname">HasHtmlFormat</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.rectable.htmlclip.HtmlClipboard.HasHtmlFormat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a boolean indicating if the clipboard has data in HTML format</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="gdesk.rectable.htmlclip.HtmlClipboard.MARKER_BLOCK">
+<code class="sig-name descname">MARKER_BLOCK</code><em class="property"> = 'Version:(\\S+)\\s+StartHTML:(\\d+)\\s+EndHTML:(\\d+)\\s+StartFragment:(\\d+)\\s+EndFragment:(\\d+)\\s+SourceURL:(\\S+)'</em><a class="headerlink" href="#gdesk.rectable.htmlclip.HtmlClipboard.MARKER_BLOCK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gdesk.rectable.htmlclip.HtmlClipboard.MARKER_BLOCK_EX">
+<code class="sig-name descname">MARKER_BLOCK_EX</code><em class="property"> = 'Version:(\\S+)\\s+StartHTML:(\\d+)\\s+EndHTML:(\\d+)\\s+StartFragment:(\\d+)\\s+EndFragment:(\\d+)\\s+StartSelection:(\\d+)\\s+EndSelection:(\\d+)\\s+SourceURL:(\\S+)'</em><a class="headerlink" href="#gdesk.rectable.htmlclip.HtmlClipboard.MARKER_BLOCK_EX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gdesk.rectable.htmlclip.HtmlClipboard.MARKER_BLOCK_EX_RE">
+<code class="sig-name descname">MARKER_BLOCK_EX_RE</code><em class="property"> = re.compile('Version:(\\S+)\\s+StartHTML:(\\d+)\\s+EndHTML:(\\d+)\\s+StartFragment:(\\d+)\\s+EndFragment:(\\d+)\\s+StartSelection:(\\d+)\\s+EndSelection:(\\d+)\\s+SourceURL:(\\S+)')</em><a class="headerlink" href="#gdesk.rectable.htmlclip.HtmlClipboard.MARKER_BLOCK_EX_RE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gdesk.rectable.htmlclip.HtmlClipboard.MARKER_BLOCK_OUTPUT">
+<code class="sig-name descname">MARKER_BLOCK_OUTPUT</code><em class="property"> = 'Version:1.0\r\nStartHTML:%09d\r\nEndHTML:%09d\r\nStartFragment:%09d\r\nEndFragment:%09d\r\nStartSelection:%09d\r\nEndSelection:%09d\r\nSourceURL:%s\r\n'</em><a class="headerlink" href="#gdesk.rectable.htmlclip.HtmlClipboard.MARKER_BLOCK_OUTPUT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gdesk.rectable.htmlclip.HtmlClipboard.MARKER_BLOCK_RE">
+<code class="sig-name descname">MARKER_BLOCK_RE</code><em class="property"> = re.compile('Version:(\\S+)\\s+StartHTML:(\\d+)\\s+EndHTML:(\\d+)\\s+StartFragment:(\\d+)\\s+EndFragment:(\\d+)\\s+SourceURL:(\\S+)')</em><a class="headerlink" href="#gdesk.rectable.htmlclip.HtmlClipboard.MARKER_BLOCK_RE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.rectable.htmlclip.HtmlClipboard.PutFragment">
+<code class="sig-name descname">PutFragment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fragment</span></em>, <em class="sig-param"><span class="n">selection</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">html</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.rectable.htmlclip.HtmlClipboard.PutFragment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Put the given well-formed fragment of Html into the clipboard.
+selection, if given, must be a literal string within fragment.
+html, if given, must be a well-formed Html document that textually
+contains fragment and its required markers.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.rectable.htmlclip.HtmlClipboard.PutToClipboard">
+<code class="sig-name descname">PutToClipboard</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">html</span></em>, <em class="sig-param"><span class="n">fragmentStart</span></em>, <em class="sig-param"><span class="n">fragmentEnd</span></em>, <em class="sig-param"><span class="n">selectionStart</span></em>, <em class="sig-param"><span class="n">selectionEnd</span></em>, <em class="sig-param"><span class="n">source</span><span class="o">=</span><span class="default_value">'None'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.rectable.htmlclip.HtmlClipboard.PutToClipboard" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replace the Clipboard contents with the given html information.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.rectable.htmlclip.PutHtml">
+<code class="sig-prename descclassname">gdesk.rectable.htmlclip.</code><code class="sig-name descname">PutHtml</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fragment</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.rectable.htmlclip.PutHtml" title="Permalink to this definition">¶</a></dt>
+<dd><p>Put the given fragment into the clipboard.
+Convenience function to do the most common operation</p>
+</dd></dl>
+
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="gdesk.rectable.base.html"
+                        title="previous chapter">gdesk.rectable.base module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="gdesk.rectable.styles.html"
+                        title="next chapter">gdesk.rectable.styles module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/gdesk.rectable.htmlclip.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.rectable.styles.html" title="gdesk.rectable.styles module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.rectable.base.html" title="gdesk.rectable.base module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.rectable.html" >gdesk.rectable package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.rectable.htmlclip module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Thomas Cools.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

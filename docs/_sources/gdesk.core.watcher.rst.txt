@@ -1,0 +1,7 @@
+gdesk.core.watcher module
+=========================
+
+.. automodule:: gdesk.core.watcher
+   :members:
+   :undoc-members:
+   :show-inheritance:

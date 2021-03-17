@@ -1,0 +1,19 @@
+gdesk.panels.matplot package
+============================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   gdesk.panels.matplot.plotpanel
+   gdesk.panels.matplot.plotproxy
+
+Module contents
+---------------
+
+.. automodule:: gdesk.panels.matplot
+   :members:
+   :undoc-members:
+   :show-inheritance:

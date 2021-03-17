@@ -1,0 +1,7 @@
+gdesk.panels.imgview.proxy module
+=================================
+
+.. automodule:: gdesk.panels.imgview.proxy
+   :members:
+   :undoc-members:
+   :show-inheritance:

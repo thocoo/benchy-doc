@@ -1,0 +1,7 @@
+gdesk.panels.imgview.blueprint module
+=====================================
+
+.. automodule:: gdesk.panels.imgview.blueprint
+   :members:
+   :undoc-members:
+   :show-inheritance:

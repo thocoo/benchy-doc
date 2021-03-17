@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gdesk.graphics.point module &#8212; gdesk 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="gdesk.graphics.rulers module" href="gdesk.graphics.rulers.html" />
+    <link rel="prev" title="gdesk.graphics.plotview module" href="gdesk.graphics.plotview.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.graphics.rulers.html" title="gdesk.graphics.rulers module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.graphics.plotview.html" title="gdesk.graphics.plotview module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.graphics.html" accesskey="U">gdesk.graphics package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.graphics.point module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-gdesk.graphics.point">
+<span id="gdesk-graphics-point-module"></span><h1>gdesk.graphics.point module<a class="headerlink" href="#module-gdesk.graphics.point" title="Permalink to this headline">¶</a></h1>
+<p>Point.py -  Extension of QPointF which adds a few missing methods.
+Copyright 2010  Luke Campagnola
+Distributed under MIT/X11 license. See license.txt for more infomation.</p>
+<dl class="py class">
+<dt id="gdesk.graphics.point.Point">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.graphics.point.</code><code class="sig-name descname">Point</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.point.Point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtCore.QPointF</span></code></p>
+<p>Extension of QPointF which adds a few missing methods.</p>
+<dl class="py method">
+<dt id="gdesk.graphics.point.Point.copy">
+<code class="sig-name descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.point.Point.copy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.point.Point.cross">
+<code class="sig-name descname">cross</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">a</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.point.Point.cross" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.point.Point.dot">
+<code class="sig-name descname">dot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">a</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.point.Point.dot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the dot product of a and this Point.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.point.Point.length">
+<code class="sig-name descname">length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.point.Point.length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the vector length of this Point.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.point.Point.max">
+<code class="sig-name descname">max</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.point.Point.max" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.point.Point.min">
+<code class="sig-name descname">min</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.point.Point.min" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.point.Point.norm">
+<code class="sig-name descname">norm</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.point.Point.norm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a vector in the same direction with unit length.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.point.Point.proj">
+<code class="sig-name descname">proj</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">b</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.point.Point.proj" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the projection of this vector onto the vector b</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.point.Point.toQPoint">
+<code class="sig-name descname">toQPoint</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.point.Point.toQPoint" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="gdesk.graphics.plotview.html"
+                        title="previous chapter">gdesk.graphics.plotview module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="gdesk.graphics.rulers.html"
+                        title="next chapter">gdesk.graphics.rulers module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/gdesk.graphics.point.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.graphics.rulers.html" title="gdesk.graphics.rulers module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.graphics.plotview.html" title="gdesk.graphics.plotview module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.graphics.html" >gdesk.graphics package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.graphics.point module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Thomas Cools.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

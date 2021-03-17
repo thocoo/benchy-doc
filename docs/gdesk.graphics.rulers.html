@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gdesk.graphics.rulers module &#8212; gdesk 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="gdesk.graphics.view module" href="gdesk.graphics.view.html" />
+    <link rel="prev" title="gdesk.graphics.point module" href="gdesk.graphics.point.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.graphics.view.html" title="gdesk.graphics.view module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.graphics.point.html" title="gdesk.graphics.point module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.graphics.html" accesskey="U">gdesk.graphics package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.graphics.rulers module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-gdesk.graphics.rulers">
+<span id="gdesk-graphics-rulers-module"></span><h1>gdesk.graphics.rulers module<a class="headerlink" href="#module-gdesk.graphics.rulers" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="gdesk.graphics.rulers.Axis">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.graphics.rulers.</code><code class="sig-name descname">Axis</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">plotAngle</span></em>, <em class="sig-param"><span class="n">start</span></em>, <em class="sig-param"><span class="n">stop</span></em>, <em class="sig-param"><span class="n">thicks</span></em>, <em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scene</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.rulers.Axis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QGraphicsLineItem</span></code></p>
+<dl class="py method">
+<dt id="gdesk.graphics.rulers.Axis.createAxis">
+<code class="sig-name descname">createAxis</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.rulers.Axis.createAxis" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.graphics.rulers.Grid">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.graphics.rulers.</code><code class="sig-name descname">Grid</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ruler</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scene</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.rulers.Grid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QGraphicsItemGroup</span></code></p>
+<dl class="py method">
+<dt id="gdesk.graphics.rulers.Grid.make_labels">
+<code class="sig-name descname">make_labels</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">push_values</span></em>, <em class="sig-param"><span class="n">grid</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.rulers.Grid.make_labels" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.rulers.Grid.orientation">
+<em class="property">property </em><code class="sig-name descname">orientation</code><a class="headerlink" href="#gdesk.graphics.rulers.Grid.orientation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.rulers.Grid.remove_labels">
+<code class="sig-name descname">remove_labels</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pop_values</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.rulers.Grid.remove_labels" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.rulers.Grid.ticks">
+<em class="property">property </em><code class="sig-name descname">ticks</code><a class="headerlink" href="#gdesk.graphics.rulers.Grid.ticks" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.rulers.Grid.update_labels">
+<code class="sig-name descname">update_labels</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">grid</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.rulers.Grid.update_labels" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.graphics.rulers.GridItem">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.graphics.rulers.</code><code class="sig-name descname">GridItem</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">level</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scene</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.rulers.GridItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QGraphicsLineItem</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.graphics.rulers.LabelItem">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.graphics.rulers.</code><code class="sig-name descname">LabelItem</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">level</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">grid</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scene</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.rulers.LabelItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QGraphicsLineItem</span></code></p>
+<dl class="py method">
+<dt id="gdesk.graphics.rulers.LabelItem.setRightAlign">
+<code class="sig-name descname">setRightAlign</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.rulers.LabelItem.setRightAlign" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.graphics.rulers.SubDivisionX">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.graphics.rulers.</code><code class="sig-name descname">SubDivisionX</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scene</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.rulers.SubDivisionX" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QGraphicsLineItem</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.graphics.rulers.SubDivisionY">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.graphics.rulers.</code><code class="sig-name descname">SubDivisionY</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scene</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.rulers.SubDivisionY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QGraphicsLineItem</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.graphics.rulers.TickedRuler">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.graphics.rulers.</code><code class="sig-name descname">TickedRuler</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">orientation</span></em>, <em class="sig-param"><span class="n">start</span></em>, <em class="sig-param"><span class="n">stop</span></em>, <em class="sig-param"><span class="n">scale</span></em>, <em class="sig-param"><span class="n">noDecimals</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scene</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.rulers.TickedRuler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QGraphicsPolygonItem</span></code></p>
+<dl class="py method">
+<dt id="gdesk.graphics.rulers.TickedRuler.create_ticks">
+<code class="sig-name descname">create_ticks</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">start</span></em>, <em class="sig-param"><span class="n">stop</span></em>, <em class="sig-param"><span class="n">scale</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.rulers.TickedRuler.create_ticks" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.rulers.TickedRuler.init_bg">
+<code class="sig-name descname">init_bg</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.rulers.TickedRuler.init_bg" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.rulers.TickedRuler.make_labels">
+<code class="sig-name descname">make_labels</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">push_values</span></em>, <em class="sig-param"><span class="n">grid</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.rulers.TickedRuler.make_labels" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.rulers.TickedRuler.remove_labels">
+<code class="sig-name descname">remove_labels</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pop_values</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.rulers.TickedRuler.remove_labels" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.rulers.TickedRuler.thicks">
+<em class="property">property </em><code class="sig-name descname">thicks</code><a class="headerlink" href="#gdesk.graphics.rulers.TickedRuler.thicks" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.rulers.TickedRuler.update_labels">
+<code class="sig-name descname">update_labels</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">start</span></em>, <em class="sig-param"><span class="n">stop</span></em>, <em class="sig-param"><span class="n">scale</span></em>, <em class="sig-param"><span class="n">grid</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.rulers.TickedRuler.update_labels" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.graphics.rulers.yAxisLabel">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.graphics.rulers.</code><code class="sig-name descname">yAxisLabel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">fontNumber</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scene</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.rulers.yAxisLabel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QGraphicsLineItem</span></code></p>
+<dl class="py method">
+<dt id="gdesk.graphics.rulers.yAxisLabel.setRightAlign">
+<code class="sig-name descname">setRightAlign</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.rulers.yAxisLabel.setRightAlign" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="gdesk.graphics.point.html"
+                        title="previous chapter">gdesk.graphics.point module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="gdesk.graphics.view.html"
+                        title="next chapter">gdesk.graphics.view module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/gdesk.graphics.rulers.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.graphics.view.html" title="gdesk.graphics.view module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.graphics.point.html" title="gdesk.graphics.point module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.graphics.html" >gdesk.graphics package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.graphics.rulers module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Thomas Cools.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

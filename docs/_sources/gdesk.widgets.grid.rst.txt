@@ -1,0 +1,7 @@
+gdesk.widgets.grid module
+=========================
+
+.. automodule:: gdesk.widgets.grid
+   :members:
+   :undoc-members:
+   :show-inheritance:

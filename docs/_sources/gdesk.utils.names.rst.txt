@@ -1,0 +1,7 @@
+gdesk.utils.names module
+========================
+
+.. automodule:: gdesk.utils.names
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+gdesk.ezdock.boxes module
+=========================
+
+.. automodule:: gdesk.ezdock.boxes
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+gdesk.utils.numba\_func module
+==============================
+
+.. automodule:: gdesk.utils.numba_func
+   :members:
+   :undoc-members:
+   :show-inheritance:

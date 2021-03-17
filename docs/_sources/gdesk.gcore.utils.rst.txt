@@ -1,0 +1,7 @@
+gdesk.gcore.utils module
+========================
+
+.. automodule:: gdesk.gcore.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,21 @@
+gdesk.rectable package
+======================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   gdesk.rectable.base
+   gdesk.rectable.htmlclip
+   gdesk.rectable.styles
+   gdesk.rectable.utils
+
+Module contents
+---------------
+
+.. automodule:: gdesk.rectable
+   :members:
+   :undoc-members:
+   :show-inheritance:

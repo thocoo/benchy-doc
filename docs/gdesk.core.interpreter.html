@@ -1,0 +1,296 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gdesk.core.interpreter module &#8212; gdesk 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="gdesk.core.shellmod module" href="gdesk.core.shellmod.html" />
+    <link rel="prev" title="gdesk.core.history module" href="gdesk.core.history.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.core.shellmod.html" title="gdesk.core.shellmod module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.core.history.html" title="gdesk.core.history module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.core.html" accesskey="U">gdesk.core package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.core.interpreter module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-gdesk.core.interpreter">
+<span id="gdesk-core-interpreter-module"></span><h1>gdesk.core.interpreter module<a class="headerlink" href="#module-gdesk.core.interpreter" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="gdesk.core.interpreter.Interpreter">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.core.interpreter.</code><code class="sig-name descname">Interpreter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">workspace</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">thread_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.Interpreter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="gdesk.core.interpreter.Interpreter.async_break">
+<code class="sig-name descname">async_break</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.Interpreter.async_break" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.interpreter.Interpreter.async_system_exit">
+<code class="sig-name descname">async_system_exit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.Interpreter.async_system_exit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.interpreter.Interpreter.compile_source">
+<code class="sig-name descname">compile_source</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">source</span></em>, <em class="sig-param"><span class="n">filename</span><span class="o">=</span><span class="default_value">'&lt;input&gt;'</span></em>, <em class="sig-param"><span class="n">symbol</span><span class="o">=</span><span class="default_value">'auto'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.Interpreter.compile_source" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compile and run some source in the interpreter.</p>
+<p>Arguments are as for compile_command().</p>
+<p>One several things can happen:</p>
+<p>1) The input is incorrect; compile_command() raised an
+exception (SyntaxError or OverflowError).  A syntax traceback
+will be printed by calling the showsyntaxerror() method.</p>
+<p>2) The input is incomplete, and more input is required;
+compile_command() returned None.  Nothing happens.</p>
+<p>3) The input is complete; compile_command() returned a code
+object.  The code is executed by calling self.runcode() (which
+also handles run-time exceptions, except for SystemExit).</p>
+<p>The return value is True in case 2, False in the other cases (unless
+an exception is raised).  The return value can be used to
+decide whether to use sys.ps1 or sys.ps2 to prompt the next
+line.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.interpreter.Interpreter.eval_expression">
+<code class="sig-name descname">eval_expression</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">expression</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.Interpreter.eval_expression" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute a code object.</p>
+<p>When an exception occurs, self.showtraceback() is called to
+display a traceback.  All exceptions are caught except
+SystemExit, which is reraised.</p>
+<p>A note about KeyboardInterrupt: this exception may occur
+elsewhere in this code, and may not always be caught.  The
+caller should be prepared to deal with it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.interpreter.Interpreter.exec_code">
+<code class="sig-name descname">exec_code</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">code</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.Interpreter.exec_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute a code object.</p>
+<p>When an exception occurs, self.showtraceback() is called to
+display a traceback.  All exceptions are caught except
+SystemExit, which is reraised.</p>
+<p>A note about KeyboardInterrupt: this exception may occur
+elsewhere in this code, and may not always be caught.  The
+caller should be prepared to deal with it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.interpreter.Interpreter.get_code_frames">
+<code class="sig-name descname">get_code_frames</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">back</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.Interpreter.get_code_frames" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.interpreter.Interpreter.showsyntaxerror">
+<code class="sig-name descname">showsyntaxerror</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.Interpreter.showsyntaxerror" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display the syntax error that just occurred.</p>
+<p>This doesn’t display a stack trace because there isn’t one.</p>
+<p>If a filename is given, it is stuffed in the exception instead
+of what was there before (because Python’s parser always uses
+“&lt;string&gt;” when reading from a string).</p>
+<p>The output is written by self.write(), below.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.interpreter.Interpreter.showtraceback">
+<code class="sig-name descname">showtraceback</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.Interpreter.showtraceback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display the exception that just occurred.</p>
+<p>We remove the first stack item because it is our own code.</p>
+<p>The output is written by self.write(), below.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.interpreter.Interpreter.use_one_command">
+<code class="sig-name descname">use_one_command</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cmd</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.Interpreter.use_one_command" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.interpreter.Interpreter.write_error">
+<code class="sig-name descname">write_error</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.Interpreter.write_error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.core.interpreter.QueueInterpreter">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.core.interpreter.</code><code class="sig-name descname">QueueInterpreter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">shell</span></em>, <em class="sig-param"><span class="n">cqs</span></em>, <em class="sig-param"><span class="n">gui_proxy</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="gdesk.core.interpreter.QueueInterpreter.commandLoop">
+<code class="sig-name descname">commandLoop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter.commandLoop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.interpreter.QueueInterpreter.control">
+<code class="sig-name descname">control</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter.control" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.interpreter.QueueInterpreter.control_loop">
+<code class="sig-name descname">control_loop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter.control_loop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.interpreter.QueueInterpreter.create_and_interact">
+<em class="property">static </em><code class="sig-name descname">create_and_interact</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">shell</span></em>, <em class="sig-param"><span class="n">cqs</span></em>, <em class="sig-param"><span class="n">gui_proxy</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter.create_and_interact" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.interpreter.QueueInterpreter.execute">
+<code class="sig-name descname">execute</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter.execute" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.interpreter.QueueInterpreter.get_current_locals">
+<code class="sig-name descname">get_current_locals</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">back</span><span class="o">=</span><span class="default_value">5</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter.get_current_locals" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.interpreter.QueueInterpreter.get_current_trace">
+<code class="sig-name descname">get_current_trace</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">back</span><span class="o">=</span><span class="default_value">50</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter.get_current_trace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.interpreter.QueueInterpreter.interact">
+<code class="sig-name descname">interact</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter.interact" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.interpreter.QueueInterpreter.register_thread">
+<code class="sig-name descname">register_thread</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tid</span></em>, <em class="sig-param"><span class="n">cqs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter.register_thread" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.interpreter.QueueInterpreter.set_console_mode">
+<code class="sig-name descname">set_console_mode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mode</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter.set_console_mode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.interpreter.QueueInterpreter.system_tracer">
+<code class="sig-name descname">system_tracer</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter.system_tracer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.interpreter.QueueInterpreter.unregister_thread">
+<code class="sig-name descname">unregister_thread</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter.unregister_thread" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt id="gdesk.core.interpreter.SyncBreaked">
+<em class="property">exception </em><code class="sig-prename descclassname">gdesk.core.interpreter.</code><code class="sig-name descname">SyncBreaked</code><a class="headerlink" href="#gdesk.core.interpreter.SyncBreaked" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.core.interpreter.async_break">
+<code class="sig-prename descclassname">gdesk.core.interpreter.</code><code class="sig-name descname">async_break</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">thread_id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.async_break" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.core.interpreter.async_raise">
+<code class="sig-prename descclassname">gdesk.core.interpreter.</code><code class="sig-name descname">async_raise</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">thread_id</span></em>, <em class="sig-param"><span class="n">exctype</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.async_raise" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raise the exception to the thread tid, performs cleanup if needed.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.core.interpreter.async_system_exit">
+<code class="sig-prename descclassname">gdesk.core.interpreter.</code><code class="sig-name descname">async_system_exit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">thread_id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.async_system_exit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="gdesk.core.history.html"
+                        title="previous chapter">gdesk.core.history module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="gdesk.core.shellmod.html"
+                        title="next chapter">gdesk.core.shellmod module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/gdesk.core.interpreter.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.core.shellmod.html" title="gdesk.core.shellmod module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.core.history.html" title="gdesk.core.history module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.core.html" >gdesk.core package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.core.interpreter module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Thomas Cools.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

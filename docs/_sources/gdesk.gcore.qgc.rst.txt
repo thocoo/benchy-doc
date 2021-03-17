@@ -1,0 +1,7 @@
+gdesk.gcore.qgc module
+======================
+
+.. automodule:: gdesk.gcore.qgc
+   :members:
+   :undoc-members:
+   :show-inheritance:

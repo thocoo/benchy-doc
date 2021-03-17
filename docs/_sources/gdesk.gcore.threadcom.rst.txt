@@ -1,0 +1,7 @@
+gdesk.gcore.threadcom module
+============================
+
+.. automodule:: gdesk.gcore.threadcom
+   :members:
+   :undoc-members:
+   :show-inheritance:

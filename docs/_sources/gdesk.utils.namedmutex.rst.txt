@@ -1,0 +1,7 @@
+gdesk.utils.namedmutex module
+=============================
+
+.. automodule:: gdesk.utils.namedmutex
+   :members:
+   :undoc-members:
+   :show-inheritance:

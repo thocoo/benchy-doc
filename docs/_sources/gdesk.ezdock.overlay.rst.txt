@@ -1,0 +1,7 @@
+gdesk.ezdock.overlay module
+===========================
+
+.. automodule:: gdesk.ezdock.overlay
+   :members:
+   :undoc-members:
+   :show-inheritance:

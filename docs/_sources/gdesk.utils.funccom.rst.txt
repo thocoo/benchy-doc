@@ -1,0 +1,7 @@
+gdesk.utils.funccom module
+==========================
+
+.. automodule:: gdesk.utils.funccom
+   :members:
+   :undoc-members:
+   :show-inheritance:

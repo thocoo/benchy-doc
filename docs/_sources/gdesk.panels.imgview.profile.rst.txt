@@ -1,0 +1,7 @@
+gdesk.panels.imgview.profile module
+===================================
+
+.. automodule:: gdesk.panels.imgview.profile
+   :members:
+   :undoc-members:
+   :show-inheritance:

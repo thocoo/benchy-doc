@@ -1,0 +1,7 @@
+gdesk.panels.imgview.quantiles module
+=====================================
+
+.. automodule:: gdesk.panels.imgview.quantiles
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+gdesk.panels.imgview.dimensions module
+======================================
+
+.. automodule:: gdesk.panels.imgview.dimensions
+   :members:
+   :undoc-members:
+   :show-inheritance:

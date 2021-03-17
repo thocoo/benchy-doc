@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gdesk.graphics.items module &#8212; gdesk 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="gdesk.graphics.plotview module" href="gdesk.graphics.plotview.html" />
+    <link rel="prev" title="gdesk.graphics.grid module" href="gdesk.graphics.grid.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.graphics.plotview.html" title="gdesk.graphics.plotview module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.graphics.grid.html" title="gdesk.graphics.grid module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.graphics.html" accesskey="U">gdesk.graphics package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.graphics.items module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-gdesk.graphics.items">
+<span id="gdesk-graphics-items-module"></span><h1>gdesk.graphics.items module<a class="headerlink" href="#module-gdesk.graphics.items" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="gdesk.graphics.items.Grid">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.graphics.items.</code><code class="sig-name descname">Grid</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">direction</span></em>, <em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scene</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.items.Grid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QGraphicsItem</span></code></p>
+<dl class="py method">
+<dt id="gdesk.graphics.items.Grid.attach_rulers">
+<code class="sig-name descname">attach_rulers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x_ruler</span></em>, <em class="sig-param"><span class="n">y_ruler</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.items.Grid.attach_rulers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.items.Grid.boundingRect">
+<code class="sig-name descname">boundingRect</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span> &#x2192; PySide2.QtCore.QRectF<a class="headerlink" href="#gdesk.graphics.items.Grid.boundingRect" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.items.Grid.paint">
+<code class="sig-name descname">paint</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">painter</span><span class="p">:</span> <span class="n">PySide2.QtGui.QPainter</span></em>, <em class="sig-param"><span class="n">option</span><span class="p">:</span> <span class="n">PySide2.QtWidgets.QStyleOptionGraphicsItem</span></em>, <em class="sig-param"><span class="n">widget</span><span class="p">:</span> <span class="n">typing.Union<span class="p">[</span>PySide2.QtWidgets.QWidget<span class="p">, </span>NoneType<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.items.Grid.paint" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.items.Grid.update_grid">
+<code class="sig-name descname">update_grid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.items.Grid.update_grid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.graphics.items.Indicator">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.graphics.items.</code><code class="sig-name descname">Indicator</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">color</span><span class="o">=</span><span class="default_value">PySide2.QtCore.Qt.GlobalColor.blue</span></em>, <em class="sig-param"><span class="n">text</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scene</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.items.Indicator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QGraphicsPolygonItem</span></code></p>
+<dl class="py method">
+<dt id="gdesk.graphics.items.Indicator.attach_curves">
+<code class="sig-name descname">attach_curves</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">curves</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.items.Indicator.attach_curves" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.items.Indicator.declutter_ylabels">
+<code class="sig-name descname">declutter_ylabels</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ymin</span><span class="o">=</span><span class="default_value">- 4000</span></em>, <em class="sig-param"><span class="n">ymax</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.items.Indicator.declutter_ylabels" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.items.Indicator.mouseMoveEvent">
+<code class="sig-name descname">mouseMoveEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">event</span><span class="p">:</span> <span class="n">PySide2.QtWidgets.QGraphicsSceneMouseEvent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.items.Indicator.mouseMoveEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.items.Indicator.mouseReleaseEvent">
+<code class="sig-name descname">mouseReleaseEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">event</span><span class="p">:</span> <span class="n">PySide2.QtWidgets.QGraphicsSceneMouseEvent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.items.Indicator.mouseReleaseEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.items.Indicator.set_ylabel_count">
+<code class="sig-name descname">set_ylabel_count</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">count</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.items.Indicator.set_ylabel_count" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.items.Indicator.updates_ylabels">
+<code class="sig-name descname">updates_ylabels</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.items.Indicator.updates_ylabels" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.graphics.items.ItemSignal">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.graphics.items.</code><code class="sig-name descname">ItemSignal</code><a class="headerlink" href="#gdesk.graphics.items.ItemSignal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="gdesk.graphics.items.ItemSignal.connect">
+<code class="sig-name descname">connect</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">func</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.items.ItemSignal.connect" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.items.ItemSignal.emit">
+<code class="sig-name descname">emit</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.items.ItemSignal.emit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.graphics.items.LabelItem">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.graphics.items.</code><code class="sig-name descname">LabelItem</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">color</span><span class="o">=</span><span class="default_value">PySide2.QtGui.QColor.fromRgbF(0.0, 0.0, 0.0, 1.0)</span></em>, <em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scene</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.items.LabelItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QGraphicsPolygonItem</span></code></p>
+<dl class="py method">
+<dt id="gdesk.graphics.items.LabelItem.makePolygon">
+<code class="sig-name descname">makePolygon</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">box_width</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.items.LabelItem.makePolygon" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.items.LabelItem.mouseMoveEvent">
+<code class="sig-name descname">mouseMoveEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">event</span><span class="p">:</span> <span class="n">PySide2.QtWidgets.QGraphicsSceneMouseEvent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.items.LabelItem.mouseMoveEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.items.LabelItem.mouseReleaseEvent">
+<code class="sig-name descname">mouseReleaseEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">event</span><span class="p">:</span> <span class="n">PySide2.QtWidgets.QGraphicsSceneMouseEvent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.items.LabelItem.mouseReleaseEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.items.LabelItem.updateText">
+<code class="sig-name descname">updateText</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.items.LabelItem.updateText" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.graphics.items.VectorCurve">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.graphics.items.</code><code class="sig-name descname">VectorCurve</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span></em>, <em class="sig-param"><span class="n">xvector</span></em>, <em class="sig-param"><span class="n">yvector</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.items.VectorCurve" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QGraphicsPathItem</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.graphics.items.YLabelItem">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.graphics.items.</code><code class="sig-name descname">YLabelItem</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">color</span><span class="o">=</span><span class="default_value">PySide2.QtGui.QColor.fromRgbF(0.0, 0.0, 0.0, 1.0)</span></em>, <em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scene</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.items.YLabelItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QGraphicsPolygonItem</span></code></p>
+<dl class="py method">
+<dt id="gdesk.graphics.items.YLabelItem.makePolygon">
+<code class="sig-name descname">makePolygon</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.items.YLabelItem.makePolygon" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.items.YLabelItem.mouseMoveEvent">
+<code class="sig-name descname">mouseMoveEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">event</span><span class="p">:</span> <span class="n">PySide2.QtWidgets.QGraphicsSceneMouseEvent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.items.YLabelItem.mouseMoveEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.items.YLabelItem.sortkey">
+<code class="sig-name descname">sortkey</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.items.YLabelItem.sortkey" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.items.YLabelItem.updateText">
+<code class="sig-name descname">updateText</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.items.YLabelItem.updateText" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.graphics.items.YLabelItem.update_offset">
+<code class="sig-name descname">update_offset</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">offset</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.items.YLabelItem.update_offset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.graphics.items.createCurve">
+<code class="sig-prename descclassname">gdesk.graphics.items.</code><code class="sig-name descname">createCurve</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">y</span></em>, <em class="sig-param"><span class="n">color</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">z</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.items.createCurve" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="gdesk.graphics.grid.html"
+                        title="previous chapter">gdesk.graphics.grid module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="gdesk.graphics.plotview.html"
+                        title="next chapter">gdesk.graphics.plotview module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/gdesk.graphics.items.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.graphics.plotview.html" title="gdesk.graphics.plotview module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.graphics.grid.html" title="gdesk.graphics.grid module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.graphics.html" >gdesk.graphics package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.graphics.items module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Thomas Cools.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

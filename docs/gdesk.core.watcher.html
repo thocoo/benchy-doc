@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gdesk.core.watcher module &#8212; gdesk 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="gdesk.dialogs package" href="gdesk.dialogs.html" />
+    <link rel="prev" title="gdesk.core.tasks module" href="gdesk.core.tasks.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.dialogs.html" title="gdesk.dialogs package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.core.tasks.html" title="gdesk.core.tasks module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.core.html" accesskey="U">gdesk.core package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.core.watcher module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-gdesk.core.watcher">
+<span id="gdesk-core-watcher-module"></span><h1>gdesk.core.watcher module<a class="headerlink" href="#module-gdesk.core.watcher" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="gdesk.core.watcher.CommandClient">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.core.watcher.</code><code class="sig-name descname">CommandClient</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host</span><span class="o">=</span><span class="default_value">'localhost'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.watcher.CommandClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="gdesk.core.watcher.CommandClient.send">
+<code class="sig-name descname">send</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retries</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.watcher.CommandClient.send" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.core.watcher.CommandServer">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.core.watcher.</code><code class="sig-name descname">CommandServer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">shell</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.watcher.CommandServer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="gdesk.core.watcher.CommandServer.connect_process">
+<em class="property">static </em><code class="sig-name descname">connect_process</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cqs_config</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.watcher.CommandServer.connect_process" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.watcher.CommandServer.connect_zmq_process">
+<em class="property">static </em><code class="sig-name descname">connect_zmq_process</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cqs_config</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.watcher.CommandServer.connect_zmq_process" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.watcher.CommandServer.execute_code">
+<em class="property">static </em><code class="sig-name descname">execute_code</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">init_code</span></em>, <em class="sig-param"><span class="n">console_id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.watcher.CommandServer.execute_code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.watcher.CommandServer.execute_command">
+<code class="sig-name descname">execute_command</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">handover</span></em>, <em class="sig-param"><span class="n">cmd</span></em>, <em class="sig-param"><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.watcher.CommandServer.execute_command" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.watcher.CommandServer.execute_file">
+<em class="property">static </em><code class="sig-name descname">execute_file</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">init_file</span></em>, <em class="sig-param"><span class="n">console_id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.watcher.CommandServer.execute_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.watcher.CommandServer.host_info">
+<code class="sig-name descname">host_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.watcher.CommandServer.host_info" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.watcher.CommandServer.open_images">
+<em class="property">static </em><code class="sig-name descname">open_images</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">image_paths</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.watcher.CommandServer.open_images" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.watcher.CommandServer.recv_queue_socket_loop">
+<code class="sig-name descname">recv_queue_socket_loop</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">handover</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.watcher.CommandServer.recv_queue_socket_loop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.watcher.CommandServer.recv_socket_socket_loop">
+<code class="sig-name descname">recv_socket_socket_loop</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">handover</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.watcher.CommandServer.recv_socket_socket_loop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.watcher.CommandServer.start">
+<code class="sig-name descname">start</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">qapp</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.watcher.CommandServer.start" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.watcher.CommandServer.start_kernel">
+<em class="property">static </em><code class="sig-name descname">start_kernel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">kerneltype</span><span class="o">=</span><span class="default_value">'ipykernel'</span></em>, <em class="sig-param"><span class="n">connectfile</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">rundir</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">child</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">threaded</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.watcher.CommandServer.start_kernel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.watcher.CommandServer.start_queue_loop">
+<code class="sig-name descname">start_queue_loop</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">qapp</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.watcher.CommandServer.start_queue_loop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.watcher.CommandServer.stop">
+<code class="sig-name descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.watcher.CommandServer.stop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="gdesk.core.tasks.html"
+                        title="previous chapter">gdesk.core.tasks module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="gdesk.dialogs.html"
+                        title="next chapter">gdesk.dialogs package</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/gdesk.core.watcher.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.dialogs.html" title="gdesk.dialogs package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.core.tasks.html" title="gdesk.core.tasks module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.core.html" >gdesk.core package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.core.watcher module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Thomas Cools.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

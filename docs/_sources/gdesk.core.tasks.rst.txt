@@ -1,0 +1,7 @@
+gdesk.core.tasks module
+=======================
+
+.. automodule:: gdesk.core.tasks
+   :members:
+   :undoc-members:
+   :show-inheritance:

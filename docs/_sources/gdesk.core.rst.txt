@@ -1,0 +1,26 @@
+gdesk.core package
+==================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   gdesk.core.comm
+   gdesk.core.conf
+   gdesk.core.gui_proxy
+   gdesk.core.history
+   gdesk.core.interpreter
+   gdesk.core.shellmod
+   gdesk.core.stdinout
+   gdesk.core.tasks
+   gdesk.core.watcher
+
+Module contents
+---------------
+
+.. automodule:: gdesk.core
+   :members:
+   :undoc-members:
+   :show-inheritance:

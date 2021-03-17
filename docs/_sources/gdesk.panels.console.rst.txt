@@ -1,0 +1,19 @@
+gdesk.panels.console package
+============================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   gdesk.panels.console.consolepanel
+   gdesk.panels.console.consoleproxy
+
+Module contents
+---------------
+
+.. automodule:: gdesk.panels.console
+   :members:
+   :undoc-members:
+   :show-inheritance:

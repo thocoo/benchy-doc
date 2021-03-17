@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gdesk.core.tasks module &#8212; gdesk 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="gdesk.core.watcher module" href="gdesk.core.watcher.html" />
+    <link rel="prev" title="gdesk.core.stdinout module" href="gdesk.core.stdinout.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.core.watcher.html" title="gdesk.core.watcher module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.core.stdinout.html" title="gdesk.core.stdinout module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.core.html" accesskey="U">gdesk.core package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.core.tasks module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-gdesk.core.tasks">
+<span id="gdesk-core-tasks-module"></span><h1>gdesk.core.tasks module<a class="headerlink" href="#module-gdesk.core.tasks" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="gdesk.core.tasks.ProcessTask">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.core.tasks.</code><code class="sig-name descname">ProcessTask</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mainshell</span></em>, <em class="sig-param"><span class="n">cqs</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.tasks.ProcessTask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#gdesk.core.tasks.TaskBase" title="gdesk.core.tasks.TaskBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">gdesk.core.tasks.TaskBase</span></code></a></p>
+<dl class="py method">
+<dt id="gdesk.core.tasks.ProcessTask.start">
+<code class="sig-name descname">start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.tasks.ProcessTask.start" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.tasks.ProcessTask.start_child_process">
+<em class="property">static </em><code class="sig-name descname">start_child_process</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cqs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.tasks.ProcessTask.start_child_process" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.core.tasks.ProcessThreadTask">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.core.tasks.</code><code class="sig-name descname">ProcessThreadTask</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mainshell</span></em>, <em class="sig-param"><span class="n">master_process_task</span></em>, <em class="sig-param"><span class="n">queue_type</span><span class="o">=</span><span class="default_value">'pipe'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.tasks.ProcessThreadTask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#gdesk.core.tasks.TaskBase" title="gdesk.core.tasks.TaskBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">gdesk.core.tasks.TaskBase</span></code></a></p>
+<dl class="py method">
+<dt id="gdesk.core.tasks.ProcessThreadTask.start">
+<code class="sig-name descname">start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.tasks.ProcessThreadTask.start" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.core.tasks.TaskBase">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.core.tasks.</code><code class="sig-name descname">TaskBase</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tasktype</span><span class="o">=</span><span class="default_value">'process'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.tasks.TaskBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="gdesk.core.tasks.TaskBase.async_break">
+<code class="sig-name descname">async_break</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.tasks.TaskBase.async_break" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.tasks.TaskBase.call_func">
+<code class="sig-name descname">call_func</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">func</span></em>, <em class="sig-param"><span class="n">args</span><span class="o">=</span><span class="default_value">()</span></em>, <em class="sig-param"><span class="n">callback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">queue</span><span class="o">=</span><span class="default_value">'stdin'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.tasks.TaskBase.call_func" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.tasks.TaskBase.cmd_queue">
+<em class="property">property </em><code class="sig-name descname">cmd_queue</code><a class="headerlink" href="#gdesk.core.tasks.TaskBase.cmd_queue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.tasks.TaskBase.enable_profiling">
+<code class="sig-name descname">enable_profiling</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.tasks.TaskBase.enable_profiling" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.tasks.TaskBase.evaluate">
+<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="n">multiple</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.tasks.TaskBase.evaluate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.tasks.TaskBase.flow_alive">
+<code class="sig-name descname">flow_alive</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">callback</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="o">=</span><span class="default_value">5</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.tasks.TaskBase.flow_alive" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.tasks.TaskBase.getReturnedValues">
+<code class="sig-name descname">getReturnedValues</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mode</span></em>, <em class="sig-param"><span class="n">error_code</span></em>, <em class="sig-param"><span class="n">result</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.tasks.TaskBase.getReturnedValues" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.tasks.TaskBase.is_current_thread">
+<code class="sig-name descname">is_current_thread</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.tasks.TaskBase.is_current_thread" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.tasks.TaskBase.kill">
+<code class="sig-name descname">kill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.tasks.TaskBase.kill" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.tasks.TaskBase.print_locals">
+<code class="sig-name descname">print_locals</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.tasks.TaskBase.print_locals" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.tasks.TaskBase.print_trace">
+<code class="sig-name descname">print_trace</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.tasks.TaskBase.print_trace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.tasks.TaskBase.process_ready">
+<code class="sig-name descname">process_ready</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.tasks.TaskBase.process_ready" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.tasks.TaskBase.register">
+<code class="sig-name descname">register</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mainshell</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.tasks.TaskBase.register" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.tasks.TaskBase.return_queue">
+<em class="property">property </em><code class="sig-name descname">return_queue</code><a class="headerlink" href="#gdesk.core.tasks.TaskBase.return_queue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.tasks.TaskBase.send_command">
+<code class="sig-name descname">send_command</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">command</span></em>, <em class="sig-param"><span class="n">callback</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.tasks.TaskBase.send_command" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.tasks.TaskBase.send_func_and_call">
+<code class="sig-name descname">send_func_and_call</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mode</span></em>, <em class="sig-param"><span class="n">args</span><span class="o">=</span><span class="default_value">()</span></em>, <em class="sig-param"><span class="n">callback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.tasks.TaskBase.send_func_and_call" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.tasks.TaskBase.send_input">
+<code class="sig-name descname">send_input</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.tasks.TaskBase.send_input" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.tasks.TaskBase.set_flusher">
+<code class="sig-name descname">set_flusher</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">func</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.tasks.TaskBase.set_flusher" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.tasks.TaskBase.set_timeit">
+<code class="sig-name descname">set_timeit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">enable</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.tasks.TaskBase.set_timeit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.tasks.TaskBase.set_tracing">
+<code class="sig-name descname">set_tracing</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">enable</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.tasks.TaskBase.set_tracing" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.tasks.TaskBase.stdin_queue">
+<em class="property">property </em><code class="sig-name descname">stdin_queue</code><a class="headerlink" href="#gdesk.core.tasks.TaskBase.stdin_queue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.tasks.TaskBase.stdout_queue">
+<em class="property">property </em><code class="sig-name descname">stdout_queue</code><a class="headerlink" href="#gdesk.core.tasks.TaskBase.stdout_queue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.tasks.TaskBase.sync_break">
+<code class="sig-name descname">sync_break</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.tasks.TaskBase.sync_break" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.tasks.TaskBase.system_exit">
+<code class="sig-name descname">system_exit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.tasks.TaskBase.system_exit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.tasks.TaskBase.unregister">
+<code class="sig-name descname">unregister</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.tasks.TaskBase.unregister" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.tasks.TaskBase.wait_process_ready">
+<code class="sig-name descname">wait_process_ready</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">timeout</span><span class="o">=</span><span class="default_value">3</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.tasks.TaskBase.wait_process_ready" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.core.tasks.ThreadTask">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.core.tasks.</code><code class="sig-name descname">ThreadTask</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mainshell</span></em>, <em class="sig-param"><span class="n">new_thread</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.tasks.ThreadTask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#gdesk.core.tasks.TaskBase" title="gdesk.core.tasks.TaskBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">gdesk.core.tasks.TaskBase</span></code></a></p>
+<dl class="py attribute">
+<dt id="gdesk.core.tasks.ThreadTask.cmd_queues">
+<code class="sig-name descname">cmd_queues</code><em class="property"> = {}</em><a class="headerlink" href="#gdesk.core.tasks.ThreadTask.cmd_queues" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.tasks.ThreadTask.command_loop">
+<code class="sig-name descname">command_loop</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cqs</span></em>, <em class="sig-param"><span class="n">gui_proxy</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.tasks.ThreadTask.command_loop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.tasks.ThreadTask.finish">
+<code class="sig-name descname">finish</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">close</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.tasks.ThreadTask.finish" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.tasks.ThreadTask.start">
+<code class="sig-name descname">start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.tasks.ThreadTask.start" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.core.tasks.TimeOutGuiCall">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.core.tasks.</code><code class="sig-name descname">TimeOutGuiCall</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">gui_proxy</span></em>, <em class="sig-param"><span class="n">timeout</span></em>, <em class="sig-param"><span class="n">callback</span></em>, <em class="sig-param"><span class="n">args</span><span class="o">=</span><span class="default_value">()</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.tasks.TimeOutGuiCall" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="gdesk.core.tasks.TimeOutGuiCall.call">
+<code class="sig-name descname">call</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.tasks.TimeOutGuiCall.call" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.tasks.TimeOutGuiCall.delay_call">
+<code class="sig-name descname">delay_call</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.tasks.TimeOutGuiCall.delay_call" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="gdesk.core.stdinout.html"
+                        title="previous chapter">gdesk.core.stdinout module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="gdesk.core.watcher.html"
+                        title="next chapter">gdesk.core.watcher module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/gdesk.core.tasks.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.core.watcher.html" title="gdesk.core.watcher module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.core.stdinout.html" title="gdesk.core.stdinout module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.core.html" >gdesk.core package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.core.tasks module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Thomas Cools.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

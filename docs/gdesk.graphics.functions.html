@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gdesk.graphics.functions module &#8212; gdesk 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="gdesk.graphics.grid module" href="gdesk.graphics.grid.html" />
+    <link rel="prev" title="gdesk.graphics package" href="gdesk.graphics.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.graphics.grid.html" title="gdesk.graphics.grid module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.graphics.html" title="gdesk.graphics package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.graphics.html" accesskey="U">gdesk.graphics package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.graphics.functions module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-gdesk.graphics.functions">
+<span id="gdesk-graphics-functions-module"></span><h1>gdesk.graphics.functions module<a class="headerlink" href="#module-gdesk.graphics.functions" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="gdesk.graphics.functions.arrayToQPath">
+<code class="sig-prename descclassname">gdesk.graphics.functions.</code><code class="sig-name descname">arrayToQPath</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">y</span></em>, <em class="sig-param"><span class="n">connect</span><span class="o">=</span><span class="default_value">'all'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.functions.arrayToQPath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert an array of x,y coordinats to QPainterPath as efficiently as possible.
+The <em>connect</em> argument may be ‘all’, indicating that each point should be
+connected to the next; ‘pairs’, indicating that each pair of points
+should be connected, or an array of int32 values (0 or 1) indicating
+connections.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.graphics.functions.intColor">
+<code class="sig-prename descclassname">gdesk.graphics.functions.</code><code class="sig-name descname">intColor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">index</span></em>, <em class="sig-param"><span class="n">hues</span><span class="o">=</span><span class="default_value">9</span></em>, <em class="sig-param"><span class="n">values</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">maxValue</span><span class="o">=</span><span class="default_value">255</span></em>, <em class="sig-param"><span class="n">minValue</span><span class="o">=</span><span class="default_value">150</span></em>, <em class="sig-param"><span class="n">maxHue</span><span class="o">=</span><span class="default_value">360</span></em>, <em class="sig-param"><span class="n">minHue</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">sat</span><span class="o">=</span><span class="default_value">255</span></em>, <em class="sig-param"><span class="n">alpha</span><span class="o">=</span><span class="default_value">255</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.functions.intColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a QColor from a single index. Useful for stepping through a predefined list of colors.</p>
+<p>The argument <em>index</em> determines which color from the set will be returned. All other arguments determine what the set of predefined colors will be</p>
+<p>Colors are chosen by cycling across hues while varying the value (brightness).
+By default, this selects from a list of 9 hues.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.graphics.functions.mkBrush">
+<code class="sig-prename descclassname">gdesk.graphics.functions.</code><code class="sig-name descname">mkBrush</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.functions.mkBrush" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Convenience function for constructing Brush.</div>
+<div class="line">This function always constructs a solid brush and accepts the same arguments as <code class="xref py py-func docutils literal notranslate"><span class="pre">mkColor()</span></code></div>
+<div class="line">Calling mkBrush(None) returns an invisible brush.</div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.graphics.functions.mkColor">
+<code class="sig-prename descclassname">gdesk.graphics.functions.</code><code class="sig-name descname">mkColor</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.functions.mkColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience function for constructing QColor from a variety of argument types. Accepted arguments are:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>‘c’</p></td>
+<td><p>one of: r, g, b, c, m, y, k, w</p></td>
+</tr>
+<tr class="row-even"><td><p>R, G, B, [A]</p></td>
+<td><p>integers 0-255</p></td>
+</tr>
+<tr class="row-odd"><td><p>(R, G, B, [A])</p></td>
+<td><p>tuple of integers 0-255</p></td>
+</tr>
+<tr class="row-even"><td><p>float</p></td>
+<td><p>greyscale, 0.0-1.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>int</p></td>
+<td><p>see <code class="xref py py-func docutils literal notranslate"><span class="pre">intColor()</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>(int, hues)</p></td>
+<td><p>see <code class="xref py py-func docutils literal notranslate"><span class="pre">intColor()</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>“RGB”</p></td>
+<td><p>hexadecimal strings; may begin with ‘#’</p></td>
+</tr>
+<tr class="row-even"><td><p>“RGBA”</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>“RRGGBB”</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>“RRGGBBAA”</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>QColor</p></td>
+<td><p>QColor instance; makes a copy.</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="gdesk.graphics.html"
+                        title="previous chapter">gdesk.graphics package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="gdesk.graphics.grid.html"
+                        title="next chapter">gdesk.graphics.grid module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/gdesk.graphics.functions.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.graphics.grid.html" title="gdesk.graphics.grid module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.graphics.html" title="gdesk.graphics package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.graphics.html" >gdesk.graphics package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.graphics.functions module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Thomas Cools.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

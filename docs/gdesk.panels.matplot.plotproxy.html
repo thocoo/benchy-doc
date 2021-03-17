@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gdesk.panels.matplot.plotproxy module &#8212; gdesk 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="gdesk.panels.base module" href="gdesk.panels.base.html" />
+    <link rel="prev" title="gdesk.panels.matplot.plotpanel module" href="gdesk.panels.matplot.plotpanel.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.panels.base.html" title="gdesk.panels.base module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.panels.matplot.plotpanel.html" title="gdesk.panels.matplot.plotpanel module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.panels.html" >gdesk.panels package</a> &#187;</li>
+          <li class="nav-item nav-item-4"><a href="gdesk.panels.matplot.html" accesskey="U">gdesk.panels.matplot package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.panels.matplot.plotproxy module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-gdesk.panels.matplot.plotproxy">
+<span id="gdesk-panels-matplot-plotproxy-module"></span><h1>gdesk.panels.matplot.plotproxy module<a class="headerlink" href="#module-gdesk.panels.matplot.plotproxy" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="gdesk.panels.matplot.plotproxy.FigureBox">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.panels.matplot.plotproxy.</code><code class="sig-name descname">FigureBox</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">figure</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.matplot.plotproxy.FigureBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.panels.matplot.plotproxy.PlotGuiProxy">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.panels.matplot.plotproxy.</code><code class="sig-name descname">PlotGuiProxy</code><a class="headerlink" href="#gdesk.panels.matplot.plotproxy.PlotGuiProxy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="gdesk.core.gui_proxy.html#gdesk.core.gui_proxy.GuiProxyBase" title="gdesk.core.gui_proxy.GuiProxyBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">gdesk.core.gui_proxy.GuiProxyBase</span></code></a></p>
+<dl class="py method">
+<dt id="gdesk.panels.matplot.plotproxy.PlotGuiProxy.attach">
+<code class="sig-name descname">attach</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">gui</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.matplot.plotproxy.PlotGuiProxy.attach" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gdesk.panels.matplot.plotproxy.PlotGuiProxy.category">
+<code class="sig-name descname">category</code><em class="property"> = 'plot'</em><a class="headerlink" href="#gdesk.panels.matplot.plotproxy.PlotGuiProxy.category" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.matplot.plotproxy.PlotGuiProxy.new">
+<em class="property">static </em><code class="sig-name descname">new</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.matplot.plotproxy.PlotGuiProxy.new" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new figure.</p>
+<p>Links to pylab.figure</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.matplot.plotproxy.PlotGuiProxy.prepareplot">
+<code class="sig-name descname">prepareplot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.matplot.plotproxy.PlotGuiProxy.prepareplot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.matplot.plotproxy.PlotGuiProxy.restore_gcf_set_active">
+<em class="property">static </em><code class="sig-name descname">restore_gcf_set_active</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.matplot.plotproxy.PlotGuiProxy.restore_gcf_set_active" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.matplot.plotproxy.PlotGuiProxy.select">
+<em class="property">static </em><code class="sig-name descname">select</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.matplot.plotproxy.PlotGuiProxy.select" title="Permalink to this definition">¶</a></dt>
+<dd><p>If panid &lt; 0, -1: select the active panel, -2: selected before that, …
+panid == None: new panel
+panid &gt;= 0: select the panel if exists, otherwise a new with that number</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.matplot.plotproxy.PlotGuiProxy.show">
+<code class="sig-name descname">show</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">figure</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hold</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.matplot.plotproxy.PlotGuiProxy.show" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.matplot.plotproxy.PlotGuiProxy.show_figure_box">
+<em class="property">static </em><code class="sig-name descname">show_figure_box</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.matplot.plotproxy.PlotGuiProxy.show_figure_box" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display the figure in the figurebox.
+The figure has to be added to the current pyplot backend.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>hold</strong> (<em>bool</em>) – Replace the figure in the current selected panel by the new figure</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.panels.matplot.plotproxy.PlotGuiProxy.xy">
+<code class="sig-name descname">xy</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.matplot.plotproxy.PlotGuiProxy.xy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.panels.matplot.plotproxy.PlotProxy">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.panels.matplot.plotproxy.</code><code class="sig-name descname">PlotProxy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">gui</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.matplot.plotproxy.PlotProxy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="gdesk.panels.matplot.plotpanel.html"
+                        title="previous chapter">gdesk.panels.matplot.plotpanel module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="gdesk.panels.base.html"
+                        title="next chapter">gdesk.panels.base module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/gdesk.panels.matplot.plotproxy.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.panels.base.html" title="gdesk.panels.base module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.panels.matplot.plotpanel.html" title="gdesk.panels.matplot.plotpanel module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.panels.html" >gdesk.panels package</a> &#187;</li>
+          <li class="nav-item nav-item-4"><a href="gdesk.panels.matplot.html" >gdesk.panels.matplot package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.panels.matplot.plotproxy module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Thomas Cools.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

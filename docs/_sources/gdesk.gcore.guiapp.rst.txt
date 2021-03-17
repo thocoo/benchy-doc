@@ -1,0 +1,7 @@
+gdesk.gcore.guiapp module
+=========================
+
+.. automodule:: gdesk.gcore.guiapp
+   :members:
+   :undoc-members:
+   :show-inheritance:

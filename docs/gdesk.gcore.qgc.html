@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gdesk.gcore.qgc module &#8212; gdesk 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="gdesk.gcore.threadcom module" href="gdesk.gcore.threadcom.html" />
+    <link rel="prev" title="gdesk.gcore.guiapp module" href="gdesk.gcore.guiapp.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.gcore.threadcom.html" title="gdesk.gcore.threadcom module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.gcore.guiapp.html" title="gdesk.gcore.guiapp module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.gcore.html" accesskey="U">gdesk.gcore package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.gcore.qgc module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-gdesk.gcore.qgc">
+<span id="gdesk-gcore-qgc-module"></span><h1>gdesk.gcore.qgc module<a class="headerlink" href="#module-gdesk.gcore.qgc" title="Permalink to this headline">¶</a></h1>
+<p>The Garbage Collector timer in the Qt Event Loop.</p>
+<dl class="py class">
+<dt id="gdesk.gcore.qgc.QGarbageCollector">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.gcore.qgc.</code><code class="sig-name descname">QGarbageCollector</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span></em>, <em class="sig-param"><span class="n">debug</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.gcore.qgc.QGarbageCollector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtCore.QObject</span></code></p>
+<p>Disable automatic garbage collection and instead collect manually.</p>
+<p>Timeout every INTERVAL milliseconds.</p>
+<p>This is done to ensure that garbage collection only happens in the GUI
+thread, as otherwise Qt can crash.</p>
+<dl class="py attribute">
+<dt id="gdesk.gcore.qgc.QGarbageCollector.INTERVAL">
+<code class="sig-name descname">INTERVAL</code><em class="property"> = 5000</em><a class="headerlink" href="#gdesk.gcore.qgc.QGarbageCollector.INTERVAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.gcore.qgc.QGarbageCollector.check">
+<code class="sig-name descname">check</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.gcore.qgc.QGarbageCollector.check" title="Permalink to this definition">¶</a></dt>
+<dd><p>Do the garbage collection.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.gcore.qgc.QGarbageCollector.disable">
+<code class="sig-name descname">disable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.gcore.qgc.QGarbageCollector.disable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disable the timer.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.gcore.qgc.QGarbageCollector.enable">
+<code class="sig-name descname">enable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.gcore.qgc.QGarbageCollector.enable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable the timer.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="gdesk.gcore.qgc.QGarbageCollector.staticMetaObject">
+<code class="sig-name descname">staticMetaObject</code><em class="property"> = &lt;PySide2.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#gdesk.gcore.qgc.QGarbageCollector.staticMetaObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="gdesk.gcore.guiapp.html"
+                        title="previous chapter">gdesk.gcore.guiapp module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="gdesk.gcore.threadcom.html"
+                        title="next chapter">gdesk.gcore.threadcom module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/gdesk.gcore.qgc.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.gcore.threadcom.html" title="gdesk.gcore.threadcom module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.gcore.guiapp.html" title="gdesk.gcore.guiapp module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.gcore.html" >gdesk.gcore package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.gcore.qgc module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Thomas Cools.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

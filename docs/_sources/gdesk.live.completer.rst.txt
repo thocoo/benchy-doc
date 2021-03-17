@@ -1,0 +1,7 @@
+gdesk.live.completer module
+===========================
+
+.. automodule:: gdesk.live.completer
+   :members:
+   :undoc-members:
+   :show-inheritance:

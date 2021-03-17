@@ -1,0 +1,7 @@
+gdesk.graphics.rulers module
+============================
+
+.. automodule:: gdesk.graphics.rulers
+   :members:
+   :undoc-members:
+   :show-inheritance:

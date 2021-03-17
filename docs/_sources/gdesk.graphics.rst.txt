@@ -1,0 +1,24 @@
+gdesk.graphics package
+======================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   gdesk.graphics.functions
+   gdesk.graphics.grid
+   gdesk.graphics.items
+   gdesk.graphics.plotview
+   gdesk.graphics.point
+   gdesk.graphics.rulers
+   gdesk.graphics.view
+
+Module contents
+---------------
+
+.. automodule:: gdesk.graphics
+   :members:
+   :undoc-members:
+   :show-inheritance:

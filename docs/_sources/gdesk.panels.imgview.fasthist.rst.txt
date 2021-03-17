@@ -1,0 +1,7 @@
+gdesk.panels.imgview.fasthist module
+====================================
+
+.. automodule:: gdesk.panels.imgview.fasthist
+   :members:
+   :undoc-members:
+   :show-inheritance:

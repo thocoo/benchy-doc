@@ -1,0 +1,18 @@
+gdesk.panels.dialog package
+===========================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   gdesk.panels.dialog.proxy
+
+Module contents
+---------------
+
+.. automodule:: gdesk.panels.dialog
+   :members:
+   :undoc-members:
+   :show-inheritance:

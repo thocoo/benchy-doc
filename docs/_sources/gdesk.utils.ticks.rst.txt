@@ -1,0 +1,7 @@
+gdesk.utils.ticks module
+========================
+
+.. automodule:: gdesk.utils.ticks
+   :members:
+   :undoc-members:
+   :show-inheritance:

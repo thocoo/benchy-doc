@@ -1,0 +1,7 @@
+gdesk.graphics.point module
+===========================
+
+.. automodule:: gdesk.graphics.point
+   :members:
+   :undoc-members:
+   :show-inheritance:

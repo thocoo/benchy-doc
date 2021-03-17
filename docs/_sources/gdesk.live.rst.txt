@@ -1,0 +1,21 @@
+gdesk.live package
+==================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   gdesk.live.completer
+   gdesk.live.console
+   gdesk.live.interactive
+   gdesk.live.manage
+
+Module contents
+---------------
+
+.. automodule:: gdesk.live
+   :members:
+   :undoc-members:
+   :show-inheritance:

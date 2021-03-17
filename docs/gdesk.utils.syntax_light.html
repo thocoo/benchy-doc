@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gdesk.utils.syntax_light module &#8212; gdesk 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="gdesk.utils.ticks module" href="gdesk.utils.ticks.html" />
+    <link rel="prev" title="gdesk.utils.shared module" href="gdesk.utils.shared.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.utils.ticks.html" title="gdesk.utils.ticks module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.utils.shared.html" title="gdesk.utils.shared module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.utils.html" accesskey="U">gdesk.utils package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.utils.syntax_light module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-gdesk.utils.syntax_light">
+<span id="gdesk-utils-syntax-light-module"></span><h1>gdesk.utils.syntax_light module<a class="headerlink" href="#module-gdesk.utils.syntax_light" title="Permalink to this headline">¶</a></h1>
+<p>Add syntax highlighting to Python source code</p>
+<dl class="py function">
+<dt id="gdesk.utils.syntax_light.alltt_escape">
+<code class="sig-prename descclassname">gdesk.utils.syntax_light.</code><code class="sig-name descname">alltt_escape</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">s</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.syntax_light.alltt_escape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replace backslash and braces with their escaped equivalents</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.utils.syntax_light.analyze_python">
+<code class="sig-prename descclassname">gdesk.utils.syntax_light.</code><code class="sig-name descname">analyze_python</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">source</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.syntax_light.analyze_python" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate and classify chunks of Python for syntax highlighting.
+Yields tuples in the form: (category, categorized_text).</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.utils.syntax_light.ansi_highlight">
+<code class="sig-prename descclassname">gdesk.utils.syntax_light.</code><code class="sig-name descname">ansi_highlight</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">classified_text</span></em>, <em class="sig-param"><span class="n">colors</span><span class="o">=</span><span class="default_value">{'builtin': '\x1b[0;35m', '\x1b[0m', 'comment': '\x1b[0;31m', '\x1b[0m', 'definition': '\x1b[0;33m', '\x1b[0m', 'defname': '\x1b[0;34m', '\x1b[0m', 'docstring': '\x1b[0;32m', '\x1b[0m', 'keyword': '\x1b[0;33m', '\x1b[0m', 'operator': '\x1b[0;33m', '\x1b[0m', 'string': '\x1b[0;32m', '\x1b[0m'}</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.syntax_light.ansi_highlight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add syntax highlighting to source code using ANSI escape sequences</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.utils.syntax_light.build_html_page">
+<code class="sig-prename descclassname">gdesk.utils.syntax_light.</code><code class="sig-name descname">build_html_page</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">classified_text</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">'python'</span></em>, <em class="sig-param"><span class="n">css</span><span class="o">=</span><span class="default_value">{'.builtin': '{color: purple;}', '.comment': '{color: crimson;}', '.definition': '{color: darkorange; font-weight:bold;}', '.defname': '{color: blue;}', '.docstring': '{color: forestgreen; font-style:italic;}', '.keyword': '{color: darkorange;}', '.operator': '{color: brown;}', '.string': '{color: forestgreen;}'}</span></em>, <em class="sig-param"><span class="n">html</span><span class="o">=</span><span class="default_value">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot;\n          &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;\n&lt;html&gt;\n&lt;head&gt;\n&lt;meta http-equiv=&quot;Content-type&quot; content=&quot;text/html;charset=UTF-8&quot;&gt;\n&lt;title&gt; {title} &lt;/title&gt;\n&lt;style type=&quot;text/css&quot;&gt;\n{css}\n&lt;/style&gt;\n&lt;/head&gt;\n&lt;body&gt;\n{body}\n&lt;/body&gt;\n&lt;/html&gt;\n'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.syntax_light.build_html_page" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a complete HTML page with colorized source code</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.utils.syntax_light.combine_range">
+<code class="sig-prename descclassname">gdesk.utils.syntax_light.</code><code class="sig-name descname">combine_range</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">lines</span></em>, <em class="sig-param"><span class="n">start</span></em>, <em class="sig-param"><span class="n">end</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.syntax_light.combine_range" title="Permalink to this definition">¶</a></dt>
+<dd><p>Join content from a range of lines between start and end</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.utils.syntax_light.html_highlight">
+<code class="sig-prename descclassname">gdesk.utils.syntax_light.</code><code class="sig-name descname">html_highlight</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">classified_text</span></em>, <em class="sig-param"><span class="n">opener</span><span class="o">=</span><span class="default_value">'&lt;pre class=&quot;python&quot;&gt;\n'</span></em>, <em class="sig-param"><span class="n">closer</span><span class="o">=</span><span class="default_value">'&lt;/pre&gt;\n'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.syntax_light.html_highlight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert classified text to an HTML fragment</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.utils.syntax_light.is_builtin">
+<code class="sig-prename descclassname">gdesk.utils.syntax_light.</code><code class="sig-name descname">is_builtin</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">s</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.syntax_light.is_builtin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if s is the name of a builtin</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.utils.syntax_light.latex_highlight">
+<code class="sig-prename descclassname">gdesk.utils.syntax_light.</code><code class="sig-name descname">latex_highlight</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">classified_text</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">'python'</span></em>, <em class="sig-param"><span class="n">commands</span><span class="o">=</span><span class="default_value">{'builtin': '{\\color{purple}#1}', 'comment': '{\\color{red}#1}', 'definition': '{\\color{orange}#1}', 'defname': '{\\color{blue}#1}', 'docstring': '{\\emph{\\color{ForestGreen}#1}}', 'keyword': '{\\color{orange}#1}', 'operator': '{\\color{brown}#1}', 'string': '{\\color{ForestGreen}#1}'}</span></em>, <em class="sig-param"><span class="n">document</span><span class="o">=</span><span class="default_value">'\n\\documentclass{article}\n\\usepackage{alltt}\n\\usepackage{upquote}\n\\usepackage{color}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[cm]{fullpage}\n%(macros)s\n\\begin{document}\n\\center{\\LARGE{%(title)s}}\n\\begin{alltt}\n%(body)s\n\\end{alltt}\n\\end{document}\n'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.syntax_light.latex_highlight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a complete LaTeX document with colorized source code</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.utils.syntax_light.raw_highlight">
+<code class="sig-prename descclassname">gdesk.utils.syntax_light.</code><code class="sig-name descname">raw_highlight</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">classified_text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.syntax_light.raw_highlight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Straight text display of text classifications</p>
+</dd></dl>
+
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="gdesk.utils.shared.html"
+                        title="previous chapter">gdesk.utils.shared module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="gdesk.utils.ticks.html"
+                        title="next chapter">gdesk.utils.ticks module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/gdesk.utils.syntax_light.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.utils.ticks.html" title="gdesk.utils.ticks module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.utils.shared.html" title="gdesk.utils.shared module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.utils.html" >gdesk.utils package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.utils.syntax_light module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Thomas Cools.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

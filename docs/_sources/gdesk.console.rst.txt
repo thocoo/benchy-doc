@@ -1,0 +1,7 @@
+gdesk.console module
+====================
+
+.. automodule:: gdesk.console
+   :members:
+   :undoc-members:
+   :show-inheritance:

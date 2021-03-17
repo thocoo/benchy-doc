@@ -1,0 +1,7 @@
+gdesk.panels.window module
+==========================
+
+.. automodule:: gdesk.panels.window
+   :members:
+   :undoc-members:
+   :show-inheritance:

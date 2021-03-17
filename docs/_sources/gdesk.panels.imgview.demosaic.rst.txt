@@ -1,0 +1,7 @@
+gdesk.panels.imgview.demosaic module
+====================================
+
+.. automodule:: gdesk.panels.imgview.demosaic
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gdesk.dialogs.filterlist module &#8212; gdesk 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="gdesk.dialogs.formlayout module" href="gdesk.dialogs.formlayout.html" />
+    <link rel="prev" title="gdesk.dialogs.filedialog module" href="gdesk.dialogs.filedialog.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.dialogs.formlayout.html" title="gdesk.dialogs.formlayout module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.dialogs.filedialog.html" title="gdesk.dialogs.filedialog module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.dialogs.html" accesskey="U">gdesk.dialogs package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.dialogs.filterlist module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-gdesk.dialogs.filterlist">
+<span id="gdesk-dialogs-filterlist-module"></span><h1>gdesk.dialogs.filterlist module<a class="headerlink" href="#module-gdesk.dialogs.filterlist" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="gdesk.dialogs.filterlist.FilterList">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.dialogs.filterlist.</code><code class="sig-name descname">FilterList</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">items</span></em>, <em class="sig-param"><span class="n">multiple</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">filter</span><span class="o">=</span><span class="default_value">'*'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.dialogs.filterlist.FilterList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QDialog</span></code></p>
+<dl class="py method">
+<dt id="gdesk.dialogs.filterlist.FilterList.addSelectByFilter">
+<code class="sig-name descname">addSelectByFilter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.dialogs.filterlist.FilterList.addSelectByFilter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.dialogs.filterlist.FilterList.cancel">
+<code class="sig-name descname">cancel</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.dialogs.filterlist.FilterList.cancel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.dialogs.filterlist.FilterList.checkAll">
+<code class="sig-name descname">checkAll</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.dialogs.filterlist.FilterList.checkAll" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.dialogs.filterlist.FilterList.checkItems">
+<code class="sig-name descname">checkItems</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">items_to_select</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.dialogs.filterlist.FilterList.checkItems" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.dialogs.filterlist.FilterList.checkItemsFilterMatch">
+<code class="sig-name descname">checkItemsFilterMatch</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pattern</span></em>, <em class="sig-param"><span class="n">append</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">remove</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">use_regexp</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.dialogs.filterlist.FilterList.checkItemsFilterMatch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.dialogs.filterlist.FilterList.checkItemsRe">
+<code class="sig-name descname">checkItemsRe</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pattern</span></em>, <em class="sig-param"><span class="n">append</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">remove</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.dialogs.filterlist.FilterList.checkItemsRe" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.dialogs.filterlist.FilterList.checkedItems">
+<code class="sig-name descname">checkedItems</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.dialogs.filterlist.FilterList.checkedItems" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.dialogs.filterlist.FilterList.initgui">
+<code class="sig-name descname">initgui</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">items</span></em>, <em class="sig-param"><span class="n">multiple</span></em>, <em class="sig-param"><span class="n">filter</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.dialogs.filterlist.FilterList.initgui" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.dialogs.filterlist.FilterList.ok">
+<code class="sig-name descname">ok</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.dialogs.filterlist.FilterList.ok" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.dialogs.filterlist.FilterList.removeSelectByFilter">
+<code class="sig-name descname">removeSelectByFilter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.dialogs.filterlist.FilterList.removeSelectByFilter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.dialogs.filterlist.FilterList.selectItem">
+<code class="sig-name descname">selectItem</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">item</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.dialogs.filterlist.FilterList.selectItem" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.dialogs.filterlist.FilterList.selectedItem">
+<code class="sig-name descname">selectedItem</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.dialogs.filterlist.FilterList.selectedItem" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gdesk.dialogs.filterlist.FilterList.staticMetaObject">
+<code class="sig-name descname">staticMetaObject</code><em class="property"> = &lt;PySide2.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#gdesk.dialogs.filterlist.FilterList.staticMetaObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.dialogs.filterlist.FilterList.toggleCheckStateAll">
+<code class="sig-name descname">toggleCheckStateAll</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.dialogs.filterlist.FilterList.toggleCheckStateAll" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="gdesk.dialogs.filterlist.SelectionList">
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.dialogs.filterlist.</code><code class="sig-name descname">SelectionList</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.dialogs.filterlist.SelectionList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QListWidget</span></code></p>
+<dl class="py attribute">
+<dt id="gdesk.dialogs.filterlist.SelectionList.staticMetaObject">
+<code class="sig-name descname">staticMetaObject</code><em class="property"> = &lt;PySide2.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#gdesk.dialogs.filterlist.SelectionList.staticMetaObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="gdesk.dialogs.filedialog.html"
+                        title="previous chapter">gdesk.dialogs.filedialog module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="gdesk.dialogs.formlayout.html"
+                        title="next chapter">gdesk.dialogs.formlayout module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/gdesk.dialogs.filterlist.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.dialogs.formlayout.html" title="gdesk.dialogs.formlayout module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.dialogs.filedialog.html" title="gdesk.dialogs.filedialog module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.dialogs.html" >gdesk.dialogs package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.dialogs.filterlist module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Thomas Cools.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+gdesk.panels.imgview package
+============================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   gdesk.panels.imgview.blueprint
+   gdesk.panels.imgview.demosaic
+   gdesk.panels.imgview.dimensions
+   gdesk.panels.imgview.fasthist
+   gdesk.panels.imgview.imgdata
+   gdesk.panels.imgview.imgview
+   gdesk.panels.imgview.profile
+   gdesk.panels.imgview.proxy
+   gdesk.panels.imgview.quantiles
+   gdesk.panels.imgview.roi
+   gdesk.panels.imgview.spectrogram
+
+Module contents
+---------------
+
+.. automodule:: gdesk.panels.imgview
+   :members:
+   :undoc-members:
+   :show-inheritance:

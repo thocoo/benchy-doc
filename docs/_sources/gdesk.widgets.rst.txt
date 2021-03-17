@@ -1,0 +1,19 @@
+gdesk.widgets package
+=====================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   gdesk.widgets.grid
+   gdesk.widgets.thumbs
+
+Module contents
+---------------
+
+.. automodule:: gdesk.widgets
+   :members:
+   :undoc-members:
+   :show-inheritance:

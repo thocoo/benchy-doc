@@ -1,0 +1,32 @@
+gdesk.panels package
+====================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   gdesk.panels.console
+   gdesk.panels.dialog
+   gdesk.panels.imgview
+   gdesk.panels.levels
+   gdesk.panels.matplot
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   gdesk.panels.base
+   gdesk.panels.panels
+   gdesk.panels.window
+
+Module contents
+---------------
+
+.. automodule:: gdesk.panels
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,10 @@
+gdesk.test package
+==================
+
+Module contents
+---------------
+
+.. automodule:: gdesk.test
+   :members:
+   :undoc-members:
+   :show-inheritance:

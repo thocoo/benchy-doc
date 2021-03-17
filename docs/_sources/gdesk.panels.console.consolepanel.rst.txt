@@ -1,0 +1,7 @@
+gdesk.panels.console.consolepanel module
+========================================
+
+.. automodule:: gdesk.panels.console.consolepanel
+   :members:
+   :undoc-members:
+   :show-inheritance:

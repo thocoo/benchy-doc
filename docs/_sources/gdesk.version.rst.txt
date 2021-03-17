@@ -1,0 +1,7 @@
+gdesk.version module
+====================
+
+.. automodule:: gdesk.version
+   :members:
+   :undoc-members:
+   :show-inheritance:

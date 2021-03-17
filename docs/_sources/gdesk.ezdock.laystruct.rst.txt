@@ -1,0 +1,7 @@
+gdesk.ezdock.laystruct module
+=============================
+
+.. automodule:: gdesk.ezdock.laystruct
+   :members:
+   :undoc-members:
+   :show-inheritance:

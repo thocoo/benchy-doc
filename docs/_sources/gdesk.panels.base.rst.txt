@@ -1,0 +1,7 @@
+gdesk.panels.base module
+========================
+
+.. automodule:: gdesk.panels.base
+   :members:
+   :undoc-members:
+   :show-inheritance:

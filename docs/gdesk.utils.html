@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gdesk.utils package &#8212; gdesk 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="gdesk.utils.ansi_code_processor module" href="gdesk.utils.ansi_code_processor.html" />
+    <link rel="prev" title="gdesk.test package" href="gdesk.test.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.utils.ansi_code_processor.html" title="gdesk.utils.ansi_code_processor module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.test.html" title="gdesk.test package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" accesskey="U">gdesk package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.utils package</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="gdesk-utils-package">
+<h1>gdesk.utils package<a class="headerlink" href="#gdesk-utils-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="gdesk.utils.ansi_code_processor.html">gdesk.utils.ansi_code_processor module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gdesk.utils.funccom.html">gdesk.utils.funccom module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gdesk.utils.imconvert.html">gdesk.utils.imconvert module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gdesk.utils.keypress.html">gdesk.utils.keypress module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gdesk.utils.namedmutex.html">gdesk.utils.namedmutex module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gdesk.utils.names.html">gdesk.utils.names module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gdesk.utils.numba_func.html">gdesk.utils.numba_func module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gdesk.utils.shared.html">gdesk.utils.shared module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gdesk.utils.syntax_light.html">gdesk.utils.syntax_light module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gdesk.utils.ticks.html">gdesk.utils.ticks module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gdesk.utils.z_order.html">gdesk.utils.z_order module</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="module-gdesk.utils">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-gdesk.utils" title="Permalink to this headline">¶</a></h2>
+<p>A collections of utils.</p>
+<dl class="py function">
+<dt id="gdesk.utils.clip_array">
+<code class="sig-prename descclassname">gdesk.utils.</code><code class="sig-name descname">clip_array</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">array</span></em>, <em class="sig-param"><span class="n">dtype</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.clip_array" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clip the array to clipvalues of dtype.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.utils.clip_values">
+<code class="sig-prename descclassname">gdesk.utils.</code><code class="sig-name descname">clip_values</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dtype</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.clip_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the lowest and highest clipvalue for a certain numpy data type.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.utils.lazyf">
+<code class="sig-prename descclassname">gdesk.utils.</code><code class="sig-name descname">lazyf</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">template</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.lazyf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Do a f-string formating.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.utils.new_id_using_keys">
+<code class="sig-prename descclassname">gdesk.utils.</code><code class="sig-name descname">new_id_using_keys</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">keys</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.new_id_using_keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find the lowest new id starting from already exisiting ids.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">gdesk.utils package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-gdesk.utils">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="gdesk.test.html"
+                        title="previous chapter">gdesk.test package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="gdesk.utils.ansi_code_processor.html"
+                        title="next chapter">gdesk.utils.ansi_code_processor module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/gdesk.utils.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.utils.ansi_code_processor.html" title="gdesk.utils.ansi_code_processor module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.test.html" title="gdesk.test package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.utils package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Thomas Cools.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

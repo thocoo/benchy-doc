@@ -1,0 +1,7 @@
+gdesk.dialogs.filterlist module
+===============================
+
+.. automodule:: gdesk.dialogs.filterlist
+   :members:
+   :undoc-members:
+   :show-inheritance:

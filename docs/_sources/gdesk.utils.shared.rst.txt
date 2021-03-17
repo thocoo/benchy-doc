@@ -1,0 +1,7 @@
+gdesk.utils.shared module
+=========================
+
+.. automodule:: gdesk.utils.shared
+   :members:
+   :undoc-members:
+   :show-inheritance:
