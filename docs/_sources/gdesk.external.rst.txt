@@ -1,5 +1,5 @@
-benchy package
-==============
+gdesk.external package
+======================
 
 Submodules
 ----------
@@ -7,12 +7,12 @@ Submodules
 .. toctree::
    :maxdepth: 4
 
-   benchy.version
+   gdesk.external.channel
 
 Module contents
 ---------------
 
-.. automodule:: benchy
+.. automodule:: gdesk.external
    :members:
    :undoc-members:
    :show-inheritance:

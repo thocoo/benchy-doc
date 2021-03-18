@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gdesk.external.channel module &#8212; gdesk 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="gdesk.ezdock package" href="gdesk.ezdock.html" />
+    <link rel="prev" title="gdesk.external package" href="gdesk.external.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.ezdock.html" title="gdesk.ezdock package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.external.html" title="gdesk.external package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.external.html" accesskey="U">gdesk.external package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.external.channel module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-gdesk.external.channel">
+<span id="gdesk-external-channel-module"></span><h1>gdesk.external.channel module<a class="headerlink" href="#module-gdesk.external.channel" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="gdesk.external.channel.connect">
+<code class="sig-prename descclassname">gdesk.external.channel.</code><code class="sig-name descname">connect</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host</span><span class="o">=</span><span class="default_value">'localhost'</span></em>, <em class="sig-param"><span class="n">namespace</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gui_redirect</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">as_server</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.external.channel.connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start Gamma Hawk as a independend process and open a zmq communication channel
+This function start a new thread.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>port</strong> (<em>int</em>) – TCP port number to connect to (default 5998)</p></li>
+<li><p><strong>host</strong> (<em>str</em>) – Hostname of ip address to connect to (default localhost)</p></li>
+<li><p><strong>namespace</strong> (<em>dict</em>) – The namespace to use in the Gamma Hawk console (Caller namespace by default)</p></li>
+<li><p><strong>gui_redirect</strong> (<em>bool</em>) – Make the gui mapper accesible in this thread</p></li>
+<li><p><strong>as_server</strong> (<em>bool</em>) – True -&gt; This will be the zmq server (default False -&gt; GH acts as server)</p></li>
+</ul>
+</dd>
+</dl>
+<p>Typical usage in Canvas by the following command:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span> <span class="kn">from</span> <span class="nn">ghawk2.external</span> <span class="kn">import</span> <span class="n">channel</span>
+<span class="gp">&gt;&gt;&gt; </span> <span class="n">channel</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Connecting to a running GH instance at another computer</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span> <span class="n">channel</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="mi">5998</span><span class="p">,</span> <span class="s1">&#39;FFYBVR-L1.ad.onsemi.com&#39;</span><span class="p">)</span>   
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.external.channel.init_gui">
+<code class="sig-prename descclassname">gdesk.external.channel.</code><code class="sig-name descname">init_gui</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">shell</span></em>, <em class="sig-param"><span class="n">commqueues</span></em>, <em class="sig-param"><span class="n">gui_redirect</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">client</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.external.channel.init_gui" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.external.channel.python_executable">
+<code class="sig-prename descclassname">gdesk.external.channel.</code><code class="sig-name descname">python_executable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.external.channel.python_executable" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.external.channel.start_gui">
+<code class="sig-prename descclassname">gdesk.external.channel.</code><code class="sig-name descname">start_gui</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">child</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">commqueues</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">deamon</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.external.channel.start_gui" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="gdesk.external.channel.start_gui_as_child">
+<code class="sig-prename descclassname">gdesk.external.channel.</code><code class="sig-name descname">start_gui_as_child</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">namespace</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gui_redirect</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.external.channel.start_gui_as_child" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start Gamma Hawk as a child process and open a communication channel
+to a new thread in this process.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>workspace</strong> (<em>dict</em>) – The workspace to use in the Shell object</p></li>
+<li><p><strong>gui_redirect</strong> (<em>bool</em>) – make the gui mapper accesible in this thread</p></li>
+</ul>
+</dd>
+</dl>
+<p>Typical usage in Canvas by the following command:</p>
+<blockquote>
+<div><p>from ghawk2.external.channel import start_ghawk_as_child; start_ghawk_as_child(globals())</p>
+</div></blockquote>
+</dd></dl>
+
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="gdesk.external.html"
+                        title="previous chapter">gdesk.external package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="gdesk.ezdock.html"
+                        title="next chapter">gdesk.ezdock package</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/gdesk.external.channel.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gdesk.ezdock.html" title="gdesk.ezdock package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="gdesk.external.html" title="gdesk.external package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="gdesk.external.html" >gdesk.external package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">gdesk.external.channel module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Thomas Cools.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

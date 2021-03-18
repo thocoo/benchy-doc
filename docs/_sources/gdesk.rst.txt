@@ -10,6 +10,7 @@ Subpackages
    gdesk.core
    gdesk.dialogs
    gdesk.dicttree
+   gdesk.external
    gdesk.ezdock
    gdesk.gcore
    gdesk.graphics
