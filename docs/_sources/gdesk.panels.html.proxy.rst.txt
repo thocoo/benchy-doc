@@ -1,0 +1,7 @@
+gdesk.panels.html.proxy module
+==============================
+
+.. automodule:: gdesk.panels.html.proxy
+   :members:
+   :undoc-members:
+   :show-inheritance:

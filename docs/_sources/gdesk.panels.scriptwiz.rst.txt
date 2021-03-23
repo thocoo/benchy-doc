@@ -1,0 +1,19 @@
+gdesk.panels.scriptwiz package
+==============================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   gdesk.panels.scriptwiz.panel
+   gdesk.panels.scriptwiz.proxy
+
+Module contents
+---------------
+
+.. automodule:: gdesk.panels.scriptwiz
+   :members:
+   :undoc-members:
+   :show-inheritance:

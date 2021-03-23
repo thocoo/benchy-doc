@@ -7,11 +7,14 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
+   gdesk.panels.cmdhist
    gdesk.panels.console
    gdesk.panels.dialog
+   gdesk.panels.html
    gdesk.panels.imgview
    gdesk.panels.levels
    gdesk.panels.matplot
+   gdesk.panels.scriptwiz
 
 Submodules
 ----------

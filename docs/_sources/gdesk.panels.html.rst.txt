@@ -1,0 +1,19 @@
+gdesk.panels.html package
+=========================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   gdesk.panels.html.panel
+   gdesk.panels.html.proxy
+
+Module contents
+---------------
+
+.. automodule:: gdesk.panels.html
+   :members:
+   :undoc-members:
+   :show-inheritance:

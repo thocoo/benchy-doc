@@ -1,0 +1,7 @@
+gdesk.panels.scriptwiz.proxy module
+===================================
+
+.. automodule:: gdesk.panels.scriptwiz.proxy
+   :members:
+   :undoc-members:
+   :show-inheritance:

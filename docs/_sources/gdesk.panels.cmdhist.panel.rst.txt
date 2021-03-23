@@ -1,0 +1,7 @@
+gdesk.panels.cmdhist.panel module
+=================================
+
+.. automodule:: gdesk.panels.cmdhist.panel
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+gdesk.panels.scriptwiz.panel module
+===================================
+
+.. automodule:: gdesk.panels.scriptwiz.panel
+   :members:
+   :undoc-members:
+   :show-inheritance:

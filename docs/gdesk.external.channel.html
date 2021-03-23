@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>gdesk.external.channel module &#8212; gdesk 0.0.1 documentation</title>
+    <title>gdesk.external.channel module &#8212; gdesk 0.1.0 documentation</title>
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="gdesk.external.html" title="gdesk.external package"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="gdesk.external.html" accesskey="U">gdesk.external package</a> &#187;</li>
@@ -51,26 +51,28 @@
 <dl class="py function">
 <dt id="gdesk.external.channel.connect_to_gui">
 <code class="sig-prename descclassname">gdesk.external.channel.</code><code class="sig-name descname">connect_to_gui</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">port</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">host</span><span class="o">=</span><span class="default_value">'localhost'</span></em>, <em class="sig-param"><span class="n">namespace</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gui_redirect</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">as_server</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.external.channel.connect_to_gui" title="Permalink to this definition">¶</a></dt>
-<dd><p>Start Gamma Hawk as a independend process and open a zmq communication channel
+<dd><p>Start Gamma Desk as a independend process and open a zmq communication channel
 This function start a new thread.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>port</strong> (<em>int</em>) – TCP port number to connect to (default 5998)</p></li>
 <li><p><strong>host</strong> (<em>str</em>) – Hostname of ip address to connect to (default localhost)</p></li>
-<li><p><strong>namespace</strong> (<em>dict</em>) – The namespace to use in the Gamma Hawk console (Caller namespace by default)</p></li>
+<li><p><strong>namespace</strong> (<em>dict</em>) – The namespace to use in the Gamma Desk console
+(Caller namespace by default)</p></li>
 <li><p><strong>gui_redirect</strong> (<em>bool</em>) – Make the gui mapper accesible in this thread</p></li>
-<li><p><strong>as_server</strong> (<em>bool</em>) – True -&gt; This will be the zmq server (default False -&gt; GH acts as server)</p></li>
+<li><p><strong>as_server</strong> (<em>bool</em>) – True -&gt; This will be the zmq server
+(default False -&gt; GD acts as server)</p></li>
 </ul>
 </dd>
 </dl>
-<p>Typical usage in Canvas by the following command:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span> <span class="kn">from</span> <span class="nn">ghawk2.external</span> <span class="kn">import</span> <span class="n">channel</span>
-<span class="gp">&gt;&gt;&gt; </span> <span class="n">channel</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<p>Typical usage in a second Python process by the following command:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span> <span class="kn">from</span> <span class="nn">gdesk.external</span> <span class="kn">import</span> <span class="n">channel</span>
+<span class="gp">&gt;&gt;&gt; </span> <span class="n">channel</span><span class="o">.</span><span class="n">connect_to_gui</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Connecting to a running GH instance at another computer</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span> <span class="n">channel</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="mi">5998</span><span class="p">,</span> <span class="s1">&#39;FFYBVR-L1.ad.onsemi.com&#39;</span><span class="p">)</span>   
+<p>Connecting to a running GD instance at another computer</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span> <span class="n">channel</span><span class="o">.</span><span class="n">connect_to_gui</span><span class="p">(</span><span class="mi">5998</span><span class="p">,</span> <span class="s1">&#39;FFYBVR-L1.ad.onsemi.com&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -160,7 +162,7 @@ to a new thread in this process.</p>
         <li class="right" >
           <a href="gdesk.external.html" title="gdesk.external package"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="gdesk.external.html" >gdesk.external package</a> &#187;</li>

@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Scripting &#8212; gdesk 0.1.0 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Processes" href="tutorial.processes.html" />
+    <link rel="prev" title="Plots" href="tutorial.plot.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="tutorial.processes.html" title="Processes"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="tutorial.plot.html" title="Plots"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Live Scripting</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="live-scripting">
+<h1>Live Scripting<a class="headerlink" href="#live-scripting" title="Permalink to this headline">¶</a></h1>
+<p>Custom functions can be programmed in an external Python file (.py extension) using the scripting system.
+These functions can be called from the shell.
+The code is reloaded to Gamma Desk automatically when saved and a function is called from the shell.</p>
+<p>Place the following content in a Python file.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello world&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Save for example the file as C:\temp\livescripts\hello.py</p>
+<p>Check then if C:\temp\livescripts is in the Live Scripting search path.
+Take the menu of a console panel, and go to Script-&gt;Edit Live paths…</p>
+<p>Then, the following should print Hello World.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">use</span><span class="o">.</span><span class="n">hello</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Hello</span> <span class="n">world</span>
+</pre></div>
+</div>
+<p>If you edit the hello.py, save and recall it, it should call the updated function.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, new world&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">use</span><span class="o">.</span><span class="n">hello</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Hello</span><span class="p">,</span> <span class="n">new</span> <span class="n">world</span>
+</pre></div>
+</div>
+<div class="section" id="refer-across-scripts">
+<h2>Refer across scripts<a class="headerlink" href="#refer-across-scripts" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">gdesk</span> <span class="kn">import</span> <span class="n">using</span>
+
+<span class="n">other</span> <span class="o">=</span> <span class="n">using</span><span class="o">.</span><span class="n">other</span>
+
+<span class="k">def</span> <span class="nf">func1</span><span class="p">():</span>
+    <span class="n">other</span><span class="o">.</span><span class="n">func2</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">func1</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Live Scripting</a><ul>
+<li><a class="reference internal" href="#refer-across-scripts">Refer across scripts</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="tutorial.plot.html"
+                        title="previous chapter">Plots</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="tutorial.processes.html"
+                        title="next chapter">Processes</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/tutorial.livescript.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="tutorial.processes.html" title="Processes"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="tutorial.plot.html" title="Plots"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Live Scripting</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Thomas Cools.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

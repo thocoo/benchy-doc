@@ -1,0 +1,19 @@
+gdesk.panels.cmdhist package
+============================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   gdesk.panels.cmdhist.panel
+   gdesk.panels.cmdhist.proxy
+
+Module contents
+---------------
+
+.. automodule:: gdesk.panels.cmdhist
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -18,6 +18,7 @@ Tutorial
    
    tutorial.console
    tutorial.plot  
+   tutorial.livescript
    tutorial.processes
 
 Api
@@ -28,6 +29,13 @@ Api
    
    user_api
    modules
+   
+Search
+======
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`   
    
 Release
 =======

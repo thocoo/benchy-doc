@@ -1,0 +1,7 @@
+gdesk.panels.cmdhist.proxy module
+=================================
+
+.. automodule:: gdesk.panels.cmdhist.proxy
+   :members:
+   :undoc-members:
+   :show-inheritance:
