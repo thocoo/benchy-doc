@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Console panel: a Python interpreter &#8212; gdesk 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Plots" href="tutorial.plot.html" />
+    <link rel="prev" title="Welcome to Gamma Desk" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="tutorial.plot.html" title="Plots"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Gamma Desk"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">The Console panel: a Python interpreter</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="the-console-panel-a-python-interpreter">
+<h1>The Console panel: a Python interpreter<a class="headerlink" href="#the-console-panel-a-python-interpreter" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-center" id="id1">
+<img alt="console hello world" src="_images/console.png" />
+<p class="caption"><span class="caption-text">A console panel of Gamma Desk.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>Using the console widget is quite straightforward. You enter Python code,
+press <code class="docutils literal notranslate"><span class="pre">ENTER</span></code> to execute it and observe the return value and/or print
+statement output in the output window.
+To work conveniently several improvements have been made over
+a standard Python interpreter. You are highly encouraged to try these out
+for yourself:</p>
+<blockquote>
+<div><ul>
+<li><p>Multiline input:</p>
+<ul class="simple">
+<li><p>When typing Python code, hit <code class="docutils literal notranslate"><span class="pre">SHIFT+ENTER</span></code> to start at a new line
+without executing the previous line.</p></li>
+<li><p>To execute a multiline piece of code hit <code class="docutils literal notranslate"><span class="pre">CTRL+ENTER</span></code> with your
+cursor anywhere in your code. Alternatively, you can end your code
+with an empty line and hit <code class="docutils literal notranslate"><span class="pre">ENTER</span></code>.</p></li>
+<li><p>If you hit <code class="docutils literal notranslate"><span class="pre">ENTER</span></code> on a single line of code, but more lines are expected,
+a line line is started.</p></li>
+</ul>
+</li>
+<li><p>Basic auto completion:</p>
+<ul class="simple">
+<li><p>To know what functionality and properties any specific object provides,
+you type the name of the variable that holds that object followed by
+a dot (<code class="docutils literal notranslate"><span class="pre">.</span></code>) and then hit <code class="docutils literal notranslate"><span class="pre">TAB</span></code>. For example: <code class="docutils literal notranslate"><span class="pre">gui.</span></code> + <code class="docutils literal notranslate"><span class="pre">TAB</span></code>.
+This show all the attributes of <code class="docutils literal notranslate"><span class="pre">gui</span></code></p></li>
+<li><p>You can filter the results by typing the one or more prefix characters and then
+hit <code class="docutils literal notranslate"><span class="pre">TAB</span></code>. For example: <code class="docutils literal notranslate"><span class="pre">gui.s</span></code> + <code class="docutils literal notranslate"><span class="pre">TAB</span></code>
+This shows all the attributes of <code class="docutils literal notranslate"><span class="pre">gui</span></code> starting with <code class="docutils literal notranslate"><span class="pre">s</span></code></p></li>
+<li><p>This autocompletion level is case sensitive.</p></li>
+<li><p>Attributes which are callable ends with <code class="docutils literal notranslate"><span class="pre">(</span></code></p></li>
+<li><p>This autocompletion also works for string keys of dictionaries.
+For example: <code class="docutils literal notranslate"><span class="pre">shell.ws[</span></code> + <code class="docutils literal notranslate"><span class="pre">TAB</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Second-level Autocompletion:</p>
+<ul class="simple">
+<li><p>This autocompletion is not case sensitive.</p></li>
+<li><p>The characters after <code class="docutils literal notranslate"><span class="pre">.</span></code> are used for filter on occurrance, not only as prefix</p></li>
+<li><p>This autocompletion is started by <code class="docutils literal notranslate"><span class="pre">CTRL+TAB</span></code>. For exmaple <code class="docutils literal notranslate"><span class="pre">gui.roi</span></code> + <code class="docutils literal notranslate"><span class="pre">CTRL+TAB</span></code> will
+list all gui attributes containing <code class="docutils literal notranslate"><span class="pre">roi</span></code></p></li>
+</ul>
+</li>
+<li><p>Short hand help function:</p>
+<ul class="simple">
+<li><p>The standard way of pulling up documentation in Python is through
+the <code class="docutils literal notranslate"><span class="pre">help()</span></code> function. In Gamma Desk, you can type a question mark
+after a name (e.g. <code class="docutils literal notranslate"><span class="pre">my_var?</span></code>) and hit <code class="docutils literal notranslate"><span class="pre">ENTER</span></code>.
+This will leave <code class="docutils literal notranslate"><span class="pre">my_var</span></code> on the prompt but
+print out the documentation. It is syntactic sugar for <code class="docutils literal notranslate"><span class="pre">help(my_var)</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Edit code:</p>
+<ul class="simple">
+<li><p>The code file is opened with a <code class="docutils literal notranslate"><span class="pre">my_function??</span></code>. It is syntactic sugar for shell.edit(my_function)</p></li>
+<li><p>Which editor executable is used depends on the configuration of Gamma Desk.</p></li>
+</ul>
+</li>
+<li><p>print/show a variable:</p>
+<p>Python has by default, 2 methods to make a string representation of an object:</p>
+<ul class="simple">
+<li><p>The repr() function returns a printable representation of the given object.
+If the user type the object in the command and presses <code class="docutils literal notranslate"><span class="pre">ENTER</span></code>, this function is called.
+This is the default behavior of Pytyhon</p></li>
+<li><p>The str() function gives typical a more extended string. print() will use this function.</p></li>
+<li><p>There is a Python module pprint (Pretty Print) to give a cleaner print of list, dictionaries,…
+The actual printed output depends on how well the pretty print module recognize the object.
+It is will suited for nested dictionaries and lists.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">my_object!</span></code> is syntactic sugar for <code class="docutils literal notranslate"><span class="pre">print(my_object)</span></code>. So if you want to have the repr() of the object,
+you just type the object + <code class="docutils literal notranslate"><span class="pre">ENTER</span></code>. If you want to have the str() of the object, you type object + <code class="docutils literal notranslate"><span class="pre">!</span></code> + <code class="docutils literal notranslate"><span class="pre">ENTER</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">my_object!!</span></code> is syntactic sugar for <code class="docutils literal notranslate"><span class="pre">pprint.pprint(my_object)</span></code></p></li>
+</ul>
+</li>
+<li><p>DOS commands:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">!my</span> <span class="pre">command</span></code> is equivalent for <code class="docutils literal notranslate"><span class="pre">shell.popen(r&quot;&quot;&quot;my</span> <span class="pre">command&quot;&quot;)</span></code> and will
+execute the command in DOS. For example <code class="docutils literal notranslate"><span class="pre">!dir</span></code> will show the content of the
+current directory.</p></li>
+<li><p>TO DO: this feature is considered Alpha state.</p></li>
+</ul>
+</li>
+<li><p>Magic commands:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">%some</span> <span class="pre">string</span></code> is equivalent to shell.magic(‘some string’)</p>
+<ul>
+<li><p>%pwd: Print current working dir</p></li>
+<li><p>%ls, %dir: List the current dir</p></li>
+<li><p>%cd &lt;dir&gt;: Change working dir to &lt;dir&gt;</p></li>
+<li><p>%tb: Print latest error</p></li>
+<li><p>%info: Print info on the current process and thread</p></li>
+<li><p>%who: List the current workspace</p></li>
+</ul>
+</li>
+<li><p>TO DO: this feature is considered Alpha state.</p></li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="execution-control">
+<h2>Execution Control<a class="headerlink" href="#execution-control" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="synchroon-breaking">
+<h3>Synchroon Breaking<a class="headerlink" href="#synchroon-breaking" title="Permalink to this headline">¶</a></h3>
+<p>This method makes use of the Python debugger to setting the system trace function.
+This function is called whenever a new local scope is entered.
+Because of this extra call, the total execution time of the user code is affected.
+The function can raise a custom Error SyncBreaked to interrupt the current flow.</p>
+<p>The trace function will be setuped before any executing of user code.</p>
+<p>Because this method uses the system tracing, it affect the proper operation of the  Python debugger.</p>
+</div>
+<div class="section" id="asynchroon-breaking">
+<h3>Asynchroon Breaking<a class="headerlink" href="#asynchroon-breaking" title="Permalink to this headline">¶</a></h3>
+<p>Sending a KeyBoardInterrupt to the execution thread.
+The receiving thread have to step to the next Python command to really raise the KeyBoardInterrupt.</p>
+</div>
+<div class="section" id="system-exit">
+<h3>System Exit<a class="headerlink" href="#system-exit" title="Permalink to this headline">¶</a></h3>
+<p>A controlled exit of the process.</p>
+</div>
+<div class="section" id="kill-process">
+<h3>Kill Process<a class="headerlink" href="#kill-process" title="Permalink to this headline">¶</a></h3>
+<p>A hard kill of the process.</p>
+</div>
+<div class="section" id="recover-a-python-blocking-thread">
+<h3>Recover a Python blocking thread<a class="headerlink" href="#recover-a-python-blocking-thread" title="Permalink to this headline">¶</a></h3>
+<p>Note that for interrupting a Python thread without killing the entire Python interpreter, it is needed
+that the tread does a Python step. If the thread is waiting for example for data on a queue, and the queue
+never get feeded, the thread can not be breaked.</p>
+<p>One solution is start another thread which you can use the solve the blocking.</p>
+</div>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">The Console panel: a Python interpreter</a><ul>
+<li><a class="reference internal" href="#usage">Usage</a></li>
+<li><a class="reference internal" href="#execution-control">Execution Control</a><ul>
+<li><a class="reference internal" href="#synchroon-breaking">Synchroon Breaking</a></li>
+<li><a class="reference internal" href="#asynchroon-breaking">Asynchroon Breaking</a></li>
+<li><a class="reference internal" href="#system-exit">System Exit</a></li>
+<li><a class="reference internal" href="#kill-process">Kill Process</a></li>
+<li><a class="reference internal" href="#recover-a-python-blocking-thread">Recover a Python blocking thread</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter"> Welcome to Gamma Desk</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="tutorial.plot.html"
+                        title="next chapter">Plots</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/tutorial.console.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="tutorial.plot.html" title="Plots"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Gamma Desk"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">The Console panel: a Python interpreter</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Thomas Cools.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

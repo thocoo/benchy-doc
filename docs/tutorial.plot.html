@@ -1,0 +1,516 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plots &#8212; gdesk 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Processes" href="tutorial.processes.html" />
+    <link rel="prev" title="The Console panel: a Python interpreter" href="tutorial.console.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="tutorial.processes.html" title="Processes"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="tutorial.console.html" title="The Console panel: a Python interpreter"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Plots</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="plots">
+<h1>Plots<a class="headerlink" href="#plots" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-center" id="id1">
+<img alt="Gamma Desk plot panel" src="_images/plot.png" />
+<p class="caption"><span class="caption-text">Gamma Desk plot panel</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>There a many plotting libraries for Python avaiable, but the most common and easy to use is <a class="reference external" href="https://matplotlib.org/">Matplotlib</a>.</p>
+<p>If you want to use Matplotlib in some gui environment, you need a suitable backend for that gui.</p>
+<p>This backed is responsible to actual draw the plotting content to screen or to disk.</p>
+<p>There are by default backends available for the common gui libraries like Gtk, Qt, Wx.
+There are also backends to export to svg or pdf files.</p>
+<div class="section" id="default-backends">
+<h3>Default backends<a class="headerlink" href="#default-backends" title="Permalink to this headline">¶</a></h3>
+<p>Note that the default gui backends of Matplotlib have quite some limitations</p>
+<ul class="simple">
+<li><p>plots are created only in the main thread</p></li>
+<li><p>There should be no other gui with its own eventloops be running in the same process
+This can be a problem if the Python interpreter is running in another GUI process.</p></li>
+</ul>
+<p>To really integrate the interactive plotting in a gui, a customized backend is needed.</p>
+</div>
+<div class="section" id="gamma-desk-backend">
+<h3>Gamma Desk Backend<a class="headerlink" href="#gamma-desk-backend" title="Permalink to this headline">¶</a></h3>
+<p>The Gamma Desk backend features:</p>
+<ul class="simple">
+<li><p>Plotting from main and non main threads</p></li>
+<li><p>Plotting from external processes outside the gui and rendering the figure in the gui:</p>
+<ul>
+<li><p>channeling the figure object from the external process to the gui process</p></li>
+<li><p>channeling the basic plot commands, the figure is crated in the gui process</p></li>
+</ul>
+</li>
+</ul>
+<p>There is some Mathlab state-based interface <a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot">pyplot</a>
+to Matplotlib plotting library.</p>
+</div>
+</div>
+<div class="section" id="usecase-interactive-console-in-the-gui-process">
+<h2>Usecase: Interactive Console in the Gui Process<a class="headerlink" href="#usecase-interactive-console-in-the-gui-process" title="Permalink to this headline">¶</a></h2>
+<p>Nothing special here. You only have to make sure you use the gdesk backed.
+Note that the gdesk backend is already selected at startup of gDesk.</p>
+<p>Get a reference to pyplot:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Although it is note mandatory, I suggest to always use <cite>plt</cite> as variable name for the pylab module.</p>
+</div>
+<p>There are a few alternative methods of importing pyplot.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Only import pyplot functions</span>
+<span class="c1">#This method is prefered</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1">#importing pyplot and also a lot of references to numpy objects</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pylab</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="c1">#or a shorter version (not suitable for every version of Matplotlib)</span>
+<span class="kn">import</span> <span class="nn">pylab</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+<p>You can check if indeed, the correct backend is selected.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">get_backend</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;module://gdesk.matplotbe&#39;</span>
+</pre></div>
+</div>
+<p>Make a very basic plot.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Note that after the plot command, the plot window is shown, but no plot is visible.
+The show command will actual show the plot.</p>
+<p>To close all figures:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="interactive-mode">
+<h3>Interactive mode<a class="headerlink" href="#interactive-mode" title="Permalink to this headline">¶</a></h3>
+<p>In interactive, every plt command will cause a redraw of the plot.
+By default, matplotbe is not started in interactive mode.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">isinteractive</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span>
+</pre></div>
+</div>
+<p>You can enable or disable interactive mode the interactive command:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">interactive</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that interactive mode can slow down the process a lot.</p>
+</div>
+</div>
+<div class="section" id="switching-backend">
+<h3>Switching backend<a class="headerlink" href="#switching-backend" title="Permalink to this headline">¶</a></h3>
+<p>You can switch to another backend.
+Switching the backend will close all figures.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">switch_backend</span><span class="p">(</span><span class="s1">&#39;svg&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">switch_backend</span><span class="p">(</span><span class="s1">&#39;module://gdesk.matplotbe&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="usecase-interactive-console-in-an-external-process">
+<h2>Usecase: Interactive Console in an external process<a class="headerlink" href="#usecase-interactive-console-in-an-external-process" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="method-1-figure-channeling">
+<h3>Method 1: figure channeling<a class="headerlink" href="#method-1-figure-channeling" title="Permalink to this headline">¶</a></h3>
+<p>The figure object is created in the user process.
+Then, the figure is sended to the gui to show it.
+The backend is svg if the user process is not the gui process.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">get_backend</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;svg&#39;</span>
+</pre></div>
+</div>
+<p>Make a plot using the svg backend.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Data for plotting</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+<span class="n">s</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;time (s)&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;voltage (mV)&#39;</span><span class="p">,</span>
+       <span class="n">title</span><span class="o">=</span><span class="s1">&#39;About as simple as it gets, folks&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Normally you execute here the following <cite>plt.show()</cite> to actual show the plot.
+But since there is no gui backend selected, this will not work.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ne">UserWarning</span><span class="p">:</span> <span class="n">Matplotlib</span> <span class="ow">is</span> <span class="n">currently</span> <span class="n">using</span> <span class="n">svg</span><span class="p">,</span> <span class="n">which</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">non</span><span class="o">-</span><span class="n">GUI</span> <span class="n">backend</span><span class="p">,</span> <span class="n">so</span> <span class="n">cannot</span> <span class="n">show</span> <span class="n">the</span> <span class="n">figure</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Send the current figure from this process to Gamma Desk gui process.
+The figure is renumbered according the active plots in the gui process.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">gui</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>It will create a new figure window. If you use the option <cite>hold=True</cite>, the current active plot window will used to
+show the figure instead of a new window.</p>
+</div>
+<div class="section" id="method-2-by-command-channeling">
+<h3>Method 2: By command channeling<a class="headerlink" href="#method-2-by-command-channeling" title="Permalink to this headline">¶</a></h3>
+<p>The commands and arguments are channeled to the gui.
+The figure object is created in the gui thread.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plx</span> <span class="o">=</span> <span class="n">gui</span><span class="o">.</span><span class="n">prepareplot</span><span class="p">()</span>   <span class="c1">#reference to the pylab proxy</span>
+<span class="n">plx</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">])</span>
+<span class="n">plx</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>I suggest to use <cite>plx</cite> as variable name for the pylab proxy to make it clear
+it is not the same as plt which is usual a reference to matplotlib.pyplot.</p>
+</div>
+<p>Because plx is a proxy to the pyplot on the gui process. The following gives the backend
+currently used in the gui process.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plx</span><span class="o">.</span><span class="n">get_backend</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;module://gdesk.matplotbe&#39;</span>
+</pre></div>
+</div>
+<p>This method has some limitations:</p>
+<ul class="simple">
+<li><p>Only the pyplot.&lt;funcs&gt; are available</p></li>
+<li><p>Any returned object of the function calls is actual a copy comming from the gui process to the local process</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="plotting-examples">
+<h2>Plotting Examples<a class="headerlink" href="#plotting-examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="simple-xy-plot">
+<h3>Simple XY plot<a class="headerlink" href="#simple-xy-plot" title="Permalink to this headline">¶</a></h3>
+<p>Simple xy plotting using the pyplot proxy</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plx</span> <span class="o">=</span> <span class="n">gui</span><span class="o">.</span><span class="n">prepareplot</span><span class="p">()</span>   <span class="c1">#reference to the pylab proxy</span>
+<span class="n">plx</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>              <span class="c1">#only needed if not first plot</span>
+<span class="n">elecs</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">400</span><span class="p">]</span>
+<span class="n">response</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">2000</span><span class="p">,</span> <span class="mi">4000</span><span class="p">,</span> <span class="mi">6000</span><span class="p">,</span> <span class="mi">7000</span><span class="p">]</span>
+<span class="n">plx</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">elecs</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="s1">&#39;+-&#39;</span><span class="p">)</span>
+<span class="n">plx</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plx</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Electrons&#39;</span><span class="p">)</span>
+<span class="n">plx</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Response [DN]&#39;</span><span class="p">)</span>
+<span class="n">plx</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Response&#39;</span><span class="p">)</span>
+<span class="n">plx</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>        <span class="c1">#cleanup space around plot</span>
+<span class="n">plx</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="subplots">
+<h3>Subplots<a class="headerlink" href="#subplots" title="Permalink to this headline">¶</a></h3>
+<p>Subplots can be generated using subplot() as in the following example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">)</span>
+<span class="n">x2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
+
+<span class="n">y1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">x1</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x1</span><span class="p">)</span>
+<span class="n">y2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">x2</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;A tale of 2 subplots&#39;</span><span class="p">)</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="s1">&#39;o-&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Damped oscillation&#39;</span><span class="p">)</span>
+
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="s1">&#39;.-&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;time (s)&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Undamped&#39;</span><span class="p">)</span>
+
+<span class="n">gui</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>    <span class="c1">#Note that plt.show() can only work if you are currently in the gui process</span>
+</pre></div>
+</div>
+<div class="figure align-default">
+<img alt="_images/tale_of_2_subplots.png" src="_images/tale_of_2_subplots.png" />
+</div>
+</div>
+<div class="section" id="histogram">
+<h3>Histogram<a class="headerlink" href="#histogram" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">19680801</span><span class="p">)</span>
+
+<span class="c1"># example data</span>
+<span class="n">mu</span> <span class="o">=</span> <span class="mi">100</span>  <span class="c1"># mean of distribution</span>
+<span class="n">sigma</span> <span class="o">=</span> <span class="mi">15</span>  <span class="c1"># standard deviation of distribution</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">mu</span> <span class="o">+</span> <span class="n">sigma</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">437</span><span class="p">)</span>
+
+<span class="n">num_bins</span> <span class="o">=</span> <span class="mi">50</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="c1"># the histogram of the data</span>
+<span class="n">n</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">patches</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">num_bins</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># add a &#39;best fit&#39; line</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">((</span><span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span> <span class="o">*</span> <span class="n">sigma</span><span class="p">))</span> <span class="o">*</span>
+     <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">sigma</span> <span class="o">*</span> <span class="p">(</span><span class="n">bins</span> <span class="o">-</span> <span class="n">mu</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">bins</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;--&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Smarts&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Probability density&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Histogram of IQ: $\mu=100$, $\sigma=15$&#39;</span><span class="p">)</span>
+
+<span class="c1"># Tweak spacing to prevent clipping of ylabel</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">gui</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="figure align-default">
+<img alt="_images/histogram.png" src="_images/histogram.png" />
+</div>
+</div>
+</div>
+<div class="section" id="plotting-from-independent-python-process">
+<h2>Plotting from independent Python process<a class="headerlink" href="#plotting-from-independent-python-process" title="Permalink to this headline">¶</a></h2>
+<p>Make sure Gamma Desk is <a class="reference external" href="install.html">installed</a> in the relevant Python distribution.</p>
+<p>The type of communcations channels depends on if Gamma Desk is started as independent process or child process.</p>
+<div class="section" id="start-gamma-desk-as-indepedent-process">
+<h3>Start Gamma Desk as Indepedent Process<a class="headerlink" href="#start-gamma-desk-as-indepedent-process" title="Permalink to this headline">¶</a></h3>
+<p>First start a Gamma Desk instance.</p>
+<p>Then in the console of the other Python process, execute:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">gdesk.external.channel</span> <span class="kn">import</span> <span class="n">connect_to_gui</span>
+<span class="n">connect_to_gui</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="start-gamma-desk-as-child-process">
+<h3>Start Gamma Desk as Child Process<a class="headerlink" href="#start-gamma-desk-as-child-process" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">gdesk.external.channel</span> <span class="kn">import</span> <span class="n">start_gui_as_child</span>
+<span class="n">start_gui_as_child</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Since the workspace &amp; Process in the Gamma Desk Console is the same,
+you can execute the following commands in the console of your choice.</p>
+</div>
+<div class="section" id="figure-channeling-method">
+<h3>Figure channeling method<a class="headerlink" href="#figure-channeling-method" title="Permalink to this headline">¶</a></h3>
+<p>We prepare the figure using the svg backend and send
+the figure to the gui process.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Use pyplot with svg backend</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1">#make a figure object in this thread (svg backend)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+
+<span class="c1">#The typical plot commands</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;My simple example&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;The x-axis title&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;The y-axis title&#39;</span><span class="p">)</span>
+
+<span class="c1">#Send to the current figure to the gdesk gui process</span>
+<span class="n">gui</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="command-channeling-method">
+<h3>Command channeling method<a class="headerlink" href="#command-channeling-method" title="Permalink to this headline">¶</a></h3>
+<p>We actual draw the figure in the gui process.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Use gdesk backend in the gdesk gui process</span>
+<span class="c1">#return the proxy to pyplot object in the gdesk gui process</span>
+<span class="n">plx</span> <span class="o">=</span> <span class="n">gui</span><span class="o">.</span><span class="n">prepareplot</span><span class="p">()</span>
+
+<span class="c1">#Disable the interactive mode and create a new figure</span>
+<span class="n">plx</span><span class="o">.</span><span class="n">ioff</span><span class="p">()</span>
+<span class="n">plx</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+
+<span class="c1">#The typical plot commands</span>
+<span class="n">plx</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;My simple example&#39;</span><span class="p">)</span>
+<span class="n">plx</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plx</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">plx</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;The x-axis title&#39;</span><span class="p">)</span>
+<span class="n">plx</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;The y-axis title&#39;</span><span class="p">)</span>
+
+<span class="n">plx</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The gui is a mapping to the gui proxy instance registered for the current thread.
+The gui will be None if accessed from unregistered thread.</p>
+</div>
+</div>
+<div class="section" id="issues">
+<h2>Issues<a class="headerlink" href="#issues" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="starting-a-matplotlib-gui-outside-of-the-main-thread-will-likely-fail">
+<h3>Starting a Matplotlib GUI outside of the main thread will likely fail<a class="headerlink" href="#starting-a-matplotlib-gui-outside-of-the-main-thread-will-likely-fail" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ne">UserWarning</span><span class="p">:</span> <span class="n">Starting</span> <span class="n">a</span> <span class="n">Matplotlib</span> <span class="n">GUI</span> <span class="n">outside</span> <span class="n">of</span> <span class="n">the</span> <span class="n">main</span> <span class="n">thread</span> <span class="n">will</span> <span class="n">likely</span> <span class="n">fail</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>A Matplotlib backend is usualy not suitable to plot from outside the GUI thread.
+The Matplotlib base backend warns for this, but the warning is surpressed for the gdesk backend.</p>
+<p>To check which is the current backend. The current backend in the GUI process should be <cite>module://gdesk.matplotbe</cite>.
+Outside the GUI process, it should be NOT <cite>module://gdesk.matplotbe</cite>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pylab</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">get_backend</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;module://gdesk.matplotbe&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="matplotlib-is-currently-using-svg-which-is-a-non-gui-backend-so-cannot-show-the-figure">
+<h3>Matplotlib is currently using svg, which is a non-GUI backend, so cannot show the figure<a class="headerlink" href="#matplotlib-is-currently-using-svg-which-is-a-non-gui-backend-so-cannot-show-the-figure" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ne">UserWarning</span><span class="p">:</span> <span class="n">Matplotlib</span> <span class="ow">is</span> <span class="n">currently</span> <span class="n">using</span> <span class="n">svg</span><span class="p">,</span> <span class="n">which</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">non</span><span class="o">-</span><span class="n">GUI</span> <span class="n">backend</span><span class="p">,</span> <span class="n">so</span> <span class="n">cannot</span> <span class="n">show</span> <span class="n">the</span> <span class="n">figure</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>You are probably not on the gui process. You have to send the figure to the gui process.
+Try <cite>gui.plot.show()</cite> instead of plt.show()`</p>
+</div>
+<div class="section" id="fonts-are-too-small">
+<h3>Fonts are too small<a class="headerlink" href="#fonts-are-too-small" title="Permalink to this headline">¶</a></h3>
+<p>Increase the value of plt.rcParams[‘font.size’] before making a plot</p>
+</div>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Plots</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a><ul>
+<li><a class="reference internal" href="#default-backends">Default backends</a></li>
+<li><a class="reference internal" href="#gamma-desk-backend">Gamma Desk Backend</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#usecase-interactive-console-in-the-gui-process">Usecase: Interactive Console in the Gui Process</a><ul>
+<li><a class="reference internal" href="#interactive-mode">Interactive mode</a></li>
+<li><a class="reference internal" href="#switching-backend">Switching backend</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#usecase-interactive-console-in-an-external-process">Usecase: Interactive Console in an external process</a><ul>
+<li><a class="reference internal" href="#method-1-figure-channeling">Method 1: figure channeling</a></li>
+<li><a class="reference internal" href="#method-2-by-command-channeling">Method 2: By command channeling</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#plotting-examples">Plotting Examples</a><ul>
+<li><a class="reference internal" href="#simple-xy-plot">Simple XY plot</a></li>
+<li><a class="reference internal" href="#subplots">Subplots</a></li>
+<li><a class="reference internal" href="#histogram">Histogram</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#plotting-from-independent-python-process">Plotting from independent Python process</a><ul>
+<li><a class="reference internal" href="#start-gamma-desk-as-indepedent-process">Start Gamma Desk as Indepedent Process</a></li>
+<li><a class="reference internal" href="#start-gamma-desk-as-child-process">Start Gamma Desk as Child Process</a></li>
+<li><a class="reference internal" href="#figure-channeling-method">Figure channeling method</a></li>
+<li><a class="reference internal" href="#command-channeling-method">Command channeling method</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#issues">Issues</a><ul>
+<li><a class="reference internal" href="#starting-a-matplotlib-gui-outside-of-the-main-thread-will-likely-fail">Starting a Matplotlib GUI outside of the main thread will likely fail</a></li>
+<li><a class="reference internal" href="#matplotlib-is-currently-using-svg-which-is-a-non-gui-backend-so-cannot-show-the-figure">Matplotlib is currently using svg, which is a non-GUI backend, so cannot show the figure</a></li>
+<li><a class="reference internal" href="#fonts-are-too-small">Fonts are too small</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="tutorial.console.html"
+                        title="previous chapter">The Console panel: a Python interpreter</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="tutorial.processes.html"
+                        title="next chapter">Processes</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/tutorial.plot.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="tutorial.processes.html" title="Processes"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="tutorial.console.html" title="The Console panel: a Python interpreter"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Plots</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Thomas Cools.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,773 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Shell and Gui user API &#8212; gdesk 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="gdesk" href="modules.html" />
+    <link rel="prev" title="Processes" href="tutorial.processes.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="gdesk"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="tutorial.processes.html" title="Processes"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">The Shell and Gui user API</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="the-shell-and-gui-user-api">
+<h1>The Shell and Gui user API<a class="headerlink" href="#the-shell-and-gui-user-api" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="shell">
+<h2>shell<a class="headerlink" href="#shell" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.core.shellmod.</code><code class="sig-name descname">Shell</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">workspace</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span></dt>
+<dd><dl class="py method">
+<dt>
+<code class="sig-name descname">edit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">object</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Edit source file of object with external editor</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>objects</strong> – object from which the source code will be opened in an editor</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">edit_dbase</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Edit a SQLite file with an external editor.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">edit_file</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span></em>, <em class="sig-param"><span class="n">lineno</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Edit the file with an external editor at a certain lineno.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">execfile</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filepath</span></em>, <em class="sig-param"><span class="n">globals</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">locals</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Execute a Python file</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">execfilews</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filepath</span></em>, <em class="sig-param"><span class="n">wsname</span><span class="o">=</span><span class="default_value">'__execfilews__'</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Execute a Python file in a new workspace.
+Place the workspace in shell</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">get_sys_paths</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">customs_only</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span></dt>
+<dd><p>List the sys.paths.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>customs_only</strong> (<em>bool</em>) – List only paths not part of the python.exe directory.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">getcodefile</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">object</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Find out which source or compiled file an object was defined in.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">info</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Print info about the current process</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">magic</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cmd</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Magic commands like in IPython.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">pprint</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">var</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Do a <a class="reference external" href="https://docs.python.org/3.8/library/pprint.html">pretty print</a> of var.
+The user can also use <cite>var!!</cite> to call this function.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">set_sys_paths</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">new_sys_paths</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Set new content for sys.path.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">this_interpreter</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Return the interpreter related to this thread.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="gui">
+<h2>gui<a class="headerlink" href="#gui" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.core.gui_proxy.</code><code class="sig-name descname">GuiProxy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">qapp</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">master_call_queue</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">master_return_queue</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">process_ready_call</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Communication channel to the gui
+Master and Slave
+Across Procecess and Threads</p>
+<dl class="py method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">exit</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Exit Gamma Hawk</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">get_panel_ids</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Returns all current panal ids of a category.
+The last one is the selected one.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>current panal ids</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">history</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span></dt>
+<dd><p>The command history</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>count</strong> (<em>int</em>) – Show the last count elements</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Command history as list</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">menu_trigger</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Trigger a menu action of a panel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>category</strong> (<em>str</em>) – Example ‘image’</p></li>
+<li><p><strong>id</strong> (<em>int</em>) – Example 1</p></li>
+<li><p><strong>action_names</strong> (<em>list</em>) – Example [‘File’, ‘New…’]</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">pull</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Pull and object from the gui data stack</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">push</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Push an object on the gui data stack</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>obj</strong> (<em>object</em>) – A pickable object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<em class="property">property </em><code class="sig-name descname">qapp</code></dt>
+<dd><p>The QApplication instance. Is only visible in the gui thread.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">show</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">argv</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Shows a object in an suitable panel</p>
+<p>You can give more then one object to display, multiple viewers will be created.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>select</strong> (<em>int</em>) – selects which viewer shows the object (start with 1! 0 in GH1)
+negative numbers stands for last selected, or the selected before that, or before that</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<em class="property">property </em><code class="sig-name descname">vr</code></dt>
+<dd><p>The roi sliced numpy array of the current image viewer</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<em class="property">property </em><code class="sig-name descname">vs</code></dt>
+<dd><p>The shared array on the current image viewer
+Note that the data is on shared memory.
+<code class="docutils literal notranslate"><span class="pre">vs[:]</span></code> or <code class="docutils literal notranslate"><span class="pre">vs.ndarray</span></code> to view it as a real numpy array</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="section" id="proxy-base">
+<h3>Proxy Base<a class="headerlink" href="#proxy-base" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.core.gui_proxy.</code><code class="sig-name descname">GuiProxyBase</code></dt>
+<dd><dl class="py method">
+<dt>
+<em class="property">classmethod </em><code class="sig-name descname">close</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">panid</span><span class="o">=</span><span class="default_value">- 1</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Close the selected panel of the category</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<em class="property">classmethod </em><code class="sig-name descname">menu</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">action_names</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Call a certain menu item of the panel</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>action_names</strong> (<em>list</em>) – Example [‘File’, ‘New…’]</p></li>
+<li><p><strong>*args</strong> – <p>Positional arguments of the menu call</p>
+</p></li>
+<li><p><strong>**kwargs</strong> – <p>Keyword arguments of the menu call</p>
+</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<em class="property">classmethod </em><code class="sig-name descname">selected</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Return the panel id of the selected panel if this category.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="gui-img">
+<h3>gui.img<a class="headerlink" href="#gui-img" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.panels.imgview.proxy.</code><code class="sig-name descname">ImageGuiProxy</code></dt>
+<dd><dl class="py method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">get_roi</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Get the region of interest of the current viewport as a tuple of integers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return tuple(int, int, int, int)</dt>
+<dd class="field-odd"><p>x0, y0, width, height.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">get_roi_slices</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Get the current region of interest as a tupple of slice objects</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">jump_to</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Select a certain pixel and zoom to it</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">select</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Select or create an image panel with id image_id or auto id</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">set_roi</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Set the region of interest on the current viewport.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x0</strong> (<em>int</em>) – first column of the roi</p></li>
+<li><p><strong>y0</strong> (<em>int</em>) – first row of the roi</p></li>
+<li><p><strong>width</strong> (<em>int</em>) – width of the roi</p></li>
+<li><p><strong>height</strong> (<em>int</em>) – height of the roi</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">set_roi_slices</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Set the region of interest on the current viewport.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>slices</strong> (<em>tuple</em>) – Tuple of slices accross the dimensions.</p></li>
+<li><p><strong>yonfirst</strong> (<em>bool</em>) – True if first slice is the y direction.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname">show</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">array</span></em>, <em class="sig-param"><span class="n">cmap</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Show array in the image viewer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>array</strong> (<em>ndarray</em>) – </p></li>
+<li><p><strong>cmap</strong> (<em>str</em>) – ‘grey’, ‘jet’ or ‘turbo’</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">zoom_fit</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Zoom the image to fitting the image viewer area.
+Snap on the default zooming values.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">zoom_full</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Zoom the image to fully fitting the image viewer area.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">zoom_region</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Zoom the image to a certain region.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="gui-plot">
+<h3>gui.plot<a class="headerlink" href="#gui-plot" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.panels.matplot.plotproxy.</code><code class="sig-name descname">PlotGuiProxy</code></dt>
+<dd><dl class="py method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">new</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Create a new figure.</p>
+<p>Links to pylab.figure</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">select</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span></dt>
+<dd><p>If panid &lt; 0, -1: select the active panel, -2: selected before that, …
+panid == None: new panel
+panid &gt;= 0: select the panel if exists, otherwise a new with that number</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">show_figure_box</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Display the figure in the figurebox.
+The figure has to be added to the current pyplot backend.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>hold</strong> (<em>bool</em>) – Replace the figure in the current selected panel by the new figure</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="gui-dialog">
+<h3>gui.dialog<a class="headerlink" href="#gui-dialog" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt>
+<em class="property">class </em><code class="sig-prename descclassname">gdesk.panels.dialog.proxy.</code><code class="sig-name descname">DialogGuiProxy</code></dt>
+<dd><dl class="py method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">fedit</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Create form dialog and return result
+(if Cancel button is pressed, return None)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>tuple</em>) – datalist, datagroup (see below)</p></li>
+<li><p><strong>title</strong> (<em>str</em>) – form title</p></li>
+<li><p><strong>comment</strong> (<em>str</em>) – header comment</p></li>
+<li><p><strong>icon</strong> (<em>QIcon</em>) – dialog box icon</p></li>
+<li><p><strong>parent</strong> (<em>QWidget</em>) – parent widget</p></li>
+<li><p><strong>ok</strong> (<em>str</em>) – customized ok button label</p></li>
+<li><p><strong>cancel</strong> (<em>str</em>) – customized cancel button label</p></li>
+<li><p><strong>apply</strong> (<em>function</em>) – (label, function) customized button label and callback</p></li>
+<li><p><strong>apply</strong> – function taking two arguments (result, widgets)</p></li>
+<li><p><strong>result</strong> (<em>str</em>) – result serialization (‘list’, ‘dict’, ‘OrderedDict’,
+‘JSON’ or ‘XML’)</p></li>
+<li><p><strong>outfile</strong> (<em>str</em>) – write result to the file outfile.[py|json|xml]</p></li>
+<li><p><strong>type</strong> (<em>str</em>) – layout type (‘form’ or ‘questions’)</p></li>
+<li><p><strong>scrollbar</strong> (<em>bool</em>) – vertical scrollbar</p></li>
+<li><p><strong>background_color</strong> (<em>str</em>) – color of the background</p></li>
+<li><p><strong>widget_color</strong> (<em>str</em>) – color of the widgets</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Serialized result (data type depends on <cite>result</cite> parameter)</p>
+</dd>
+</dl>
+<p>datalist: list/tuple of (field_name, field_value)
+datagroup: list/tuple of (datalist <em>or</em> datagroup, title, comment)</p>
+<dl class="simple">
+<dt>Tips:</dt><dd><ul class="simple">
+<li><p>one field for each member of a datalist</p></li>
+<li><p>one tab for each member of a top-level datagroup</p></li>
+<li><p>one page (of a multipage widget, each page can be selected with a 
+combo box) for each member of a datagroup inside a datagroup</p></li>
+</ul>
+</dd>
+<dt>Supported types for field_value:</dt><dd><ul class="simple">
+<li><p>int, float, str, unicode, bool</p></li>
+<li><dl class="simple">
+<dt>colors: in Qt-compatible text form, i.e. in hex format or name (red,…)</dt><dd><p>(automatically detected from a string)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>list/tuple:</dt><dd><ul>
+<li><p>the first element will be the selected index (or value)</p></li>
+<li><p>the other elements can be couples (key, value) or only values</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">filterlist</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Open a items filter dialog.
+The user have to select items from it.</p>
+<dl class="simple">
+<dt>selection = None<span class="classifier">select nothing</span></dt><dd><p>= one_item : select the one item
+= []: use checkable items
+= [str1, str2] : check items on string value</p>
+</dd>
+<dt>filter    = None: check nothing</dt><dd><p>= False: check everything
+= <code class="docutils literal notranslate"><span class="pre">\w*01\w*</span></code>: use re to match string</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">getdir</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Show a directory dialog to choose a dir</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The directory</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">getfile</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Show a file dialog to open a file.
+Return a string tuple of  file path and choosen filter</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filter</strong> (<em>str</em>) – a filter of the form *.tif</p></li>
+<li><p><strong>title</strong> (<em>str</em>) – the window title</p></li>
+<li><p><strong>file</strong> (<em>str</em>) – default file path</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The file path and choosen filter</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple(str, str)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">getfilenames</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filter</span><span class="o">=</span><span class="default_value">'*.*'</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">'open'</span></em>, <em class="sig-param"><span class="n">file</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Multi file selection version of getfilename</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">getfiles</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Multi file selection version of getfile</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">getpath</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">startpath</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">'select a Directory'</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Show a directory dialog to choose a dir
+:return: The directory
+:rtype: pathlib.Path</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">getstring</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Show a popup-window to ask the user some textual input.</p>
+<p>Makes use of QtWidgets.QInputDialog.getText; see
+<a class="reference external" href="https://srinikom.github.io/pyside-docs/PySide/QtGui/QInputDialog.html#PySide.QtGui.PySide.QtGui.QInputDialog.getText">https://srinikom.github.io/pyside-docs/PySide/QtGui/QInputDialog.html#PySide.QtGui.PySide.QtGui.QInputDialog.getText</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>prompt</strong> (<em>str</em>) – The explanation that is visible just above the text input field.</p></li>
+<li><p><strong>default</strong> (<em>str</em>) – The text that is already present in the editable input field.</p></li>
+<li><p><strong>title</strong> (<em>str</em>) – The name of the pop-window (shown in its title bar).</p></li>
+<li><p><strong>echo</strong> (<em>str</em>) – ‘Normal’ for normal text entry; ‘Password’ for password entry. See
+<a class="reference external" href="http://doc.qt.io/qt-4.8/qlineedit.html#EchoMode-enum">http://doc.qt.io/qt-4.8/qlineedit.html#EchoMode-enum</a></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">inputdlg</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Open a input dialog. The user can enter a string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>prompt</strong> (<em>str</em>) – The prompt</p></li>
+<li><p><strong>default</strong> (<em>str</em>) – The default string</p></li>
+<li><p><strong>title</strong> (<em>str</em>) – The title of the dialog</p></li>
+<li><p><strong>masked</strong> (<em>bool</em>) – Mask the string as stars <cite>******</cite></p></li>
+<li><p><strong>timeout</strong> (<em>None</em><em> or </em><em>float</em>) – After time, continue the flow. Expressed in miliseconds</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The user string</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p>Timeout can not be combined with mask.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">msgbox</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Creates a message box</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>message</strong> (<em>str</em>) – the message</p></li>
+<li><p><strong>title</strong> (<em>str</em>) – the title</p></li>
+<li><p><strong>icon</strong> (<em>str</em>) – ‘none’, ‘help, ‘info’, ‘warn’, ‘error’</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">putfile</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Open a save file dialog and return a file name selected by the user.
+The file does not have to exist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filter</strong> (<em>str</em>) – File type filter, filters are seperated by <code class="docutils literal notranslate"><span class="pre">;;</span></code>
+e.g.: *.tif, Image (*.tif *.png), Text(*.txt);;Image (*.tif *.png)</p></li>
+<li><p><strong>title</strong> (<em>str</em>) – Title of the dialog</p></li>
+<li><p><strong>file</strong> (<em>str</em><em> or </em><em>None</em>) – Propose of file name</p></li>
+<li><p><strong>defaultfilter</strong> (<em>str</em>) – Default filter to use</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The filename and used filter</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str, str</p>
+</dd>
+</dl>
+<p>Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">filename</span><span class="p">,</span> <span class="nb">filter</span> <span class="o">=</span> <span class="n">gui</span><span class="o">.</span><span class="n">putfile</span><span class="p">(</span><span class="s1">&#39;Text(*.txt);;Image (*.tif *.png)&#39;</span><span class="p">,</span> <span class="s2">&quot;Give it a filename&quot;</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;C:\temp\default.tif&quot;</span><span class="p">,</span> <span class="s2">&quot;Image (*.tif *.png)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">putfilename</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filter</span><span class="o">=</span><span class="default_value">'*.*'</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">'save'</span></em>, <em class="sig-param"><span class="n">file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">defaultfilter</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Open a save file dialog and return a file name selected by the user.
+The file does not have to exist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filter</strong> (<em>str</em>) – File type filter, filters are seperated by <code class="docutils literal notranslate"><span class="pre">;;</span></code>
+e.g.: *.tif, Image (*.tif *.png), Text(*.txt);;Image (*.tif *.png)</p></li>
+<li><p><strong>title</strong> (<em>str</em>) – Title of the dialog</p></li>
+<li><p><strong>file</strong> (<em>str</em><em> or </em><em>None</em>) – Propose of file name</p></li>
+<li><p><strong>defaultfilter</strong> (<em>str</em>) – Default filter to use</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The filename</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p>Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">filename</span> <span class="o">=</span> <span class="n">gui</span><span class="o">.</span><span class="n">putfile</span><span class="p">(</span><span class="s1">&#39;Text(*.txt);;Image (*.tif *.png)&#39;</span><span class="p">,</span> <span class="s2">&quot;Give it a filename&quot;</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;C:\temp\default.tif&quot;</span><span class="p">,</span> <span class="s2">&quot;Image (*.tif *.png)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">question</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Yes/No question</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="gui-console">
+<h3>gui.console<a class="headerlink" href="#gui-console" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">The Shell and Gui user API</a><ul>
+<li><a class="reference internal" href="#shell">shell</a></li>
+<li><a class="reference internal" href="#gui">gui</a><ul>
+<li><a class="reference internal" href="#proxy-base">Proxy Base</a></li>
+<li><a class="reference internal" href="#gui-img">gui.img</a></li>
+<li><a class="reference internal" href="#gui-plot">gui.plot</a></li>
+<li><a class="reference internal" href="#gui-dialog">gui.dialog</a></li>
+<li><a class="reference internal" href="#gui-console">gui.console</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="tutorial.processes.html"
+                        title="previous chapter">Processes</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="modules.html"
+                        title="next chapter">gdesk</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/user_api.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="gdesk"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="tutorial.processes.html" title="Processes"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">The Shell and Gui user API</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Thomas Cools.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

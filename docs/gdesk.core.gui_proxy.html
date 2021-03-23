@@ -135,6 +135,11 @@ The last one is the selected one.</p>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt id="gdesk.core.gui_proxy.GuiProxy.load_layout">
+<em class="property">static </em><code class="sig-name descname">load_layout</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.gui_proxy.GuiProxy.load_layout" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
 <dt id="gdesk.core.gui_proxy.GuiProxy.menu_trigger">
 <em class="property">static </em><code class="sig-name descname">menu_trigger</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.gui_proxy.GuiProxy.menu_trigger" title="Permalink to this definition">¶</a></dt>
 <dd><p>Trigger a menu action of a panel.</p>
@@ -143,7 +148,7 @@ The last one is the selected one.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>category</strong> (<em>str</em>) – Example ‘image’</p></li>
 <li><p><strong>id</strong> (<em>int</em>) – Example 1</p></li>
-<li><p><strong>action_names</strong> (<em>list</em>) – Example [‘File’, ‘New Image’]</p></li>
+<li><p><strong>action_names</strong> (<em>list</em>) – Example [‘File’, ‘New…’]</p></li>
 </ul>
 </dd>
 </dl>
@@ -231,9 +236,32 @@ Note that the data is on shared memory.
 <dd></dd></dl>
 
 <dl class="py method">
+<dt id="gdesk.core.gui_proxy.GuiProxyBase.close">
+<em class="property">classmethod </em><code class="sig-name descname">close</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">panid</span><span class="o">=</span><span class="default_value">- 1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.gui_proxy.GuiProxyBase.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close the selected panel of the category</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="gdesk.core.gui_proxy.GuiProxyBase.derivedClasses">
 <em class="property">classmethod </em><code class="sig-name descname">derivedClasses</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.gui_proxy.GuiProxyBase.derivedClasses" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt id="gdesk.core.gui_proxy.GuiProxyBase.menu">
+<em class="property">classmethod </em><code class="sig-name descname">menu</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">action_names</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.gui_proxy.GuiProxyBase.menu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call a certain menu item of the panel</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>action_names</strong> (<em>list</em>) – Example [‘File’, ‘New…’]</p></li>
+<li><p><strong>*args</strong> – <p>Positional arguments of the menu call</p>
+</p></li>
+<li><p><strong>**kwargs</strong> – <p>Keyword arguments of the menu call</p>
+</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt id="gdesk.core.gui_proxy.GuiProxyBase.selected">
