@@ -1,0 +1,7 @@
+gdesk.core.comm\_nonduplex module
+=================================
+
+.. automodule:: gdesk.core.comm_nonduplex
+   :members:
+   :undoc-members:
+   :show-inheritance:
