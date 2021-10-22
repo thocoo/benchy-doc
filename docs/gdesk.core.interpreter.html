@@ -4,15 +4,15 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>gdesk.core.interpreter module &#8212; gdesk 0.1.1 documentation</title>
-    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>gdesk.core.interpreter module &#8212; gdesk 0.1.4 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="gdesk.core.shellmod module" href="gdesk.core.shellmod.html" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="gdesk.core.history.html" title="gdesk.core.history module"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="gdesk.core.html" accesskey="U">gdesk.core package</a> &#187;</li>
@@ -46,25 +46,25 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="module-gdesk.core.interpreter">
+  <section id="module-gdesk.core.interpreter">
 <span id="gdesk-core-interpreter-module"></span><h1>gdesk.core.interpreter module<a class="headerlink" href="#module-gdesk.core.interpreter" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="gdesk.core.interpreter.Interpreter">
-<em class="property">class </em><code class="sig-prename descclassname">gdesk.core.interpreter.</code><code class="sig-name descname">Interpreter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">workspace</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">thread_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.Interpreter" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.interpreter.Interpreter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">gdesk.core.interpreter.</span></span><span class="sig-name descname"><span class="pre">Interpreter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">workspace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thread_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.Interpreter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
-<dt id="gdesk.core.interpreter.Interpreter.async_break">
-<code class="sig-name descname">async_break</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.Interpreter.async_break" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.interpreter.Interpreter.async_break">
+<span class="sig-name descname"><span class="pre">async_break</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.Interpreter.async_break" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.core.interpreter.Interpreter.async_system_exit">
-<code class="sig-name descname">async_system_exit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.Interpreter.async_system_exit" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.interpreter.Interpreter.async_system_exit">
+<span class="sig-name descname"><span class="pre">async_system_exit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.Interpreter.async_system_exit" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.core.interpreter.Interpreter.compile_source">
-<code class="sig-name descname">compile_source</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">source</span></em>, <em class="sig-param"><span class="n">filename</span><span class="o">=</span><span class="default_value">'&lt;input&gt;'</span></em>, <em class="sig-param"><span class="n">symbol</span><span class="o">=</span><span class="default_value">'auto'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.Interpreter.compile_source" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.interpreter.Interpreter.compile_source">
+<span class="sig-name descname"><span class="pre">compile_source</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&lt;input&gt;'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'auto'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.Interpreter.compile_source" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compile and run some source in the interpreter.</p>
 <p>Arguments are as for compile_command().</p>
 <p>One several things can happen:</p>
@@ -83,8 +83,8 @@ line.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.core.interpreter.Interpreter.eval_expression">
-<code class="sig-name descname">eval_expression</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">expression</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.Interpreter.eval_expression" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.interpreter.Interpreter.eval_expression">
+<span class="sig-name descname"><span class="pre">eval_expression</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expression</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.Interpreter.eval_expression" title="Permalink to this definition">¶</a></dt>
 <dd><p>Execute a code object.</p>
 <p>When an exception occurs, self.showtraceback() is called to
 display a traceback.  All exceptions are caught except
@@ -95,8 +95,8 @@ caller should be prepared to deal with it.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.core.interpreter.Interpreter.exec_code">
-<code class="sig-name descname">exec_code</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">code</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.Interpreter.exec_code" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.interpreter.Interpreter.exec_code">
+<span class="sig-name descname"><span class="pre">exec_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.Interpreter.exec_code" title="Permalink to this definition">¶</a></dt>
 <dd><p>Execute a code object.</p>
 <p>When an exception occurs, self.showtraceback() is called to
 display a traceback.  All exceptions are caught except
@@ -107,13 +107,13 @@ caller should be prepared to deal with it.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.core.interpreter.Interpreter.get_code_frames">
-<code class="sig-name descname">get_code_frames</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">back</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.Interpreter.get_code_frames" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.interpreter.Interpreter.get_code_frames">
+<span class="sig-name descname"><span class="pre">get_code_frames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">back</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.Interpreter.get_code_frames" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.core.interpreter.Interpreter.showsyntaxerror">
-<code class="sig-name descname">showsyntaxerror</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.Interpreter.showsyntaxerror" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.interpreter.Interpreter.showsyntaxerror">
+<span class="sig-name descname"><span class="pre">showsyntaxerror</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.Interpreter.showsyntaxerror" title="Permalink to this definition">¶</a></dt>
 <dd><p>Display the syntax error that just occurred.</p>
 <p>This doesn’t display a stack trace because there isn’t one.</p>
 <p>If a filename is given, it is stuffed in the exception instead
@@ -123,114 +123,114 @@ of what was there before (because Python’s parser always uses
 </dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.core.interpreter.Interpreter.showtraceback">
-<code class="sig-name descname">showtraceback</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.Interpreter.showtraceback" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.interpreter.Interpreter.showtraceback">
+<span class="sig-name descname"><span class="pre">showtraceback</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.Interpreter.showtraceback" title="Permalink to this definition">¶</a></dt>
 <dd><p>Display the exception that just occurred.</p>
 <p>We remove the first stack item because it is our own code.</p>
 <p>The output is written by self.write(), below.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.core.interpreter.Interpreter.use_one_command">
-<code class="sig-name descname">use_one_command</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cmd</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.Interpreter.use_one_command" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.interpreter.Interpreter.use_one_command">
+<span class="sig-name descname"><span class="pre">use_one_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cmd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.Interpreter.use_one_command" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.core.interpreter.Interpreter.write_error">
-<code class="sig-name descname">write_error</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.Interpreter.write_error" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.interpreter.Interpreter.write_error">
+<span class="sig-name descname"><span class="pre">write_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.Interpreter.write_error" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="gdesk.core.interpreter.QueueInterpreter">
-<em class="property">class </em><code class="sig-prename descclassname">gdesk.core.interpreter.</code><code class="sig-name descname">QueueInterpreter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">shell</span></em>, <em class="sig-param"><span class="n">cqs</span></em>, <em class="sig-param"><span class="n">gui_proxy</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.interpreter.QueueInterpreter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">gdesk.core.interpreter.</span></span><span class="sig-name descname"><span class="pre">QueueInterpreter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shell</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cqs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gui_proxy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">console_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
-<dt id="gdesk.core.interpreter.QueueInterpreter.commandLoop">
-<code class="sig-name descname">commandLoop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter.commandLoop" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.interpreter.QueueInterpreter.commandLoop">
+<span class="sig-name descname"><span class="pre">commandLoop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter.commandLoop" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.core.interpreter.QueueInterpreter.control">
-<code class="sig-name descname">control</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter.control" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.interpreter.QueueInterpreter.control">
+<span class="sig-name descname"><span class="pre">control</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter.control" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.core.interpreter.QueueInterpreter.control_loop">
-<code class="sig-name descname">control_loop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter.control_loop" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.interpreter.QueueInterpreter.control_loop">
+<span class="sig-name descname"><span class="pre">control_loop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter.control_loop" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.core.interpreter.QueueInterpreter.create_and_interact">
-<em class="property">static </em><code class="sig-name descname">create_and_interact</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">shell</span></em>, <em class="sig-param"><span class="n">cqs</span></em>, <em class="sig-param"><span class="n">gui_proxy</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter.create_and_interact" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.interpreter.QueueInterpreter.create_and_interact">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">create_and_interact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shell</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cqs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gui_proxy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">console_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter.create_and_interact" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.core.interpreter.QueueInterpreter.execute">
-<code class="sig-name descname">execute</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter.execute" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.interpreter.QueueInterpreter.execute">
+<span class="sig-name descname"><span class="pre">execute</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter.execute" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.core.interpreter.QueueInterpreter.get_current_locals">
-<code class="sig-name descname">get_current_locals</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">back</span><span class="o">=</span><span class="default_value">5</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter.get_current_locals" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.interpreter.QueueInterpreter.get_current_locals">
+<span class="sig-name descname"><span class="pre">get_current_locals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">back</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter.get_current_locals" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.core.interpreter.QueueInterpreter.get_current_trace">
-<code class="sig-name descname">get_current_trace</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">back</span><span class="o">=</span><span class="default_value">50</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter.get_current_trace" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.interpreter.QueueInterpreter.get_current_trace">
+<span class="sig-name descname"><span class="pre">get_current_trace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">back</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter.get_current_trace" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.core.interpreter.QueueInterpreter.interact">
-<code class="sig-name descname">interact</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter.interact" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.interpreter.QueueInterpreter.interact">
+<span class="sig-name descname"><span class="pre">interact</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter.interact" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.core.interpreter.QueueInterpreter.register_thread">
-<code class="sig-name descname">register_thread</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tid</span></em>, <em class="sig-param"><span class="n">cqs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter.register_thread" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.interpreter.QueueInterpreter.register_thread">
+<span class="sig-name descname"><span class="pre">register_thread</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cqs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter.register_thread" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.core.interpreter.QueueInterpreter.set_console_mode">
-<code class="sig-name descname">set_console_mode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mode</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter.set_console_mode" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.interpreter.QueueInterpreter.set_console_mode">
+<span class="sig-name descname"><span class="pre">set_console_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter.set_console_mode" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.core.interpreter.QueueInterpreter.system_tracer">
-<code class="sig-name descname">system_tracer</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter.system_tracer" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.interpreter.QueueInterpreter.system_tracer">
+<span class="sig-name descname"><span class="pre">system_tracer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter.system_tracer" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.core.interpreter.QueueInterpreter.unregister_thread">
-<code class="sig-name descname">unregister_thread</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter.unregister_thread" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.interpreter.QueueInterpreter.unregister_thread">
+<span class="sig-name descname"><span class="pre">unregister_thread</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.QueueInterpreter.unregister_thread" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py exception">
-<dt id="gdesk.core.interpreter.SyncBreaked">
-<em class="property">exception </em><code class="sig-prename descclassname">gdesk.core.interpreter.</code><code class="sig-name descname">SyncBreaked</code><a class="headerlink" href="#gdesk.core.interpreter.SyncBreaked" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.interpreter.SyncBreaked">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">gdesk.core.interpreter.</span></span><span class="sig-name descname"><span class="pre">SyncBreaked</span></span><a class="headerlink" href="#gdesk.core.interpreter.SyncBreaked" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="gdesk.core.interpreter.async_break">
-<code class="sig-prename descclassname">gdesk.core.interpreter.</code><code class="sig-name descname">async_break</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">thread_id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.async_break" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.interpreter.async_break">
+<span class="sig-prename descclassname"><span class="pre">gdesk.core.interpreter.</span></span><span class="sig-name descname"><span class="pre">async_break</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">thread_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.async_break" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="gdesk.core.interpreter.async_raise">
-<code class="sig-prename descclassname">gdesk.core.interpreter.</code><code class="sig-name descname">async_raise</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">thread_id</span></em>, <em class="sig-param"><span class="n">exctype</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.async_raise" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.interpreter.async_raise">
+<span class="sig-prename descclassname"><span class="pre">gdesk.core.interpreter.</span></span><span class="sig-name descname"><span class="pre">async_raise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">thread_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exctype</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.async_raise" title="Permalink to this definition">¶</a></dt>
 <dd><p>Raise the exception to the thread tid, performs cleanup if needed.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="gdesk.core.interpreter.async_system_exit">
-<code class="sig-prename descclassname">gdesk.core.interpreter.</code><code class="sig-name descname">async_system_exit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">thread_id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.async_system_exit" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.interpreter.async_system_exit">
+<span class="sig-prename descclassname"><span class="pre">gdesk.core.interpreter.</span></span><span class="sig-name descname"><span class="pre">async_system_exit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">thread_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.interpreter.async_system_exit" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-</div>
+</section>
 
 
             <div class="clearer"></div>
@@ -281,7 +281,7 @@ of what was there before (because Python’s parser always uses
         <li class="right" >
           <a href="gdesk.core.history.html" title="gdesk.core.history module"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="gdesk.core.html" >gdesk.core package</a> &#187;</li>
@@ -290,7 +290,7 @@ of what was there before (because Python’s parser always uses
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2021, Thomas Cools.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.1.
     </div>
   </body>
 </html>

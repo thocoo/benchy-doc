@@ -4,15 +4,15 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>gdesk.core.stdinout module &#8212; gdesk 0.1.1 documentation</title>
-    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>gdesk.core.stdinout module &#8212; gdesk 0.1.4 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="gdesk.core.tasks module" href="gdesk.core.tasks.html" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="gdesk.core.shellmod.html" title="gdesk.core.shellmod module"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="gdesk.core.html" accesskey="U">gdesk.core package</a> &#187;</li>
@@ -46,15 +46,15 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="module-gdesk.core.stdinout">
+  <section id="module-gdesk.core.stdinout">
 <span id="gdesk-core-stdinout-module"></span><h1>gdesk.core.stdinout module<a class="headerlink" href="#module-gdesk.core.stdinout" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="gdesk.core.stdinout.ErrLogStream">
-<em class="property">class </em><code class="sig-prename descclassname">gdesk.core.stdinout.</code><code class="sig-name descname">ErrLogStream</code><a class="headerlink" href="#gdesk.core.stdinout.ErrLogStream" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.stdinout.ErrLogStream">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">gdesk.core.stdinout.</span></span><span class="sig-name descname"><span class="pre">ErrLogStream</span></span><a class="headerlink" href="#gdesk.core.stdinout.ErrLogStream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">io.TextIOBase</span></code></p>
 <dl class="py method">
-<dt id="gdesk.core.stdinout.ErrLogStream.write">
-<code class="sig-name descname">write</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.ErrLogStream.write" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.stdinout.ErrLogStream.write">
+<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.ErrLogStream.write" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write string to stream.
 Returns the number of characters written (which is always equal to
 the length of the string).</p>
@@ -63,24 +63,24 @@ the length of the string).</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="gdesk.core.stdinout.FlushPipeStream">
-<em class="property">class </em><code class="sig-prename descclassname">gdesk.core.stdinout.</code><code class="sig-name descname">FlushPipeStream</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">streamqueue</span></em>, <em class="sig-param"><span class="n">flusher</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.FlushPipeStream" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.stdinout.FlushPipeStream">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">gdesk.core.stdinout.</span></span><span class="sig-name descname"><span class="pre">FlushPipeStream</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">streamqueue</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flusher</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.FlushPipeStream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">io.TextIOBase</span></code></p>
 <dl class="py method">
-<dt id="gdesk.core.stdinout.FlushPipeStream.ansi">
-<code class="sig-name descname">ansi</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.FlushPipeStream.ansi" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.stdinout.FlushPipeStream.ansi">
+<span class="sig-name descname"><span class="pre">ansi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.FlushPipeStream.ansi" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.core.stdinout.FlushPipeStream.flush">
-<code class="sig-name descname">flush</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.FlushPipeStream.flush" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.stdinout.FlushPipeStream.flush">
+<span class="sig-name descname"><span class="pre">flush</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.FlushPipeStream.flush" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flush write buffers, if applicable.</p>
 <p>This is not implemented for read-only and non-blocking streams.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.core.stdinout.FlushPipeStream.write">
-<code class="sig-name descname">write</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.FlushPipeStream.write" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.stdinout.FlushPipeStream.write">
+<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.FlushPipeStream.write" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write string to stream.
 Returns the number of characters written (which is always equal to
 the length of the string).</p>
@@ -89,47 +89,47 @@ the length of the string).</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="gdesk.core.stdinout.FlushReducer">
-<em class="property">class </em><code class="sig-prename descclassname">gdesk.core.stdinout.</code><code class="sig-name descname">FlushReducer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">flusher</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.FlushReducer" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.stdinout.FlushReducer">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">gdesk.core.stdinout.</span></span><span class="sig-name descname"><span class="pre">FlushReducer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flusher</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.FlushReducer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
-<dt id="gdesk.core.stdinout.FlushReducer.close">
-<code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.FlushReducer.close" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.stdinout.FlushReducer.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.FlushReducer.close" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.core.stdinout.FlushReducer.reduce">
-<code class="sig-name descname">reduce</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.FlushReducer.reduce" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.stdinout.FlushReducer.reduce">
+<span class="sig-name descname"><span class="pre">reduce</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.FlushReducer.reduce" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="gdesk.core.stdinout.GhStreamHandler">
-<em class="property">class </em><code class="sig-prename descclassname">gdesk.core.stdinout.</code><code class="sig-name descname">GhStreamHandler</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stream</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.GhStreamHandler" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.stdinout.GhStreamHandler">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">gdesk.core.stdinout.</span></span><span class="sig-name descname"><span class="pre">GhStreamHandler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.GhStreamHandler" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">logging.Handler</span></code></p>
 <dl class="py method">
-<dt id="gdesk.core.stdinout.GhStreamHandler.emit">
-<code class="sig-name descname">emit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">record</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.GhStreamHandler.emit" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.stdinout.GhStreamHandler.emit">
+<span class="sig-name descname"><span class="pre">emit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.GhStreamHandler.emit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Do whatever it takes to actually log the specified logging record.</p>
 <p>This version is intended to be implemented by subclasses and so
 raises a NotImplementedError.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.core.stdinout.GhStreamHandler.setStream">
-<code class="sig-name descname">setStream</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stream</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.GhStreamHandler.setStream" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.stdinout.GhStreamHandler.setStream">
+<span class="sig-name descname"><span class="pre">setStream</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.GhStreamHandler.setStream" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="gdesk.core.stdinout.PopupHandler">
-<em class="property">class </em><code class="sig-prename descclassname">gdesk.core.stdinout.</code><code class="sig-name descname">PopupHandler</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">level</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.PopupHandler" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.stdinout.PopupHandler">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">gdesk.core.stdinout.</span></span><span class="sig-name descname"><span class="pre">PopupHandler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.PopupHandler" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">logging.Handler</span></code></p>
 <dl class="py method">
-<dt id="gdesk.core.stdinout.PopupHandler.emit">
-<code class="sig-name descname">emit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">record</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.PopupHandler.emit" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.stdinout.PopupHandler.emit">
+<span class="sig-name descname"><span class="pre">emit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.PopupHandler.emit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Do whatever it takes to actually log the specified logging record.</p>
 <p>This version is intended to be implemented by subclasses and so
 raises a NotImplementedError.</p>
@@ -138,76 +138,76 @@ raises a NotImplementedError.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="gdesk.core.stdinout.ProcessStdInput">
-<em class="property">class </em><code class="sig-prename descclassname">gdesk.core.stdinout.</code><code class="sig-name descname">ProcessStdInput</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stdin_queue</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.ProcessStdInput" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.stdinout.ProcessStdInput">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">gdesk.core.stdinout.</span></span><span class="sig-name descname"><span class="pre">ProcessStdInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stdin_queue</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.ProcessStdInput" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">io.TextIOBase</span></code></p>
 <dl class="py method">
-<dt id="gdesk.core.stdinout.ProcessStdInput.close">
-<code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.ProcessStdInput.close" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.stdinout.ProcessStdInput.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.ProcessStdInput.close" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flush and close the IO object.</p>
 <p>This method has no effect if the file is already closed.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.core.stdinout.ProcessStdInput.read">
-<code class="sig-name descname">read</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.ProcessStdInput.read" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.stdinout.ProcessStdInput.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.ProcessStdInput.read" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read at most n characters from stream.</p>
 <p>Read from underlying buffer until we have n characters or we hit EOF.
 If n is negative or omitted, read until EOF.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="gdesk.core.stdinout.ProcessStdInput.stdin_queues">
-<code class="sig-name descname">stdin_queues</code><em class="property"> = {}</em><a class="headerlink" href="#gdesk.core.stdinout.ProcessStdInput.stdin_queues" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.stdinout.ProcessStdInput.stdin_queues">
+<span class="sig-name descname"><span class="pre">stdin_queues</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{}</span></em><a class="headerlink" href="#gdesk.core.stdinout.ProcessStdInput.stdin_queues" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="gdesk.core.stdinout.StdErrRouter">
-<em class="property">class </em><code class="sig-prename descclassname">gdesk.core.stdinout.</code><code class="sig-name descname">StdErrRouter</code><a class="headerlink" href="#gdesk.core.stdinout.StdErrRouter" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.stdinout.StdErrRouter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">gdesk.core.stdinout.</span></span><span class="sig-name descname"><span class="pre">StdErrRouter</span></span><a class="headerlink" href="#gdesk.core.stdinout.StdErrRouter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#gdesk.core.stdinout.StreamRouter" title="gdesk.core.stdinout.StreamRouter"><code class="xref py py-class docutils literal notranslate"><span class="pre">gdesk.core.stdinout.StreamRouter</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="gdesk.core.stdinout.StdOutRouter">
-<em class="property">class </em><code class="sig-prename descclassname">gdesk.core.stdinout.</code><code class="sig-name descname">StdOutRouter</code><a class="headerlink" href="#gdesk.core.stdinout.StdOutRouter" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.stdinout.StdOutRouter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">gdesk.core.stdinout.</span></span><span class="sig-name descname"><span class="pre">StdOutRouter</span></span><a class="headerlink" href="#gdesk.core.stdinout.StdOutRouter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#gdesk.core.stdinout.StreamRouter" title="gdesk.core.stdinout.StreamRouter"><code class="xref py py-class docutils literal notranslate"><span class="pre">gdesk.core.stdinout.StreamRouter</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="gdesk.core.stdinout.StreamRouter">
-<em class="property">class </em><code class="sig-prename descclassname">gdesk.core.stdinout.</code><code class="sig-name descname">StreamRouter</code><a class="headerlink" href="#gdesk.core.stdinout.StreamRouter" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.stdinout.StreamRouter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">gdesk.core.stdinout.</span></span><span class="sig-name descname"><span class="pre">StreamRouter</span></span><a class="headerlink" href="#gdesk.core.stdinout.StreamRouter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Pass the calls to a threading dependent stream</p>
 <dl class="py method">
-<dt id="gdesk.core.stdinout.StreamRouter.copy_to_thread">
-<code class="sig-name descname">copy_to_thread</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">to_tid</span></em>, <em class="sig-param"><span class="n">from_tid</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.StreamRouter.copy_to_thread" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.stdinout.StreamRouter.copy_to_thread">
+<span class="sig-name descname"><span class="pre">copy_to_thread</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">to_tid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_tid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.StreamRouter.copy_to_thread" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.core.stdinout.StreamRouter.route_stream">
-<code class="sig-name descname">route_stream</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stream</span></em>, <em class="sig-param"><span class="n">ident</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.StreamRouter.route_stream" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.stdinout.StreamRouter.route_stream">
+<span class="sig-name descname"><span class="pre">route_stream</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ident</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.StreamRouter.route_stream" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="gdesk.core.stdinout.StreamRouter.stream">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">stream</span></span><a class="headerlink" href="#gdesk.core.stdinout.StreamRouter.stream" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.core.stdinout.StreamRouter.stream">
-<em class="property">property </em><code class="sig-name descname">stream</code><a class="headerlink" href="#gdesk.core.stdinout.StreamRouter.stream" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="gdesk.core.stdinout.StreamRouter.unregister">
-<code class="sig-name descname">unregister</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ident</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.StreamRouter.unregister" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.stdinout.StreamRouter.unregister">
+<span class="sig-name descname"><span class="pre">unregister</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ident</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.StreamRouter.unregister" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py function">
-<dt id="gdesk.core.stdinout.enable_ghstream_handler">
-<code class="sig-prename descclassname">gdesk.core.stdinout.</code><code class="sig-name descname">enable_ghstream_handler</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.enable_ghstream_handler" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.core.stdinout.enable_ghstream_handler">
+<span class="sig-prename descclassname"><span class="pre">gdesk.core.stdinout.</span></span><span class="sig-name descname"><span class="pre">enable_ghstream_handler</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.stdinout.enable_ghstream_handler" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-</div>
+</section>
 
 
             <div class="clearer"></div>
@@ -258,7 +258,7 @@ If n is negative or omitted, read until EOF.</p>
         <li class="right" >
           <a href="gdesk.core.shellmod.html" title="gdesk.core.shellmod module"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="gdesk.core.html" >gdesk.core package</a> &#187;</li>
@@ -267,7 +267,7 @@ If n is negative or omitted, read until EOF.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2021, Thomas Cools.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.1.
     </div>
   </body>
 </html>

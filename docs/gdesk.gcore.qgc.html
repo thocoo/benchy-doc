@@ -4,15 +4,15 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>gdesk.gcore.qgc module &#8212; gdesk 0.1.1 documentation</title>
-    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>gdesk.gcore.qgc module &#8212; gdesk 0.1.4 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="gdesk.gcore.threadcom module" href="gdesk.gcore.threadcom.html" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="gdesk.gcore.guiapp.html" title="gdesk.gcore.guiapp module"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="gdesk.gcore.html" accesskey="U">gdesk.gcore package</a> &#187;</li>
@@ -46,48 +46,48 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="module-gdesk.gcore.qgc">
+  <section id="module-gdesk.gcore.qgc">
 <span id="gdesk-gcore-qgc-module"></span><h1>gdesk.gcore.qgc module<a class="headerlink" href="#module-gdesk.gcore.qgc" title="Permalink to this headline">¶</a></h1>
 <p>The Garbage Collector timer in the Qt Event Loop.</p>
 <dl class="py class">
-<dt id="gdesk.gcore.qgc.QGarbageCollector">
-<em class="property">class </em><code class="sig-prename descclassname">gdesk.gcore.qgc.</code><code class="sig-name descname">QGarbageCollector</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span></em>, <em class="sig-param"><span class="n">debug</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.gcore.qgc.QGarbageCollector" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.gcore.qgc.QGarbageCollector">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">gdesk.gcore.qgc.</span></span><span class="sig-name descname"><span class="pre">QGarbageCollector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.gcore.qgc.QGarbageCollector" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtCore.QObject</span></code></p>
 <p>Disable automatic garbage collection and instead collect manually.</p>
 <p>Timeout every INTERVAL milliseconds.</p>
 <p>This is done to ensure that garbage collection only happens in the GUI
 thread, as otherwise Qt can crash.</p>
 <dl class="py attribute">
-<dt id="gdesk.gcore.qgc.QGarbageCollector.INTERVAL">
-<code class="sig-name descname">INTERVAL</code><em class="property"> = 5000</em><a class="headerlink" href="#gdesk.gcore.qgc.QGarbageCollector.INTERVAL" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.gcore.qgc.QGarbageCollector.INTERVAL">
+<span class="sig-name descname"><span class="pre">INTERVAL</span></span><em class="property"> <span class="pre">=</span> <span class="pre">5000</span></em><a class="headerlink" href="#gdesk.gcore.qgc.QGarbageCollector.INTERVAL" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.gcore.qgc.QGarbageCollector.check">
-<code class="sig-name descname">check</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.gcore.qgc.QGarbageCollector.check" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.gcore.qgc.QGarbageCollector.check">
+<span class="sig-name descname"><span class="pre">check</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.gcore.qgc.QGarbageCollector.check" title="Permalink to this definition">¶</a></dt>
 <dd><p>Do the garbage collection.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.gcore.qgc.QGarbageCollector.disable">
-<code class="sig-name descname">disable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.gcore.qgc.QGarbageCollector.disable" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.gcore.qgc.QGarbageCollector.disable">
+<span class="sig-name descname"><span class="pre">disable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.gcore.qgc.QGarbageCollector.disable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Disable the timer.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.gcore.qgc.QGarbageCollector.enable">
-<code class="sig-name descname">enable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.gcore.qgc.QGarbageCollector.enable" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.gcore.qgc.QGarbageCollector.enable">
+<span class="sig-name descname"><span class="pre">enable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.gcore.qgc.QGarbageCollector.enable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable the timer.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="gdesk.gcore.qgc.QGarbageCollector.staticMetaObject">
-<code class="sig-name descname">staticMetaObject</code><em class="property"> = &lt;PySide2.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#gdesk.gcore.qgc.QGarbageCollector.staticMetaObject" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.gcore.qgc.QGarbageCollector.staticMetaObject">
+<span class="sig-name descname"><span class="pre">staticMetaObject</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;PySide2.QtCore.QMetaObject</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#gdesk.gcore.qgc.QGarbageCollector.staticMetaObject" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-</div>
+</section>
 
 
             <div class="clearer"></div>
@@ -138,7 +138,7 @@ thread, as otherwise Qt can crash.</p>
         <li class="right" >
           <a href="gdesk.gcore.guiapp.html" title="gdesk.gcore.guiapp module"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="gdesk.gcore.html" >gdesk.gcore package</a> &#187;</li>
@@ -147,7 +147,7 @@ thread, as otherwise Qt can crash.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2021, Thomas Cools.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.1.
     </div>
   </body>
 </html>

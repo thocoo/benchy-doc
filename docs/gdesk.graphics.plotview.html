@@ -4,15 +4,15 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>gdesk.graphics.plotview module &#8212; gdesk 0.1.1 documentation</title>
-    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>gdesk.graphics.plotview module &#8212; gdesk 0.1.4 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="gdesk.graphics.point module" href="gdesk.graphics.point.html" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="gdesk.graphics.items.html" title="gdesk.graphics.items module"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="gdesk.graphics.html" accesskey="U">gdesk.graphics package</a> &#187;</li>
@@ -46,17 +46,17 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="module-gdesk.graphics.plotview">
+  <section id="module-gdesk.graphics.plotview">
 <span id="gdesk-graphics-plotview-module"></span><h1>gdesk.graphics.plotview module<a class="headerlink" href="#module-gdesk.graphics.plotview" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="gdesk.graphics.plotview.PlotView">
-<em class="property">class </em><code class="sig-prename descclassname">gdesk.graphics.plotview.</code><code class="sig-name descname">PlotView</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">background</span><span class="o">=</span><span class="default_value">'default'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.graphics.plotview.PlotView">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">gdesk.graphics.plotview.</span></span><span class="sig-name descname"><span class="pre">PlotView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">background</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QGraphicsView</span></code></p>
 <p>Re-implementation of QGraphicsView without scrollbars.</p>
 <p>Allow unambiguous control of the viewed coordinate range.</p>
-<dl class="py method">
-<dt id="gdesk.graphics.plotview.PlotView.auto_zoom">
-<em class="property">property </em><code class="sig-name descname">auto_zoom</code><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.auto_zoom" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="gdesk.graphics.plotview.PlotView.auto_zoom">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">auto_zoom</span></span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.auto_zoom" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check whether the ‘Auto Zoom’ checkbox is checked.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return bool</dt>
@@ -66,136 +66,136 @@
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="gdesk.graphics.plotview.PlotView.doubleClicked">
-<code class="sig-name descname">doubleClicked</code><em class="property"> = &lt;PySide2.QtCore.Signal object&gt;</em><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.doubleClicked" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.graphics.plotview.PlotView.doubleClicked">
+<span class="sig-name descname"><span class="pre">doubleClicked</span></span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.doubleClicked" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.graphics.plotview.PlotView.initMenu">
-<code class="sig-name descname">initMenu</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.initMenu" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.graphics.plotview.PlotView.initMenu">
+<span class="sig-name descname"><span class="pre">initMenu</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.initMenu" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.graphics.plotview.PlotView.limitRefreshRange">
-<code class="sig-name descname">limitRefreshRange</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.limitRefreshRange" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.graphics.plotview.PlotView.limitRefreshRange">
+<span class="sig-name descname"><span class="pre">limitRefreshRange</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.limitRefreshRange" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="gdesk.graphics.plotview.PlotView.matrixUpdated">
-<code class="sig-name descname">matrixUpdated</code><em class="property"> = &lt;PySide2.QtCore.Signal object&gt;</em><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.matrixUpdated" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.graphics.plotview.PlotView.matrixUpdated">
+<span class="sig-name descname"><span class="pre">matrixUpdated</span></span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.matrixUpdated" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.graphics.plotview.PlotView.mouseDoubleClickEvent">
-<code class="sig-name descname">mouseDoubleClickEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">event</span><span class="p">:</span> <span class="n">PySide2.QtGui.QMouseEvent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.mouseDoubleClickEvent" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.graphics.plotview.PlotView.mouseDoubleClickEvent">
+<span class="sig-name descname"><span class="pre">mouseDoubleClickEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">PySide2.QtGui.QMouseEvent</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.mouseDoubleClickEvent" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.graphics.plotview.PlotView.mouseMoveEvent">
-<code class="sig-name descname">mouseMoveEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">event</span><span class="p">:</span> <span class="n">PySide2.QtGui.QMouseEvent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.mouseMoveEvent" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.graphics.plotview.PlotView.mouseMoveEvent">
+<span class="sig-name descname"><span class="pre">mouseMoveEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">PySide2.QtGui.QMouseEvent</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.mouseMoveEvent" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.graphics.plotview.PlotView.mousePressEvent">
-<code class="sig-name descname">mousePressEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">event</span><span class="p">:</span> <span class="n">PySide2.QtGui.QMouseEvent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.mousePressEvent" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.graphics.plotview.PlotView.mousePressEvent">
+<span class="sig-name descname"><span class="pre">mousePressEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">PySide2.QtGui.QMouseEvent</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.mousePressEvent" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="gdesk.graphics.plotview.PlotView.panXUpdated">
-<code class="sig-name descname">panXUpdated</code><em class="property"> = &lt;PySide2.QtCore.Signal object&gt;</em><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.panXUpdated" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.graphics.plotview.PlotView.panXUpdated">
+<span class="sig-name descname"><span class="pre">panXUpdated</span></span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.panXUpdated" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="gdesk.graphics.plotview.PlotView.panYUpdated">
-<code class="sig-name descname">panYUpdated</code><em class="property"> = &lt;PySide2.QtCore.Signal object&gt;</em><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.panYUpdated" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.graphics.plotview.PlotView.panYUpdated">
+<span class="sig-name descname"><span class="pre">panYUpdated</span></span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.panYUpdated" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.graphics.plotview.PlotView.pixelSize">
-<code class="sig-name descname">pixelSize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.pixelSize" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.graphics.plotview.PlotView.pixelSize">
+<span class="sig-name descname"><span class="pre">pixelSize</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.pixelSize" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return vector with the length and width of one view pixel in scene coordinates</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.graphics.plotview.PlotView.refresh">
-<code class="sig-name descname">refresh</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.refresh" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.graphics.plotview.PlotView.refresh">
+<span class="sig-name descname"><span class="pre">refresh</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.refresh" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="gdesk.graphics.plotview.PlotView.scaleXUpdated">
-<code class="sig-name descname">scaleXUpdated</code><em class="property"> = &lt;PySide2.QtCore.Signal object&gt;</em><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.scaleXUpdated" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.graphics.plotview.PlotView.scaleXUpdated">
+<span class="sig-name descname"><span class="pre">scaleXUpdated</span></span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.scaleXUpdated" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="gdesk.graphics.plotview.PlotView.scaleYUpdated">
-<code class="sig-name descname">scaleYUpdated</code><em class="property"> = &lt;PySide2.QtCore.Signal object&gt;</em><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.scaleYUpdated" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.graphics.plotview.PlotView.scaleYUpdated">
+<span class="sig-name descname"><span class="pre">scaleYUpdated</span></span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.scaleYUpdated" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.graphics.plotview.PlotView.setBackground">
-<code class="sig-name descname">setBackground</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">background</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.setBackground" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.graphics.plotview.PlotView.setBackground">
+<span class="sig-name descname"><span class="pre">setBackground</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">background</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.setBackground" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the background color of the GraphicsView.
 To make the background transparent, use background=None.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.graphics.plotview.PlotView.setScale">
-<code class="sig-name descname">setScale</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sx</span></em>, <em class="sig-param"><span class="n">sy</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.setScale" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.graphics.plotview.PlotView.setScale">
+<span class="sig-name descname"><span class="pre">setScale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sy</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.setScale" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.graphics.plotview.PlotView.setXCenter">
-<code class="sig-name descname">setXCenter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pos</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.setXCenter" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.graphics.plotview.PlotView.setXCenter">
+<span class="sig-name descname"><span class="pre">setXCenter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pos</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.setXCenter" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.graphics.plotview.PlotView.setXPosScale">
-<code class="sig-name descname">setXPosScale</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pos</span></em>, <em class="sig-param"><span class="n">scale</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.setXPosScale" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.graphics.plotview.PlotView.setXPosScale">
+<span class="sig-name descname"><span class="pre">setXPosScale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.setXPosScale" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.graphics.plotview.PlotView.setYCenter">
-<code class="sig-name descname">setYCenter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pos</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.setYCenter" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.graphics.plotview.PlotView.setYCenter">
+<span class="sig-name descname"><span class="pre">setYCenter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pos</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.setYCenter" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.graphics.plotview.PlotView.setYPosScale">
-<code class="sig-name descname">setYPosScale</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pos</span></em>, <em class="sig-param"><span class="n">scale</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.setYPosScale" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.graphics.plotview.PlotView.setYPosScale">
+<span class="sig-name descname"><span class="pre">setYPosScale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.setYPosScale" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="gdesk.graphics.plotview.PlotView.staticMetaObject">
-<code class="sig-name descname">staticMetaObject</code><em class="property"> = &lt;PySide2.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.staticMetaObject" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.graphics.plotview.PlotView.staticMetaObject">
+<span class="sig-name descname"><span class="pre">staticMetaObject</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;PySide2.QtCore.QMetaObject</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.staticMetaObject" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.graphics.plotview.PlotView.toggleAutoZoom">
-<code class="sig-name descname">toggleAutoZoom</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.toggleAutoZoom" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.graphics.plotview.PlotView.toggleAutoZoom">
+<span class="sig-name descname"><span class="pre">toggleAutoZoom</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.toggleAutoZoom" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.graphics.plotview.PlotView.translate">
-<code class="sig-name descname">translate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">dx</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">dy</span><span class="p">:</span> <span class="n">float</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.translate" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.graphics.plotview.PlotView.translate">
+<span class="sig-name descname"><span class="pre">translate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dx</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dy</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.translate" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.graphics.plotview.PlotView.updateMatrix">
-<code class="sig-name descname">updateMatrix</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">propagate</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.updateMatrix" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.graphics.plotview.PlotView.updateMatrix">
+<span class="sig-name descname"><span class="pre">updateMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">propagate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.updateMatrix" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.graphics.plotview.PlotView.useOpenGL">
-<code class="sig-name descname">useOpenGL</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">b</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.useOpenGL" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.graphics.plotview.PlotView.useOpenGL">
+<span class="sig-name descname"><span class="pre">useOpenGL</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.useOpenGL" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.graphics.plotview.PlotView.wheelEvent">
-<code class="sig-name descname">wheelEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">event</span><span class="p">:</span> <span class="n">PySide2.QtGui.QWheelEvent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.wheelEvent" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.graphics.plotview.PlotView.wheelEvent">
+<span class="sig-name descname"><span class="pre">wheelEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">PySide2.QtGui.QWheelEvent</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#gdesk.graphics.plotview.PlotView.wheelEvent" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-</div>
+</section>
 
 
             <div class="clearer"></div>
@@ -246,7 +246,7 @@ To make the background transparent, use background=None.</p>
         <li class="right" >
           <a href="gdesk.graphics.items.html" title="gdesk.graphics.items module"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="gdesk.graphics.html" >gdesk.graphics package</a> &#187;</li>
@@ -255,7 +255,7 @@ To make the background transparent, use background=None.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2021, Thomas Cools.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.1.
     </div>
   </body>
 </html>

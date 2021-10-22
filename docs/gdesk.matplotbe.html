@@ -4,15 +4,15 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>gdesk.matplotbe package &#8212; gdesk 0.1.1 documentation</title>
-    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>gdesk.matplotbe package &#8212; gdesk 0.1.4 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="gdesk.panels package" href="gdesk.panels.html" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="gdesk.live.manage.html" title="gdesk.live.manage module"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="gdesk.html" accesskey="U">gdesk package</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">gdesk.matplotbe package</a></li> 
@@ -45,12 +45,175 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="gdesk-matplotbe-package">
+  <section id="gdesk-matplotbe-package">
 <h1>gdesk.matplotbe package<a class="headerlink" href="#gdesk-matplotbe-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
-</div>
-</div>
+<section id="module-gdesk.matplotbe">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-gdesk.matplotbe" title="Permalink to this headline">¶</a></h2>
+<p>Render to qt from agg.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gdesk.matplotbe.FigureCanvas">
+<span class="sig-prename descclassname"><span class="pre">gdesk.matplotbe.</span></span><span class="sig-name descname"><span class="pre">FigureCanvas</span></span><a class="headerlink" href="#gdesk.matplotbe.FigureCanvas" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#gdesk.matplotbe.FigureCanvasGh2" title="gdesk.matplotbe.FigureCanvasGh2"><code class="xref py py-class docutils literal notranslate"><span class="pre">gdesk.matplotbe.FigureCanvasGh2</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="gdesk.matplotbe.FigureCanvasGh2">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">gdesk.matplotbe.</span></span><span class="sig-name descname"><span class="pre">FigureCanvasGh2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">figure</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.matplotbe.FigureCanvasGh2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.backends.backend_agg.FigureCanvasAgg</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.backends.backend_qt5.FigureCanvasQT</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="gdesk.matplotbe.FigureCanvasGh2.blit">
+<span class="sig-name descname"><span class="pre">blit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bbox</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.matplotbe.FigureCanvasGh2.blit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Blit the canvas in bbox (default entire canvas).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdesk.matplotbe.FigureCanvasGh2.destroy">
+<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destroyWindow</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destroySubWindows</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#gdesk.matplotbe.FigureCanvasGh2.destroy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdesk.matplotbe.FigureCanvasGh2.draw_idle">
+<span class="sig-name descname"><span class="pre">draw_idle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.matplotbe.FigureCanvasGh2.draw_idle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Request a widget redraw once control returns to the GUI event loop.</p>
+<p>Even if multiple calls to <cite>draw_idle</cite> occur before control returns
+to the GUI event loop, the figure will only be rendered once.</p>
+<p>Backends may choose to override the method and implement their own
+strategy to prevent multiple renderings.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdesk.matplotbe.FigureCanvasGh2.paintEvent">
+<span class="sig-name descname"><span class="pre">paintEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.matplotbe.FigureCanvasGh2.paintEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy the image from the Agg canvas to the qt.drawable.</p>
+<p>In Qt, all drawing should be done inside of here when a widget is
+shown onscreen.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdesk.matplotbe.FigureCanvasGh2.print_figure">
+<span class="sig-name descname"><span class="pre">print_figure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.matplotbe.FigureCanvasGh2.print_figure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Render the figure to hardcopy. Set the figure patch face and edge
+colors.  This is useful because some of the GUIs have a gray figure
+face color background and you’ll probably want to override this on
+hardcopy.</p>
+<dl>
+<dt>filename<span class="classifier">str or path-like or file-like</span></dt><dd><p>The file where the figure is saved.</p>
+</dd>
+<dt>dpi<span class="classifier">float, default: <a href="#id1"><span class="problematic" id="id2">:rc:`savefig.dpi`</span></a></span></dt><dd><p>The dots per inch to save the figure in.</p>
+</dd>
+<dt>facecolor<span class="classifier">color or ‘auto’, default: <a href="#id3"><span class="problematic" id="id4">:rc:`savefig.facecolor`</span></a></span></dt><dd><p>The facecolor of the figure.  If ‘auto’, use the current figure
+facecolor.</p>
+</dd>
+<dt>edgecolor<span class="classifier">color or ‘auto’, default: <a href="#id5"><span class="problematic" id="id6">:rc:`savefig.edgecolor`</span></a></span></dt><dd><p>The edgecolor of the figure.  If ‘auto’, use the current figure
+edgecolor.</p>
+</dd>
+<dt>orientation<span class="classifier">{‘landscape’, ‘portrait’}, default: ‘portrait’</span></dt><dd><p>Only currently applies to PostScript printing.</p>
+</dd>
+<dt>format<span class="classifier">str, optional</span></dt><dd><p>Force a specific file format. If not given, the format is inferred
+from the <em>filename</em> extension, and if that fails from
+<a href="#id7"><span class="problematic" id="id8">:rc:`savefig.format`</span></a>.</p>
+</dd>
+<dt>bbox_inches<span class="classifier">‘tight’ or <cite>.Bbox</cite>, default: <a href="#id9"><span class="problematic" id="id10">:rc:`savefig.bbox`</span></a></span></dt><dd><p>Bounding box in inches: only the given portion of the figure is
+saved.  If ‘tight’, try to figure out the tight bbox of the figure.</p>
+</dd>
+<dt>pad_inches<span class="classifier">float, default: <a href="#id11"><span class="problematic" id="id12">:rc:`savefig.pad_inches`</span></a></span></dt><dd><p>Amount of padding around the figure when <em>bbox_inches</em> is ‘tight’.</p>
+</dd>
+<dt>bbox_extra_artists<span class="classifier">list of <cite>~matplotlib.artist.Artist</cite>, optional</span></dt><dd><p>A list of extra artists that will be considered when the
+tight bbox is calculated.</p>
+</dd>
+<dt>backend<span class="classifier">str, optional</span></dt><dd><p>Use a non-default backend to render the file, e.g. to render a
+png file with the “cairo” backend rather than the default “agg”,
+or a pdf file with the “pgf” backend rather than the default
+“pdf”.  Note that the default backend is normally sufficient.  See
+<span class="xref std std-ref">the-builtin-backends</span> for a list of valid backends for each
+file format.  Custom backends can be referenced as “module://…”.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gdesk.matplotbe.FigureCanvasGh2.staticMetaObject">
+<span class="sig-name descname"><span class="pre">staticMetaObject</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;PySide2.QtCore.QMetaObject</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#gdesk.matplotbe.FigureCanvasGh2.staticMetaObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gdesk.matplotbe.FigureManager">
+<span class="sig-prename descclassname"><span class="pre">gdesk.matplotbe.</span></span><span class="sig-name descname"><span class="pre">FigureManager</span></span><a class="headerlink" href="#gdesk.matplotbe.FigureManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#gdesk.matplotbe.FigureManagerGh2" title="gdesk.matplotbe.FigureManagerGh2"><code class="xref py py-class docutils literal notranslate"><span class="pre">gdesk.matplotbe.FigureManagerGh2</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="gdesk.matplotbe.FigureManagerGh2">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">gdesk.matplotbe.</span></span><span class="sig-name descname"><span class="pre">FigureManagerGh2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">canvas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.matplotbe.FigureManagerGh2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.backend_bases.FigureManagerBase</span></code></p>
+<p>Wrap everything up into a window for the pylab interface</p>
+<p>For non interactive backends, the base class does all the work</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="gdesk.matplotbe.FigureManagerGh2.destroy">
+<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.matplotbe.FigureManagerGh2.destroy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdesk.matplotbe.FigureManagerGh2.show">
+<span class="sig-name descname"><span class="pre">show</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.matplotbe.FigureManagerGh2.show" title="Permalink to this definition">¶</a></dt>
+<dd><p>For GUI backends, show the figure window and redraw.
+For non-GUI backends, raise an exception to be caught
+by <code class="xref py py-meth docutils literal notranslate"><span class="pre">show()</span></code>, for an
+optional warning.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="gdesk.matplotbe.FigureManagerGh2Child">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">gdesk.matplotbe.</span></span><span class="sig-name descname"><span class="pre">FigureManagerGh2Child</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">canvas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.matplotbe.FigureManagerGh2Child" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.backend_bases.FigureManagerBase</span></code></p>
+<p>Wrap everything up into a window for the pylab interface</p>
+<p>For non interactive backends, the base class does all the work</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="gdesk.matplotbe.FigureManagerGh2Child.show">
+<span class="sig-name descname"><span class="pre">show</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.matplotbe.FigureManagerGh2Child.show" title="Permalink to this definition">¶</a></dt>
+<dd><p>For GUI backends, show the figure window and redraw.
+For non-GUI backends, raise an exception to be caught
+by <code class="xref py py-meth docutils literal notranslate"><span class="pre">show()</span></code>, for an
+optional warning.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gdesk.matplotbe.draw_if_interactive">
+<span class="sig-prename descclassname"><span class="pre">gdesk.matplotbe.</span></span><span class="sig-name descname"><span class="pre">draw_if_interactive</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.matplotbe.draw_if_interactive" title="Permalink to this definition">¶</a></dt>
+<dd><p>For image backends - is not required.
+For GUI backends - this should be overridden if drawing should be done in
+interactive python mode.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gdesk.matplotbe.new_figure_manager">
+<span class="sig-prename descclassname"><span class="pre">gdesk.matplotbe.</span></span><span class="sig-name descname"><span class="pre">new_figure_manager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">num</span></em>, <em class="sig-param"><span class="pre">*args</span></em>, <em class="sig-param"><span class="pre">FigureClass=&lt;class</span> <span class="pre">'matplotlib.figure.Figure'&gt;</span></em>, <em class="sig-param"><span class="pre">**kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.matplotbe.new_figure_manager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new figure manager instance.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gdesk.matplotbe.new_figure_manager_given_figure">
+<span class="sig-prename descclassname"><span class="pre">gdesk.matplotbe.</span></span><span class="sig-name descname"><span class="pre">new_figure_manager_given_figure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figure</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.matplotbe.new_figure_manager_given_figure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new figure manager instance for the given figure.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="gdesk.matplotbe.show">
+<span class="sig-prename descclassname"><span class="pre">gdesk.matplotbe.</span></span><span class="sig-name descname"><span class="pre">show</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.matplotbe.show" title="Permalink to this definition">¶</a></dt>
+<dd><p>For image backends - is not required.
+For GUI backends - show() is usually the last line of a pyplot script and
+tells the backend that it is time to draw.  In interactive mode, this
+should do nothing.</p>
+</dd></dl>
+
+</section>
+</section>
 
 
             <div class="clearer"></div>
@@ -62,7 +225,7 @@
   <h3><a href="index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">gdesk.matplotbe package</a><ul>
-<li><a class="reference internal" href="#module-contents">Module contents</a></li>
+<li><a class="reference internal" href="#module-gdesk.matplotbe">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -109,7 +272,7 @@
         <li class="right" >
           <a href="gdesk.live.manage.html" title="gdesk.live.manage module"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">gdesk.matplotbe package</a></li> 
@@ -117,7 +280,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2021, Thomas Cools.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.1.
     </div>
   </body>
 </html>

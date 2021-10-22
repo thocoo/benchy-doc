@@ -4,15 +4,15 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>gdesk.live.completer module &#8212; gdesk 0.1.1 documentation</title>
-    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>gdesk.live.completer module &#8212; gdesk 0.1.4 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="gdesk.live.console module" href="gdesk.live.console.html" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="gdesk.live.html" title="gdesk.live package"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="gdesk.live.html" accesskey="U">gdesk.live package</a> &#187;</li>
@@ -46,7 +46,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="module-gdesk.live.completer">
+  <section id="module-gdesk.live.completer">
 <span id="gdesk-live-completer-module"></span><h1>gdesk.live.completer module<a class="headerlink" href="#module-gdesk.live.completer" title="Permalink to this headline">¶</a></h1>
 <p>Word completion for GNU readline.</p>
 <p>The completer completes keywords, built-ins and globals in a selectable
@@ -73,12 +73,12 @@ feature, I consider this an acceptable risk.  More complicated expressions
 used, and this module (and the readline module) are silently inactive.</p></li>
 </ul>
 <dl class="py class">
-<dt id="gdesk.live.completer.Completer">
-<em class="property">class </em><code class="sig-prename descclassname">gdesk.live.completer.</code><code class="sig-name descname">Completer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">namespace</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.live.completer.Completer" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.live.completer.Completer">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">gdesk.live.completer.</span></span><span class="sig-name descname"><span class="pre">Completer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.live.completer.Completer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
-<dt id="gdesk.live.completer.Completer.attr_matches">
-<code class="sig-name descname">attr_matches</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.live.completer.Completer.attr_matches" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.live.completer.Completer.attr_matches">
+<span class="sig-name descname"><span class="pre">attr_matches</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.live.completer.Completer.attr_matches" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute matches when text contains a dot.</p>
 <p>Assuming the text is of the form NAME.NAME….[NAME], and is
 evaluable in self.namespace, it will be evaluated and its attributes
@@ -89,30 +89,30 @@ with a __getattr__ hook is evaluated.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.live.completer.Completer.complete">
-<code class="sig-name descname">complete</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em>, <em class="sig-param"><span class="n">state</span></em>, <em class="sig-param"><span class="n">wild</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.live.completer.Completer.complete" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.live.completer.Completer.complete">
+<span class="sig-name descname"><span class="pre">complete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wild</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.live.completer.Completer.complete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the next possible completion for ‘text’.</p>
 <p>This is called successively with state == 0, 1, 2, … until it
 returns None.  The completion should begin with ‘text’.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.live.completer.Completer.global_matches">
-<code class="sig-name descname">global_matches</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.live.completer.Completer.global_matches" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.live.completer.Completer.global_matches">
+<span class="sig-name descname"><span class="pre">global_matches</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.live.completer.Completer.global_matches" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute matches when text is a simple name.</p>
 <p>Return a list of all keywords, built-in functions and names currently
 defined in self.namespace that match.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.live.completer.Completer.key_matches">
-<code class="sig-name descname">key_matches</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.live.completer.Completer.key_matches" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.live.completer.Completer.key_matches">
+<span class="sig-name descname"><span class="pre">key_matches</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.live.completer.Completer.key_matches" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute matches when text contains a [.</p>
 </dd></dl>
 
 </dd></dl>
 
-</div>
+</section>
 
 
             <div class="clearer"></div>
@@ -163,7 +163,7 @@ defined in self.namespace that match.</p>
         <li class="right" >
           <a href="gdesk.live.html" title="gdesk.live package"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="gdesk.live.html" >gdesk.live package</a> &#187;</li>
@@ -172,7 +172,7 @@ defined in self.namespace that match.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2021, Thomas Cools.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.1.
     </div>
   </body>
 </html>

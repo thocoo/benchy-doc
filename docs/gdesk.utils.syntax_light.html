@@ -4,15 +4,15 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>gdesk.utils.syntax_light module &#8212; gdesk 0.1.1 documentation</title>
-    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>gdesk.utils.syntax_light module &#8212; gdesk 0.1.4 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="gdesk.utils.ticks module" href="gdesk.utils.ticks.html" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="gdesk.utils.shared.html" title="gdesk.utils.shared module"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="gdesk.utils.html" accesskey="U">gdesk.utils package</a> &#187;</li>
@@ -46,65 +46,65 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="module-gdesk.utils.syntax_light">
+  <section id="module-gdesk.utils.syntax_light">
 <span id="gdesk-utils-syntax-light-module"></span><h1>gdesk.utils.syntax_light module<a class="headerlink" href="#module-gdesk.utils.syntax_light" title="Permalink to this headline">¶</a></h1>
 <p>Add syntax highlighting to Python source code</p>
 <dl class="py function">
-<dt id="gdesk.utils.syntax_light.alltt_escape">
-<code class="sig-prename descclassname">gdesk.utils.syntax_light.</code><code class="sig-name descname">alltt_escape</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">s</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.syntax_light.alltt_escape" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.utils.syntax_light.alltt_escape">
+<span class="sig-prename descclassname"><span class="pre">gdesk.utils.syntax_light.</span></span><span class="sig-name descname"><span class="pre">alltt_escape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.syntax_light.alltt_escape" title="Permalink to this definition">¶</a></dt>
 <dd><p>Replace backslash and braces with their escaped equivalents</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="gdesk.utils.syntax_light.analyze_python">
-<code class="sig-prename descclassname">gdesk.utils.syntax_light.</code><code class="sig-name descname">analyze_python</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">source</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.syntax_light.analyze_python" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.utils.syntax_light.analyze_python">
+<span class="sig-prename descclassname"><span class="pre">gdesk.utils.syntax_light.</span></span><span class="sig-name descname"><span class="pre">analyze_python</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.syntax_light.analyze_python" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate and classify chunks of Python for syntax highlighting.
 Yields tuples in the form: (category, categorized_text).</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="gdesk.utils.syntax_light.ansi_highlight">
-<code class="sig-prename descclassname">gdesk.utils.syntax_light.</code><code class="sig-name descname">ansi_highlight</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">classified_text</span></em>, <em class="sig-param"><span class="n">colors</span><span class="o">=</span><span class="default_value">{'builtin': '\x1b[0;35m', '\x1b[0m', 'comment': '\x1b[0;31m', '\x1b[0m', 'definition': '\x1b[0;33m', '\x1b[0m', 'defname': '\x1b[0;34m', '\x1b[0m', 'docstring': '\x1b[0;32m', '\x1b[0m', 'keyword': '\x1b[0;33m', '\x1b[0m', 'operator': '\x1b[0;33m', '\x1b[0m', 'string': '\x1b[0;32m', '\x1b[0m'}</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.syntax_light.ansi_highlight" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.utils.syntax_light.ansi_highlight">
+<span class="sig-prename descclassname"><span class="pre">gdesk.utils.syntax_light.</span></span><span class="sig-name descname"><span class="pre">ansi_highlight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">classified_text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{'builtin':</span> <span class="pre">('\x1b[0;35m',</span> <span class="pre">'\x1b[0m'),</span> <span class="pre">'comment':</span> <span class="pre">('\x1b[0;31m',</span> <span class="pre">'\x1b[0m'),</span> <span class="pre">'definition':</span> <span class="pre">('\x1b[0;33m',</span> <span class="pre">'\x1b[0m'),</span> <span class="pre">'defname':</span> <span class="pre">('\x1b[0;34m',</span> <span class="pre">'\x1b[0m'),</span> <span class="pre">'docstring':</span> <span class="pre">('\x1b[0;32m',</span> <span class="pre">'\x1b[0m'),</span> <span class="pre">'keyword':</span> <span class="pre">('\x1b[0;33m',</span> <span class="pre">'\x1b[0m'),</span> <span class="pre">'operator':</span> <span class="pre">('\x1b[0;33m',</span> <span class="pre">'\x1b[0m'),</span> <span class="pre">'string':</span> <span class="pre">('\x1b[0;32m',</span> <span class="pre">'\x1b[0m')}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.syntax_light.ansi_highlight" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add syntax highlighting to source code using ANSI escape sequences</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="gdesk.utils.syntax_light.build_html_page">
-<code class="sig-prename descclassname">gdesk.utils.syntax_light.</code><code class="sig-name descname">build_html_page</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">classified_text</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">'python'</span></em>, <em class="sig-param"><span class="n">css</span><span class="o">=</span><span class="default_value">{'.builtin': '{color: purple;}', '.comment': '{color: crimson;}', '.definition': '{color: darkorange; font-weight:bold;}', '.defname': '{color: blue;}', '.docstring': '{color: forestgreen; font-style:italic;}', '.keyword': '{color: darkorange;}', '.operator': '{color: brown;}', '.string': '{color: forestgreen;}'}</span></em>, <em class="sig-param"><span class="n">html</span><span class="o">=</span><span class="default_value">'&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot;\n          &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;\n&lt;html&gt;\n&lt;head&gt;\n&lt;meta http-equiv=&quot;Content-type&quot; content=&quot;text/html;charset=UTF-8&quot;&gt;\n&lt;title&gt; {title} &lt;/title&gt;\n&lt;style type=&quot;text/css&quot;&gt;\n{css}\n&lt;/style&gt;\n&lt;/head&gt;\n&lt;body&gt;\n{body}\n&lt;/body&gt;\n&lt;/html&gt;\n'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.syntax_light.build_html_page" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.utils.syntax_light.build_html_page">
+<span class="sig-prename descclassname"><span class="pre">gdesk.utils.syntax_light.</span></span><span class="sig-name descname"><span class="pre">build_html_page</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">classified_text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'python'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">css</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{'.builtin':</span> <span class="pre">'{color:</span> <span class="pre">purple;}',</span> <span class="pre">'.comment':</span> <span class="pre">'{color:</span> <span class="pre">crimson;}',</span> <span class="pre">'.definition':</span> <span class="pre">'{color:</span> <span class="pre">darkorange;</span> <span class="pre">font-weight:bold;}',</span> <span class="pre">'.defname':</span> <span class="pre">'{color:</span> <span class="pre">blue;}',</span> <span class="pre">'.docstring':</span> <span class="pre">'{color:</span> <span class="pre">forestgreen;</span> <span class="pre">font-style:italic;}',</span> <span class="pre">'.keyword':</span> <span class="pre">'{color:</span> <span class="pre">darkorange;}',</span> <span class="pre">'.operator':</span> <span class="pre">'{color:</span> <span class="pre">brown;}',</span> <span class="pre">'.string':</span> <span class="pre">'{color:</span> <span class="pre">forestgreen;}'}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">html</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&lt;!DOCTYPE</span> <span class="pre">HTML</span> <span class="pre">PUBLIC</span> <span class="pre">&quot;-//W3C//DTD</span> <span class="pre">HTML</span> <span class="pre">4.01//EN&quot;\n</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">&quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;\n&lt;html&gt;\n&lt;head&gt;\n&lt;meta</span> <span class="pre">http-equiv=&quot;Content-type&quot;</span> <span class="pre">content=&quot;text/html;charset=UTF-8&quot;&gt;\n&lt;title&gt;</span> <span class="pre">{title}</span> <span class="pre">&lt;/title&gt;\n&lt;style</span> <span class="pre">type=&quot;text/css&quot;&gt;\n{css}\n&lt;/style&gt;\n&lt;/head&gt;\n&lt;body&gt;\n{body}\n&lt;/body&gt;\n&lt;/html&gt;\n'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.syntax_light.build_html_page" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a complete HTML page with colorized source code</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="gdesk.utils.syntax_light.combine_range">
-<code class="sig-prename descclassname">gdesk.utils.syntax_light.</code><code class="sig-name descname">combine_range</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">lines</span></em>, <em class="sig-param"><span class="n">start</span></em>, <em class="sig-param"><span class="n">end</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.syntax_light.combine_range" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.utils.syntax_light.combine_range">
+<span class="sig-prename descclassname"><span class="pre">gdesk.utils.syntax_light.</span></span><span class="sig-name descname"><span class="pre">combine_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lines</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.syntax_light.combine_range" title="Permalink to this definition">¶</a></dt>
 <dd><p>Join content from a range of lines between start and end</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="gdesk.utils.syntax_light.html_highlight">
-<code class="sig-prename descclassname">gdesk.utils.syntax_light.</code><code class="sig-name descname">html_highlight</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">classified_text</span></em>, <em class="sig-param"><span class="n">opener</span><span class="o">=</span><span class="default_value">'&lt;pre class=&quot;python&quot;&gt;\n'</span></em>, <em class="sig-param"><span class="n">closer</span><span class="o">=</span><span class="default_value">'&lt;/pre&gt;\n'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.syntax_light.html_highlight" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.utils.syntax_light.html_highlight">
+<span class="sig-prename descclassname"><span class="pre">gdesk.utils.syntax_light.</span></span><span class="sig-name descname"><span class="pre">html_highlight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">classified_text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opener</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&lt;pre</span> <span class="pre">class=&quot;python&quot;&gt;\n'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">closer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&lt;/pre&gt;\n'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.syntax_light.html_highlight" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert classified text to an HTML fragment</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="gdesk.utils.syntax_light.is_builtin">
-<code class="sig-prename descclassname">gdesk.utils.syntax_light.</code><code class="sig-name descname">is_builtin</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">s</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.syntax_light.is_builtin" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.utils.syntax_light.is_builtin">
+<span class="sig-prename descclassname"><span class="pre">gdesk.utils.syntax_light.</span></span><span class="sig-name descname"><span class="pre">is_builtin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.syntax_light.is_builtin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return True if s is the name of a builtin</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="gdesk.utils.syntax_light.latex_highlight">
-<code class="sig-prename descclassname">gdesk.utils.syntax_light.</code><code class="sig-name descname">latex_highlight</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">classified_text</span></em>, <em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">'python'</span></em>, <em class="sig-param"><span class="n">commands</span><span class="o">=</span><span class="default_value">{'builtin': '{\\color{purple}#1}', 'comment': '{\\color{red}#1}', 'definition': '{\\color{orange}#1}', 'defname': '{\\color{blue}#1}', 'docstring': '{\\emph{\\color{ForestGreen}#1}}', 'keyword': '{\\color{orange}#1}', 'operator': '{\\color{brown}#1}', 'string': '{\\color{ForestGreen}#1}'}</span></em>, <em class="sig-param"><span class="n">document</span><span class="o">=</span><span class="default_value">'\n\\documentclass{article}\n\\usepackage{alltt}\n\\usepackage{upquote}\n\\usepackage{color}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[cm]{fullpage}\n%(macros)s\n\\begin{document}\n\\center{\\LARGE{%(title)s}}\n\\begin{alltt}\n%(body)s\n\\end{alltt}\n\\end{document}\n'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.syntax_light.latex_highlight" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.utils.syntax_light.latex_highlight">
+<span class="sig-prename descclassname"><span class="pre">gdesk.utils.syntax_light.</span></span><span class="sig-name descname"><span class="pre">latex_highlight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">classified_text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'python'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commands</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{'builtin':</span> <span class="pre">'{\\color{purple}#1}',</span> <span class="pre">'comment':</span> <span class="pre">'{\\color{red}#1}',</span> <span class="pre">'definition':</span> <span class="pre">'{\\color{orange}#1}',</span> <span class="pre">'defname':</span> <span class="pre">'{\\color{blue}#1}',</span> <span class="pre">'docstring':</span> <span class="pre">'{\\emph{\\color{ForestGreen}#1}}',</span> <span class="pre">'keyword':</span> <span class="pre">'{\\color{orange}#1}',</span> <span class="pre">'operator':</span> <span class="pre">'{\\color{brown}#1}',</span> <span class="pre">'string':</span> <span class="pre">'{\\color{ForestGreen}#1}'}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">document</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'\n\\documentclass{article}\n\\usepackage{alltt}\n\\usepackage{upquote}\n\\usepackage{color}\n\\usepackage[usenames,dvipsnames]{xcolor}\n\\usepackage[cm]{fullpage}\n%(macros)s\n\\begin{document}\n\\center{\\LARGE{%(title)s}}\n\\begin{alltt}\n%(body)s\n\\end{alltt}\n\\end{document}\n'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.syntax_light.latex_highlight" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a complete LaTeX document with colorized source code</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="gdesk.utils.syntax_light.raw_highlight">
-<code class="sig-prename descclassname">gdesk.utils.syntax_light.</code><code class="sig-name descname">raw_highlight</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">classified_text</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.syntax_light.raw_highlight" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.utils.syntax_light.raw_highlight">
+<span class="sig-prename descclassname"><span class="pre">gdesk.utils.syntax_light.</span></span><span class="sig-name descname"><span class="pre">raw_highlight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">classified_text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.syntax_light.raw_highlight" title="Permalink to this definition">¶</a></dt>
 <dd><p>Straight text display of text classifications</p>
 </dd></dl>
 
-</div>
+</section>
 
 
             <div class="clearer"></div>
@@ -155,7 +155,7 @@ Yields tuples in the form: (category, categorized_text).</p>
         <li class="right" >
           <a href="gdesk.utils.shared.html" title="gdesk.utils.shared module"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="gdesk.utils.html" >gdesk.utils package</a> &#187;</li>
@@ -164,7 +164,7 @@ Yields tuples in the form: (category, categorized_text).</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2021, Thomas Cools.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.1.
     </div>
   </body>
 </html>

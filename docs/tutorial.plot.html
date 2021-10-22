@@ -4,15 +4,15 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Plots &#8212; gdesk 0.1.1 documentation</title>
-    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Plots &#8212; gdesk 0.1.4 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Live Scripting" href="tutorial.livescript.html" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="tutorial.console.html" title="The Console panel: a Python interpreter"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Plots</a></li> 
       </ul>
     </div>  
@@ -43,20 +43,22 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="plots">
+  <section id="plots">
 <h1>Plots<a class="headerlink" href="#plots" title="Permalink to this headline">¶</a></h1>
-<div class="figure align-center" id="id1">
+<figure class="align-center" id="id1">
 <img alt="Gamma Desk plot panel" src="_images/plot.png" />
-<p class="caption"><span class="caption-text">Gamma Desk plot panel</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
-<div class="section" id="introduction">
+<figcaption>
+<p><span class="caption-text">Gamma Desk plot panel</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>There a many plotting libraries for Python avaiable, but the most common and easy to use is <a class="reference external" href="https://matplotlib.org/">Matplotlib</a>.</p>
 <p>If you want to use Matplotlib in some gui environment, you need a suitable backend for that gui.</p>
 <p>This backed is responsible to actual draw the plotting content to screen or to disk.</p>
 <p>There are by default backends available for the common gui libraries like Gtk, Qt, Wx.
 There are also backends to export to svg or pdf files.</p>
-<div class="section" id="default-backends">
+<section id="default-backends">
 <h3>Default backends<a class="headerlink" href="#default-backends" title="Permalink to this headline">¶</a></h3>
 <p>Note that the default gui backends of Matplotlib have quite some limitations</p>
 <ul class="simple">
@@ -65,8 +67,8 @@ There are also backends to export to svg or pdf files.</p>
 This can be a problem if the Python interpreter is running in another GUI process.</p></li>
 </ul>
 <p>To really integrate the interactive plotting in a gui, a customized backend is needed.</p>
-</div>
-<div class="section" id="gamma-desk-backend">
+</section>
+<section id="gamma-desk-backend">
 <h3>Gamma Desk Backend<a class="headerlink" href="#gamma-desk-backend" title="Permalink to this headline">¶</a></h3>
 <p>The Gamma Desk backend features:</p>
 <ul class="simple">
@@ -80,9 +82,9 @@ This can be a problem if the Python interpreter is running in another GUI proces
 </ul>
 <p>There is some Mathlab state-based interface <a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot">pyplot</a>
 to Matplotlib plotting library.</p>
-</div>
-</div>
-<div class="section" id="usecase-interactive-console-in-the-gui-process">
+</section>
+</section>
+<section id="usecase-interactive-console-in-the-gui-process">
 <h2>Usecase: Interactive Console in the Gui Process<a class="headerlink" href="#usecase-interactive-console-in-the-gui-process" title="Permalink to this headline">¶</a></h2>
 <p>Nothing special here. You only have to make sure you use the gdesk backed.
 Note that the gdesk backend is already selected at startup of gDesk.</p>
@@ -124,7 +126,7 @@ The show command will actual show the plot.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="section" id="interactive-mode">
+<section id="interactive-mode">
 <h3>Interactive mode<a class="headerlink" href="#interactive-mode" title="Permalink to this headline">¶</a></h3>
 <p>In interactive, every plt command will cause a redraw of the plot.
 By default, matplotbe is not started in interactive mode.</p>
@@ -142,8 +144,8 @@ By default, matplotbe is not started in interactive mode.</p>
 <p class="admonition-title">Note</p>
 <p>Note that interactive mode can slow down the process a lot.</p>
 </div>
-</div>
-<div class="section" id="switching-backend">
+</section>
+<section id="switching-backend">
 <h3>Switching backend<a class="headerlink" href="#switching-backend" title="Permalink to this headline">¶</a></h3>
 <p>You can switch to another backend.
 Switching the backend will close all figures.</p>
@@ -153,11 +155,11 @@ Switching the backend will close all figures.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">switch_backend</span><span class="p">(</span><span class="s1">&#39;module://gdesk.matplotbe&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="usecase-interactive-console-in-an-external-process">
+</section>
+</section>
+<section id="usecase-interactive-console-in-an-external-process">
 <h2>Usecase: Interactive Console in an external process<a class="headerlink" href="#usecase-interactive-console-in-an-external-process" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="method-1-figure-channeling">
+<section id="method-1-figure-channeling">
 <h3>Method 1: figure channeling<a class="headerlink" href="#method-1-figure-channeling" title="Permalink to this headline">¶</a></h3>
 <p>The figure object is created in the user process.
 Then, the figure is sended to the gui to show it.
@@ -196,8 +198,8 @@ The figure is renumbered according the active plots in the gui process.</p>
 </div>
 <p>It will create a new figure window. If you use the option <cite>hold=True</cite>, the current active plot window will used to
 show the figure instead of a new window.</p>
-</div>
-<div class="section" id="method-2-by-command-channeling">
+</section>
+<section id="method-2-by-command-channeling">
 <h3>Method 2: By command channeling<a class="headerlink" href="#method-2-by-command-channeling" title="Permalink to this headline">¶</a></h3>
 <p>The commands and arguments are channeled to the gui.
 The figure object is created in the gui thread.</p>
@@ -224,11 +226,11 @@ currently used in the gui process.</p>
 <li><p>Only the pyplot.&lt;funcs&gt; are available</p></li>
 <li><p>Any returned object of the function calls is actual a copy comming from the gui process to the local process</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="plotting-examples">
+</section>
+</section>
+<section id="plotting-examples">
 <h2>Plotting Examples<a class="headerlink" href="#plotting-examples" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="simple-xy-plot">
+<section id="simple-xy-plot">
 <h3>Simple XY plot<a class="headerlink" href="#simple-xy-plot" title="Permalink to this headline">¶</a></h3>
 <p>Simple xy plotting using the pyplot proxy</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plx</span> <span class="o">=</span> <span class="n">gui</span><span class="o">.</span><span class="n">prepareplot</span><span class="p">()</span>   <span class="c1">#reference to the pylab proxy</span>
@@ -244,8 +246,8 @@ currently used in the gui process.</p>
 <span class="n">plx</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="subplots">
+</section>
+<section id="subplots">
 <h3>Subplots<a class="headerlink" href="#subplots" title="Permalink to this headline">¶</a></h3>
 <p>Subplots can be generated using subplot() as in the following example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -270,11 +272,11 @@ currently used in the gui process.</p>
 <span class="n">gui</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>    <span class="c1">#Note that plt.show() can only work if you are currently in the gui process</span>
 </pre></div>
 </div>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="_images/tale_of_2_subplots.png" src="_images/tale_of_2_subplots.png" />
-</div>
-</div>
-<div class="section" id="histogram">
+</figure>
+</section>
+<section id="histogram">
 <h3>Histogram<a class="headerlink" href="#histogram" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -306,16 +308,16 @@ currently used in the gui process.</p>
 <span class="n">gui</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="_images/histogram.png" src="_images/histogram.png" />
-</div>
-</div>
-</div>
-<div class="section" id="plotting-from-independent-python-process">
+</figure>
+</section>
+</section>
+<section id="plotting-from-independent-python-process">
 <h2>Plotting from independent Python process<a class="headerlink" href="#plotting-from-independent-python-process" title="Permalink to this headline">¶</a></h2>
 <p>Make sure Gamma Desk is <a class="reference external" href="install.html">installed</a> in the relevant Python distribution.</p>
 <p>The type of communcations channels depends on if Gamma Desk is started as independent process or child process.</p>
-<div class="section" id="start-gamma-desk-as-indepedent-process">
+<section id="start-gamma-desk-as-indepedent-process">
 <h3>Start Gamma Desk as Indepedent Process<a class="headerlink" href="#start-gamma-desk-as-indepedent-process" title="Permalink to this headline">¶</a></h3>
 <p>First start a Gamma Desk instance.</p>
 <p>Then in the console of the other Python process, execute:</p>
@@ -323,8 +325,8 @@ currently used in the gui process.</p>
 <span class="n">connect_to_gui</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="start-gamma-desk-as-child-process">
+</section>
+<section id="start-gamma-desk-as-child-process">
 <h3>Start Gamma Desk as Child Process<a class="headerlink" href="#start-gamma-desk-as-child-process" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">gdesk.external.channel</span> <span class="kn">import</span> <span class="n">start_gui_as_child</span>
 <span class="n">start_gui_as_child</span><span class="p">()</span>
@@ -332,8 +334,8 @@ currently used in the gui process.</p>
 </div>
 <p>Since the workspace &amp; Process in the Gamma Desk Console is the same,
 you can execute the following commands in the console of your choice.</p>
-</div>
-<div class="section" id="figure-channeling-method">
+</section>
+<section id="figure-channeling-method">
 <h3>Figure channeling method<a class="headerlink" href="#figure-channeling-method" title="Permalink to this headline">¶</a></h3>
 <p>We prepare the figure using the svg backend and send
 the figure to the gui process.</p>
@@ -354,8 +356,8 @@ the figure to the gui process.</p>
 <span class="n">gui</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="command-channeling-method">
+</section>
+<section id="command-channeling-method">
 <h3>Command channeling method<a class="headerlink" href="#command-channeling-method" title="Permalink to this headline">¶</a></h3>
 <p>We actual draw the figure in the gui process.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Use gdesk backend in the gdesk gui process</span>
@@ -378,11 +380,11 @@ the figure to the gui process.</p>
 </div>
 <p>The gui is a mapping to the gui proxy instance registered for the current thread.
 The gui will be None if accessed from unregistered thread.</p>
-</div>
-</div>
-<div class="section" id="issues">
+</section>
+</section>
+<section id="issues">
 <h2>Issues<a class="headerlink" href="#issues" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="starting-a-matplotlib-gui-outside-of-the-main-thread-will-likely-fail">
+<section id="starting-a-matplotlib-gui-outside-of-the-main-thread-will-likely-fail">
 <h3>Starting a Matplotlib GUI outside of the main thread will likely fail<a class="headerlink" href="#starting-a-matplotlib-gui-outside-of-the-main-thread-will-likely-fail" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ne">UserWarning</span><span class="p">:</span> <span class="n">Starting</span> <span class="n">a</span> <span class="n">Matplotlib</span> <span class="n">GUI</span> <span class="n">outside</span> <span class="n">of</span> <span class="n">the</span> <span class="n">main</span> <span class="n">thread</span> <span class="n">will</span> <span class="n">likely</span> <span class="n">fail</span><span class="o">.</span>
 </pre></div>
@@ -398,21 +400,21 @@ Outside the GUI process, it should be NOT <cite>module://gdesk.matplotbe</cite>.
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;module://gdesk.matplotbe&#39;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="matplotlib-is-currently-using-svg-which-is-a-non-gui-backend-so-cannot-show-the-figure">
+</section>
+<section id="matplotlib-is-currently-using-svg-which-is-a-non-gui-backend-so-cannot-show-the-figure">
 <h3>Matplotlib is currently using svg, which is a non-GUI backend, so cannot show the figure<a class="headerlink" href="#matplotlib-is-currently-using-svg-which-is-a-non-gui-backend-so-cannot-show-the-figure" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ne">UserWarning</span><span class="p">:</span> <span class="n">Matplotlib</span> <span class="ow">is</span> <span class="n">currently</span> <span class="n">using</span> <span class="n">svg</span><span class="p">,</span> <span class="n">which</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">non</span><span class="o">-</span><span class="n">GUI</span> <span class="n">backend</span><span class="p">,</span> <span class="n">so</span> <span class="n">cannot</span> <span class="n">show</span> <span class="n">the</span> <span class="n">figure</span><span class="o">.</span>
 </pre></div>
 </div>
 <p>You are probably not on the gui process. You have to send the figure to the gui process.
 Try <cite>gui.plot.show()</cite> instead of plt.show()`</p>
-</div>
-<div class="section" id="fonts-are-too-small">
+</section>
+<section id="fonts-are-too-small">
 <h3>Fonts are too small<a class="headerlink" href="#fonts-are-too-small" title="Permalink to this headline">¶</a></h3>
 <p>Increase the value of plt.rcParams[‘font.size’] before making a plot</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
             <div class="clearer"></div>
@@ -504,13 +506,13 @@ Try <cite>gui.plot.show()</cite> instead of plt.show()`</p>
         <li class="right" >
           <a href="tutorial.console.html" title="The Console panel: a Python interpreter"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Plots</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2021, Thomas Cools.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.1.
     </div>
   </body>
 </html>

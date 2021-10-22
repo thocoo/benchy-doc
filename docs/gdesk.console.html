@@ -4,15 +4,15 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>gdesk.console module &#8212; gdesk 0.1.1 documentation</title>
-    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>gdesk.console module &#8212; gdesk 0.1.4 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="gdesk.version module" href="gdesk.version.html" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="gdesk.widgets.thumbs.html" title="gdesk.widgets.thumbs module"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="gdesk.html" accesskey="U">gdesk package</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">gdesk.console module</a></li> 
@@ -45,34 +45,34 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="module-gdesk.console">
+  <section id="module-gdesk.console">
 <span id="gdesk-console-module"></span><h1>gdesk.console module<a class="headerlink" href="#module-gdesk.console" title="Permalink to this headline">¶</a></h1>
 <p>Gamma Desk interface to the DOS console</p>
 <dl class="py function">
-<dt id="gdesk.console.argexec">
-<code class="sig-prename descclassname">gdesk.console.</code><code class="sig-name descname">argexec</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">argv</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">config_kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.console.argexec" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.console.argexec">
+<span class="sig-prename descclassname"><span class="pre">gdesk.console.</span></span><span class="sig-name descname"><span class="pre">argexec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">argv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">config_kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.console.argexec" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configure and start the eventloop</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="gdesk.console.argparser">
-<code class="sig-prename descclassname">gdesk.console.</code><code class="sig-name descname">argparser</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.console.argparser" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.console.argparser">
+<span class="sig-prename descclassname"><span class="pre">gdesk.console.</span></span><span class="sig-name descname"><span class="pre">argparser</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.console.argparser" title="Permalink to this definition">¶</a></dt>
 <dd><p>Make the ArgumentParser instance</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="gdesk.console.is_imported_by_child_process">
-<code class="sig-prename descclassname">gdesk.console.</code><code class="sig-name descname">is_imported_by_child_process</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.console.is_imported_by_child_process" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.console.is_imported_by_child_process">
+<span class="sig-prename descclassname"><span class="pre">gdesk.console.</span></span><span class="sig-name descname"><span class="pre">is_imported_by_child_process</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.console.is_imported_by_child_process" title="Permalink to this definition">¶</a></dt>
 <dd><p>Detect whenever this module is imported by multiprocessing.spawn</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="gdesk.console.run_as_child">
-<code class="sig-prename descclassname">gdesk.console.</code><code class="sig-name descname">run_as_child</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">console_args</span></em>, <em class="sig-param"><span class="n">config_kwargs</span></em>, <em class="sig-param"><span class="n">config_objects</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.console.run_as_child" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.console.run_as_child">
+<span class="sig-prename descclassname"><span class="pre">gdesk.console.</span></span><span class="sig-name descname"><span class="pre">run_as_child</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">console_args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_kwargs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_objects</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.console.run_as_child" title="Permalink to this definition">¶</a></dt>
 <dd><p>Top level function to start as child process</p>
 </dd></dl>
 
-</div>
+</section>
 
 
             <div class="clearer"></div>
@@ -123,7 +123,7 @@
         <li class="right" >
           <a href="gdesk.widgets.thumbs.html" title="gdesk.widgets.thumbs module"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">gdesk.console module</a></li> 
@@ -131,7 +131,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2021, Thomas Cools.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.1.
     </div>
   </body>
 </html>

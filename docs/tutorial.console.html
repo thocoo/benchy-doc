@@ -4,15 +4,15 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Console panel: a Python interpreter &#8212; gdesk 0.1.1 documentation</title>
-    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>The Console panel: a Python interpreter &#8212; gdesk 0.1.4 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Plots" href="tutorial.plot.html" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="index.html" title="Welcome to Gamma Desk"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">The Console panel: a Python interpreter</a></li> 
       </ul>
     </div>  
@@ -43,13 +43,15 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="the-console-panel-a-python-interpreter">
+  <section id="the-console-panel-a-python-interpreter">
 <h1>The Console panel: a Python interpreter<a class="headerlink" href="#the-console-panel-a-python-interpreter" title="Permalink to this headline">¶</a></h1>
-<div class="figure align-center" id="id1">
+<figure class="align-center" id="id1">
 <img alt="console hello world" src="_images/console.png" />
-<p class="caption"><span class="caption-text">A console panel of Gamma Desk.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
-<div class="section" id="usage">
+<figcaption>
+<p><span class="caption-text">A console panel of Gamma Desk.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<section id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
 <p>Using the console widget is quite straightforward. You enter Python code,
 press <code class="docutils literal notranslate"><span class="pre">ENTER</span></code> to execute it and observe the return value and/or print
@@ -148,10 +150,10 @@ current directory.</p></li>
 </li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="execution-control">
+</section>
+<section id="execution-control">
 <h2>Execution Control<a class="headerlink" href="#execution-control" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="synchroon-breaking">
+<section id="synchroon-breaking">
 <h3>Synchroon Breaking<a class="headerlink" href="#synchroon-breaking" title="Permalink to this headline">¶</a></h3>
 <p>This method makes use of the Python debugger to setting the system trace function.
 This function is called whenever a new local scope is entered.
@@ -159,29 +161,29 @@ Because of this extra call, the total execution time of the user code is affecte
 The function can raise a custom Error SyncBreaked to interrupt the current flow.</p>
 <p>The trace function will be setuped before any executing of user code.</p>
 <p>Because this method uses the system tracing, it affect the proper operation of the  Python debugger.</p>
-</div>
-<div class="section" id="asynchroon-breaking">
+</section>
+<section id="asynchroon-breaking">
 <h3>Asynchroon Breaking<a class="headerlink" href="#asynchroon-breaking" title="Permalink to this headline">¶</a></h3>
 <p>Sending a KeyBoardInterrupt to the execution thread.
 The receiving thread have to step to the next Python command to really raise the KeyBoardInterrupt.</p>
-</div>
-<div class="section" id="system-exit">
+</section>
+<section id="system-exit">
 <h3>System Exit<a class="headerlink" href="#system-exit" title="Permalink to this headline">¶</a></h3>
 <p>A controlled exit of the process.</p>
-</div>
-<div class="section" id="kill-process">
+</section>
+<section id="kill-process">
 <h3>Kill Process<a class="headerlink" href="#kill-process" title="Permalink to this headline">¶</a></h3>
 <p>A hard kill of the process.</p>
-</div>
-<div class="section" id="recover-a-python-blocking-thread">
+</section>
+<section id="recover-a-python-blocking-thread">
 <h3>Recover a Python blocking thread<a class="headerlink" href="#recover-a-python-blocking-thread" title="Permalink to this headline">¶</a></h3>
 <p>Note that for interrupting a Python thread without killing the entire Python interpreter, it is needed
 that the tread does a Python step. If the thread is waiting for example for data on a queue, and the queue
 never get feeded, the thread can not be breaked.</p>
 <p>One solution is start another thread which you can use the solve the blocking.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
             <div class="clearer"></div>
@@ -248,13 +250,13 @@ never get feeded, the thread can not be breaked.</p>
         <li class="right" >
           <a href="index.html" title="Welcome to Gamma Desk"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">The Console panel: a Python interpreter</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2021, Thomas Cools.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.1.
     </div>
   </body>
 </html>

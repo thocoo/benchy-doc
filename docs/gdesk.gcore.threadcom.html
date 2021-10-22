@@ -4,15 +4,15 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>gdesk.gcore.threadcom module &#8212; gdesk 0.1.1 documentation</title>
-    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>gdesk.gcore.threadcom module &#8212; gdesk 0.1.4 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="gdesk.gcore.utils module" href="gdesk.gcore.utils.html" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="gdesk.gcore.qgc.html" title="gdesk.gcore.qgc module"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="gdesk.gcore.html" accesskey="U">gdesk.gcore package</a> &#187;</li>
@@ -46,65 +46,63 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="module-gdesk.gcore.threadcom">
+  <section id="module-gdesk.gcore.threadcom">
 <span id="gdesk-gcore-threadcom-module"></span><h1>gdesk.gcore.threadcom module<a class="headerlink" href="#module-gdesk.gcore.threadcom" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="gdesk.gcore.threadcom.HandOver">
-<em class="property">class </em><code class="sig-prename descclassname">gdesk.gcore.threadcom.</code><code class="sig-name descname">HandOver</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.gcore.threadcom.HandOver" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.gcore.threadcom.HandOver">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">gdesk.gcore.threadcom.</span></span><span class="sig-name descname"><span class="pre">HandOver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.gcore.threadcom.HandOver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtCore.QObject</span></code></p>
 <dl class="py method">
-<dt id="gdesk.gcore.threadcom.HandOver.receive">
-<code class="sig-name descname">receive</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.gcore.threadcom.HandOver.receive" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.gcore.threadcom.HandOver.receive">
+<span class="sig-name descname"><span class="pre">receive</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.gcore.threadcom.HandOver.receive" title="Permalink to this definition">¶</a></dt>
 <dd><p>Receive returnlock, func, args, kwargs from signal_call_queue</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.gcore.threadcom.HandOver.send">
-<code class="sig-name descname">send</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">block</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">func</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.gcore.threadcom.HandOver.send" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.gcore.threadcom.HandOver.send">
+<span class="sig-name descname"><span class="pre">send</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.gcore.threadcom.HandOver.send" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>block</strong> – wait on the func to return</p></li>
 <li><p><strong>func</strong> – the reference to the function to be called by the eventloop</p></li>
-<li><p><strong>*args</strong> – <p>unnamed arguments for the function</p>
-</p></li>
-<li><p><strong>**kwargs</strong> – <p>key word arguments for the function</p>
-</p></li>
+<li><p><strong>*args</strong> – unnamed arguments for the function</p></li>
+<li><p><strong>**kwargs</strong> – key word arguments for the function</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py attribute">
-<dt id="gdesk.gcore.threadcom.HandOver.staticMetaObject">
-<code class="sig-name descname">staticMetaObject</code><em class="property"> = &lt;PySide2.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#gdesk.gcore.threadcom.HandOver.staticMetaObject" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.gcore.threadcom.HandOver.staticMetaObject">
+<span class="sig-name descname"><span class="pre">staticMetaObject</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;PySide2.QtCore.QMetaObject</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#gdesk.gcore.threadcom.HandOver.staticMetaObject" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="gdesk.gcore.threadcom.ReturnLock">
-<em class="property">class </em><code class="sig-prename descclassname">gdesk.gcore.threadcom.</code><code class="sig-name descname">ReturnLock</code><a class="headerlink" href="#gdesk.gcore.threadcom.ReturnLock" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.gcore.threadcom.ReturnLock">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">gdesk.gcore.threadcom.</span></span><span class="sig-name descname"><span class="pre">ReturnLock</span></span><a class="headerlink" href="#gdesk.gcore.threadcom.ReturnLock" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Lock and return value object used to pass the return value on SignalCalls.</p>
 <dl class="py method">
-<dt id="gdesk.gcore.threadcom.ReturnLock.locked">
-<code class="sig-name descname">locked</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.gcore.threadcom.ReturnLock.locked" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.gcore.threadcom.ReturnLock.locked">
+<span class="sig-name descname"><span class="pre">locked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.gcore.threadcom.ReturnLock.locked" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.gcore.threadcom.ReturnLock.releaseReturn">
-<code class="sig-name descname">releaseReturn</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.gcore.threadcom.ReturnLock.releaseReturn" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.gcore.threadcom.ReturnLock.releaseReturn">
+<span class="sig-name descname"><span class="pre">releaseReturn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.gcore.threadcom.ReturnLock.releaseReturn" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.gcore.threadcom.ReturnLock.waitOnReturn">
-<code class="sig-name descname">waitOnReturn</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.gcore.threadcom.ReturnLock.waitOnReturn" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.gcore.threadcom.ReturnLock.waitOnReturn">
+<span class="sig-name descname"><span class="pre">waitOnReturn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.gcore.threadcom.ReturnLock.waitOnReturn" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-</div>
+</section>
 
 
             <div class="clearer"></div>
@@ -155,7 +153,7 @@
         <li class="right" >
           <a href="gdesk.gcore.qgc.html" title="gdesk.gcore.qgc module"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="gdesk.gcore.html" >gdesk.gcore package</a> &#187;</li>
@@ -164,7 +162,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2021, Thomas Cools.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.1.
     </div>
   </body>
 </html>

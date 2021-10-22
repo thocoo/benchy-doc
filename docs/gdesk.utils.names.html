@@ -4,15 +4,15 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>gdesk.utils.names module &#8212; gdesk 0.1.1 documentation</title>
-    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>gdesk.utils.names module &#8212; gdesk 0.1.4 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="gdesk.utils.numba_func module" href="gdesk.utils.numba_func.html" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="gdesk.utils.namedmutex.html" title="gdesk.utils.namedmutex module"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="gdesk.utils.html" accesskey="U">gdesk.utils package</a> &#187;</li>
@@ -46,13 +46,13 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="module-gdesk.utils.names">
+  <section id="module-gdesk.utils.names">
 <span id="gdesk-utils-names-module"></span><h1>gdesk.utils.names module<a class="headerlink" href="#module-gdesk.utils.names" title="Permalink to this headline">¶</a></h1>
 <p>Provide OrderedStruct and DictStruct classes.</p>
 <p>Also, provide two utility functions: current_code_path() and force2bytes().</p>
 <dl class="py class">
-<dt id="gdesk.utils.names.DictStruct">
-<em class="property">class </em><code class="sig-prename descclassname">gdesk.utils.names.</code><code class="sig-name descname">DictStruct</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dictionary</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.names.DictStruct" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.utils.names.DictStruct">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">gdesk.utils.names.</span></span><span class="sig-name descname"><span class="pre">DictStruct</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dictionary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.names.DictStruct" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Object that mimics a classic structure type for holding data.</p>
 <p>You can consider it to be a dict with all the key/value pairs as object
@@ -70,8 +70,8 @@ print(d.a, d.b)</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="gdesk.utils.names.OrderedStruct">
-<em class="property">class </em><code class="sig-prename descclassname">gdesk.utils.names.</code><code class="sig-name descname">OrderedStruct</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">argv</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.names.OrderedStruct" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.utils.names.OrderedStruct">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">gdesk.utils.names.</span></span><span class="sig-name descname"><span class="pre">OrderedStruct</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">argv</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.names.OrderedStruct" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Object that mimics a classic structure type for holding data and retains the order
 of the elements.</p>
@@ -91,13 +91,13 @@ os.b = ‘new attribute b’
 </dd></dl>
 
 <dl class="py function">
-<dt id="gdesk.utils.names.addprop">
-<code class="sig-prename descclassname">gdesk.utils.names.</code><code class="sig-name descname">addprop</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">inst</span></em>, <em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">getter</span></em>, <em class="sig-param"><span class="n">setter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">doc</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.names.addprop" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.utils.names.addprop">
+<span class="sig-prename descclassname"><span class="pre">gdesk.utils.names.</span></span><span class="sig-name descname"><span class="pre">addprop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">getter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">setter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.names.addprop" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="gdesk.utils.names.current_code_path">
-<code class="sig-prename descclassname">gdesk.utils.names.</code><code class="sig-name descname">current_code_path</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.names.current_code_path" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.utils.names.current_code_path">
+<span class="sig-prename descclassname"><span class="pre">gdesk.utils.names.</span></span><span class="sig-name descname"><span class="pre">current_code_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.names.current_code_path" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the path of the caller’s source code file.</p>
 <p>If the caller is the shell (interactive scripting), None is returned.</p>
 <dl class="field-list simple">
@@ -118,13 +118,13 @@ current_code_path() is None
 </dd></dl>
 
 <dl class="py function">
-<dt id="gdesk.utils.names.find_names">
-<code class="sig-prename descclassname">gdesk.utils.names.</code><code class="sig-name descname">find_names</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">obj</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.names.find_names" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.utils.names.find_names">
+<span class="sig-prename descclassname"><span class="pre">gdesk.utils.names.</span></span><span class="sig-name descname"><span class="pre">find_names</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.names.find_names" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="gdesk.utils.names.force2bytes">
-<code class="sig-prename descclassname">gdesk.utils.names.</code><code class="sig-name descname">force2bytes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">s</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.names.force2bytes" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.utils.names.force2bytes">
+<span class="sig-prename descclassname"><span class="pre">gdesk.utils.names.</span></span><span class="sig-name descname"><span class="pre">force2bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.names.force2bytes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert the given string to bytes by encoding it.</p>
 <p>If the given argument is not a string (already bytes?), then return it verbatim.</p>
 <dl class="field-list simple">
@@ -138,13 +138,13 @@ current_code_path() is None
 </dd></dl>
 
 <dl class="py function">
-<dt id="gdesk.utils.names.fromfilename">
-<code class="sig-prename descclassname">gdesk.utils.names.</code><code class="sig-name descname">fromfilename</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fileName</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.names.fromfilename" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.utils.names.fromfilename">
+<span class="sig-prename descclassname"><span class="pre">gdesk.utils.names.</span></span><span class="sig-name descname"><span class="pre">fromfilename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.names.fromfilename" title="Permalink to this definition">¶</a></dt>
 <dd><p>parse a filename to a valid identifier
 extension is removed</p>
 </dd></dl>
 
-</div>
+</section>
 
 
             <div class="clearer"></div>
@@ -195,7 +195,7 @@ extension is removed</p>
         <li class="right" >
           <a href="gdesk.utils.namedmutex.html" title="gdesk.utils.namedmutex module"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="gdesk.utils.html" >gdesk.utils package</a> &#187;</li>
@@ -204,7 +204,7 @@ extension is removed</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2021, Thomas Cools.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.1.
     </div>
   </body>
 </html>

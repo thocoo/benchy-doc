@@ -4,15 +4,15 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>gdesk.utils.namedmutex module &#8212; gdesk 0.1.1 documentation</title>
-    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>gdesk.utils.namedmutex module &#8212; gdesk 0.1.4 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="gdesk.utils.names module" href="gdesk.utils.names.html" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="gdesk.utils.keypress.html" title="gdesk.utils.keypress module"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="gdesk.utils.html" accesskey="U">gdesk.utils package</a> &#187;</li>
@@ -46,7 +46,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="module-gdesk.utils.namedmutex">
+  <section id="module-gdesk.utils.namedmutex">
 <span id="gdesk-utils-namedmutex-module"></span><h1>gdesk.utils.namedmutex module<a class="headerlink" href="#module-gdesk.utils.namedmutex" title="Permalink to this headline">¶</a></h1>
 <p>Named mutex handling (for Win32).</p>
 <p>See README.md or <a class="reference external" href="https://github.com/benhoyt/namedmutex">https://github.com/benhoyt/namedmutex</a> for a bit more
@@ -54,33 +54,33 @@ documentation.</p>
 <p>This code is released under the new BSD 3-clause license:
 <a class="reference external" href="http://opensource.org/licenses/BSD-3-Clause">http://opensource.org/licenses/BSD-3-Clause</a></p>
 <dl class="py class">
-<dt id="gdesk.utils.namedmutex.NamedMutex">
-<em class="property">class </em><code class="sig-prename descclassname">gdesk.utils.namedmutex.</code><code class="sig-name descname">NamedMutex</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">acquired</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.namedmutex.NamedMutex" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.utils.namedmutex.NamedMutex">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">gdesk.utils.namedmutex.</span></span><span class="sig-name descname"><span class="pre">NamedMutex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">acquired</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.namedmutex.NamedMutex" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A named, system-wide mutex that can be acquired and released.</p>
 <dl class="py method">
-<dt id="gdesk.utils.namedmutex.NamedMutex.acquire">
-<code class="sig-name descname">acquire</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">timeout</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.namedmutex.NamedMutex.acquire" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.utils.namedmutex.NamedMutex.acquire">
+<span class="sig-name descname"><span class="pre">acquire</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.namedmutex.NamedMutex.acquire" title="Permalink to this definition">¶</a></dt>
 <dd><p>Acquire ownership of the mutex, returning True if acquired. If a timeout
 is specified, it will wait a maximum of timeout seconds to acquire the mutex,
 returning True if acquired, False on timeout. Raises WindowsError on error.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.utils.namedmutex.NamedMutex.close">
-<code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.namedmutex.NamedMutex.close" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.utils.namedmutex.NamedMutex.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.namedmutex.NamedMutex.close" title="Permalink to this definition">¶</a></dt>
 <dd><p>Close the mutex and release the handle.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.utils.namedmutex.NamedMutex.release">
-<code class="sig-name descname">release</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.namedmutex.NamedMutex.release" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.utils.namedmutex.NamedMutex.release">
+<span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.namedmutex.NamedMutex.release" title="Permalink to this definition">¶</a></dt>
 <dd><p>Relase an acquired mutex. Raises WindowsError on error.</p>
 </dd></dl>
 
 </dd></dl>
 
-</div>
+</section>
 
 
             <div class="clearer"></div>
@@ -131,7 +131,7 @@ returning True if acquired, False on timeout. Raises WindowsError on error.</p>
         <li class="right" >
           <a href="gdesk.utils.keypress.html" title="gdesk.utils.keypress module"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="gdesk.utils.html" >gdesk.utils package</a> &#187;</li>
@@ -140,7 +140,7 @@ returning True if acquired, False on timeout. Raises WindowsError on error.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2021, Thomas Cools.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.1.
     </div>
   </body>
 </html>

@@ -9,6 +9,7 @@ Submodules
 
    gdesk.panels.imgview.blueprint
    gdesk.panels.imgview.demosaic
+   gdesk.panels.imgview.dialogs
    gdesk.panels.imgview.dimensions
    gdesk.panels.imgview.fasthist
    gdesk.panels.imgview.imgdata

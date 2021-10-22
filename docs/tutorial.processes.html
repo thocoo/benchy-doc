@@ -4,15 +4,15 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Processes &#8212; gdesk 0.1.1 documentation</title>
-    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Processes &#8212; gdesk 0.1.4 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="The Shell and Gui user API" href="user_api.html" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="tutorial.livescript.html" title="Live Scripting"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Processes</a></li> 
       </ul>
     </div>  
@@ -43,17 +43,17 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="processes">
+  <section id="processes">
 <h1>Processes<a class="headerlink" href="#processes" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction">
+<section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>Gamma Desk (GD) can connect to other Python threads and processes.
 This process can be started by GD as a child processes or can be an already running Python process.
 The process can also run on another computer.</p>
-</div>
-<div class="section" id="gamma-desk-as-process-and-thread-starter">
+</section>
+<section id="gamma-desk-as-process-and-thread-starter">
 <h2>Gamma Desk as process and thread starter<a class="headerlink" href="#gamma-desk-as-process-and-thread-starter" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="main-thread-in-the-gui-process">
+<section id="main-thread-in-the-gui-process">
 <h3>Main Thread in the GUI process<a class="headerlink" href="#main-thread-in-the-gui-process" title="Permalink to this headline">¶</a></h3>
 <p>The main thread of Gamma Desk is also the QT eventloop.
 This eventloop process all gui events, the the gui will end if this eventloop is exitted.</p>
@@ -76,8 +76,8 @@ Qt garbage should also only be collected in this thread.
 The default Python garbage collector will collect garbage in any current running thread.
 For this reason, Gamma Desk disiabled this default Python garbage collecter timer and has its own implementation of a timer to always start the garbage
 collection in the main gui thread.</p>
-</div>
-<div class="section" id="sub-threads-in-the-gui-process">
+</section>
+<section id="sub-threads-in-the-gui-process">
 <h3>Sub Threads in the GUI process<a class="headerlink" href="#sub-threads-in-the-gui-process" title="Permalink to this headline">¶</a></h3>
 <p>These threads runs in the same process as the GUI thread.
 The workspace is the same for every thread in the same process.</p>
@@ -95,8 +95,8 @@ no gui instance. In this case, there are not attributes on the gui proxy.</p>
 <p>gui.qapp will also be None if called from anywhere except console#0.
 This is done to protect the user of accessing QT directly.
 The user should not access QT (or for sure not create any Qt object) outside the gui thread.</p>
-</div>
-<div class="section" id="main-thread-in-a-child-process">
+</section>
+<section id="main-thread-in-a-child-process">
 <h3>Main Thread in a Child Process<a class="headerlink" href="#main-thread-in-a-child-process" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Panels</span> <span class="n">Dialog</span> <span class="o">&gt;</span> <span class="n">New</span> <span class="o">&gt;</span> <span class="n">Console</span> <span class="o">&gt;</span> <span class="n">child</span>
 </pre></div>
@@ -106,21 +106,21 @@ The user should not access QT (or for sure not create any Qt object) outside the
 are piped between this child process and the GUI process.
 This means that all arguments and returns should be pickable.</p>
 <p>An exception are image arrays. These are placed on shared memory so the GUI can show them.</p>
-</div>
-<div class="section" id="sub-thread-in-a-child-process">
+</section>
+<section id="sub-thread-in-a-child-process">
 <h3>Sub Thread in a Child Process<a class="headerlink" href="#sub-thread-in-a-child-process" title="Permalink to this headline">¶</a></h3>
 <p>Panels Dialog &gt; New &gt; Console &gt; child-thread</p>
 <p>The workspace is the same as the main thread of the same process.
 The behavior is the same as the main thread.</p>
-</div>
-</div>
-<div class="section" id="connection-to-an-already-running-python-process">
+</section>
+</section>
+<section id="connection-to-an-already-running-python-process">
 <h2>Connection to an already running Python Process<a class="headerlink" href="#connection-to-an-already-running-python-process" title="Permalink to this headline">¶</a></h2>
 <p>When Gamma Desk has no current console on an other process,
 it still can receive commands from another process.
 A command server will listen to a certain tcp port.
 Every new instance of GD will bind a different port.</p>
-<div class="section" id="connection-on-the-same-computer">
+<section id="connection-on-the-same-computer">
 <h3>Connection on the same computer<a class="headerlink" href="#connection-on-the-same-computer" title="Permalink to this headline">¶</a></h3>
 <p>Run the following command in the already running Python Process
 The user doesn’t have to give the port number because code
@@ -129,8 +129,8 @@ can find it in the current active logdir of GD.</p>
 <span class="n">channel</span><span class="o">.</span><span class="n">connect_to_gui</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="connection-from-another-computer">
+</section>
+<section id="connection-from-another-computer">
 <h3>Connection from another computer<a class="headerlink" href="#connection-from-another-computer" title="Permalink to this headline">¶</a></h3>
 <p>For example, a Gamma Desk is running on  host ‘FFYBVR-L1.ad.onsemi.com’.
 An the watcher is active on port 5559.</p>
@@ -139,9 +139,9 @@ An the watcher is active on port 5559.</p>
 <span class="n">channel</span><span class="o">.</span><span class="n">connect_to_gui</span><span class="p">(</span><span class="mi">5559</span><span class="p">,</span> <span class="s1">&#39;FFYBVR-L1.ad.onsemi.com&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="gamma-desk-as-child-of-a-python-process">
+</section>
+</section>
+<section id="gamma-desk-as-child-of-a-python-process">
 <h2>Gamma Desk as child of a Python process<a class="headerlink" href="#gamma-desk-as-child-of-a-python-process" title="Permalink to this headline">¶</a></h2>
 <p>The following command will start a new Gamma Desk process as a child process</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">gDesk2.external.channel</span> <span class="kn">import</span> <span class="n">start_gui_as_child</span>
@@ -149,8 +149,8 @@ An the watcher is active on port 5559.</p>
 </pre></div>
 </div>
 <p>As soon the python process exit, GD will also exit.</p>
-</div>
-</div>
+</section>
+</section>
 
 
             <div class="clearer"></div>
@@ -222,13 +222,13 @@ An the watcher is active on port 5559.</p>
         <li class="right" >
           <a href="tutorial.livescript.html" title="Live Scripting"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Processes</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2021, Thomas Cools.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.1.
     </div>
   </body>
 </html>

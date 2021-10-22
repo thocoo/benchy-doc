@@ -4,15 +4,15 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>gdesk.core.shellmod module &#8212; gdesk 0.1.1 documentation</title>
-    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>gdesk.core.shellmod module &#8212; gdesk 0.1.4 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="gdesk.core.stdinout module" href="gdesk.core.stdinout.html" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="gdesk.core.interpreter.html" title="gdesk.core.interpreter module"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="gdesk.core.html" accesskey="U">gdesk.core package</a> &#187;</li>
@@ -46,9 +46,177 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="gdesk-core-shellmod-module">
-<h1>gdesk.core.shellmod module<a class="headerlink" href="#gdesk-core-shellmod-module" title="Permalink to this headline">¶</a></h1>
-</div>
+  <section id="module-gdesk.core.shellmod">
+<span id="gdesk-core-shellmod-module"></span><h1>gdesk.core.shellmod module<a class="headerlink" href="#module-gdesk.core.shellmod" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="gdesk.core.shellmod.Shell">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">gdesk.core.shellmod.</span></span><span class="sig-name descname"><span class="pre">Shell</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">workspace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.shellmod.Shell" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="gdesk.core.shellmod.Shell.add_sys_paths">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">add_sys_paths</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sys_paths</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.shellmod.Shell.add_sys_paths" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdesk.core.shellmod.Shell.edit">
+<span class="sig-name descname"><span class="pre">edit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.shellmod.Shell.edit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Edit source file of object with external editor</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>objects</strong> – object from which the source code will be opened in an editor</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdesk.core.shellmod.Shell.edit_dbase">
+<span class="sig-name descname"><span class="pre">edit_dbase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.shellmod.Shell.edit_dbase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Edit a SQLite file with an external editor.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdesk.core.shellmod.Shell.edit_file">
+<span class="sig-name descname"><span class="pre">edit_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineno</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.shellmod.Shell.edit_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Edit the file with an external editor at a certain lineno.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdesk.core.shellmod.Shell.execfile">
+<span class="sig-name descname"><span class="pre">execfile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">globals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">locals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.shellmod.Shell.execfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute a Python file</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdesk.core.shellmod.Shell.execfilews">
+<span class="sig-name descname"><span class="pre">execfilews</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wsname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'__execfilews__'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.shellmod.Shell.execfilews" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute a Python file in a new workspace.
+Place the workspace in shell</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdesk.core.shellmod.Shell.get_completer_data">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_completer_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wild</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.shellmod.Shell.get_completer_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdesk.core.shellmod.Shell.get_live_paths">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_live_paths</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.shellmod.Shell.get_live_paths" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdesk.core.shellmod.Shell.get_sys_paths">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_sys_paths</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">customs_only</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.shellmod.Shell.get_sys_paths" title="Permalink to this definition">¶</a></dt>
+<dd><p>List the sys.paths.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>customs_only</strong> (<em>bool</em>) – List only paths not part of the python.exe directory.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdesk.core.shellmod.Shell.get_watcher_ports">
+<span class="sig-name descname"><span class="pre">get_watcher_ports</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.shellmod.Shell.get_watcher_ports" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdesk.core.shellmod.Shell.getcodefile">
+<span class="sig-name descname"><span class="pre">getcodefile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.shellmod.Shell.getcodefile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find out which source or compiled file an object was defined in.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdesk.core.shellmod.Shell.info">
+<span class="sig-name descname"><span class="pre">info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.shellmod.Shell.info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print info about the current process</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdesk.core.shellmod.Shell.input">
+<span class="sig-name descname"><span class="pre">input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.shellmod.Shell.input" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gdesk.core.shellmod.Shell.instance">
+<span class="sig-name descname"><span class="pre">instance</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#gdesk.core.shellmod.Shell.instance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdesk.core.shellmod.Shell.magic">
+<span class="sig-name descname"><span class="pre">magic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cmd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.shellmod.Shell.magic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Magic commands like in IPython.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdesk.core.shellmod.Shell.new_interactive_thread">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">new_interactive_thread</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cqs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guiproxy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">console_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.shellmod.Shell.new_interactive_thread" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdesk.core.shellmod.Shell.popen">
+<span class="sig-name descname"><span class="pre">popen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">commands</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shell</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stdin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.shellmod.Shell.popen" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdesk.core.shellmod.Shell.pprint">
+<span class="sig-name descname"><span class="pre">pprint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.shellmod.Shell.pprint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Do a <a class="reference external" href="https://docs.python.org/3.8/library/pprint.html">pretty print</a> of var.
+The user can also use <cite>var!!</cite> to call this function.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdesk.core.shellmod.Shell.redirect_input">
+<span class="sig-name descname"><span class="pre">redirect_input</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.shellmod.Shell.redirect_input" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdesk.core.shellmod.Shell.redirect_stdout">
+<span class="sig-name descname"><span class="pre">redirect_stdout</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.shellmod.Shell.redirect_stdout" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdesk.core.shellmod.Shell.restore_input">
+<span class="sig-name descname"><span class="pre">restore_input</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.shellmod.Shell.restore_input" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdesk.core.shellmod.Shell.restore_stdout">
+<span class="sig-name descname"><span class="pre">restore_stdout</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.shellmod.Shell.restore_stdout" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdesk.core.shellmod.Shell.set_live_paths">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">set_live_paths</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_live_paths</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.shellmod.Shell.set_live_paths" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdesk.core.shellmod.Shell.set_logger_level">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">set_logger_level</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.shellmod.Shell.set_logger_level" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdesk.core.shellmod.Shell.set_sys_paths">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">set_sys_paths</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_sys_paths</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.shellmod.Shell.set_sys_paths" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set new content for sys.path.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdesk.core.shellmod.Shell.start_in_this_thread">
+<span class="sig-name descname"><span class="pre">start_in_this_thread</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cqs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">console_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.shellmod.Shell.start_in_this_thread" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdesk.core.shellmod.Shell.this_interpreter">
+<span class="sig-name descname"><span class="pre">this_interpreter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.core.shellmod.Shell.this_interpreter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the interpreter related to this thread.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
 
 
             <div class="clearer"></div>
@@ -99,7 +267,7 @@
         <li class="right" >
           <a href="gdesk.core.interpreter.html" title="gdesk.core.interpreter module"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="gdesk.core.html" >gdesk.core package</a> &#187;</li>
@@ -108,7 +276,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2021, Thomas Cools.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.1.
     </div>
   </body>
 </html>

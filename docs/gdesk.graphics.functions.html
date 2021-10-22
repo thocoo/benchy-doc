@@ -4,15 +4,15 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>gdesk.graphics.functions module &#8212; gdesk 0.1.1 documentation</title>
-    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>gdesk.graphics.functions module &#8212; gdesk 0.1.4 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="gdesk.graphics.grid module" href="gdesk.graphics.grid.html" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="gdesk.graphics.html" title="gdesk.graphics package"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="gdesk.graphics.html" accesskey="U">gdesk.graphics package</a> &#187;</li>
@@ -46,11 +46,11 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="module-gdesk.graphics.functions">
+  <section id="module-gdesk.graphics.functions">
 <span id="gdesk-graphics-functions-module"></span><h1>gdesk.graphics.functions module<a class="headerlink" href="#module-gdesk.graphics.functions" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
-<dt id="gdesk.graphics.functions.arrayToQPath">
-<code class="sig-prename descclassname">gdesk.graphics.functions.</code><code class="sig-name descname">arrayToQPath</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">y</span></em>, <em class="sig-param"><span class="n">connect</span><span class="o">=</span><span class="default_value">'all'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.functions.arrayToQPath" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.graphics.functions.arrayToQPath">
+<span class="sig-prename descclassname"><span class="pre">gdesk.graphics.functions.</span></span><span class="sig-name descname"><span class="pre">arrayToQPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connect</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'all'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.functions.arrayToQPath" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert an array of x,y coordinats to QPainterPath as efficiently as possible.
 The <em>connect</em> argument may be ‘all’, indicating that each point should be
 connected to the next; ‘pairs’, indicating that each pair of points
@@ -59,8 +59,8 @@ connections.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="gdesk.graphics.functions.intColor">
-<code class="sig-prename descclassname">gdesk.graphics.functions.</code><code class="sig-name descname">intColor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">index</span></em>, <em class="sig-param"><span class="n">hues</span><span class="o">=</span><span class="default_value">9</span></em>, <em class="sig-param"><span class="n">values</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">maxValue</span><span class="o">=</span><span class="default_value">255</span></em>, <em class="sig-param"><span class="n">minValue</span><span class="o">=</span><span class="default_value">150</span></em>, <em class="sig-param"><span class="n">maxHue</span><span class="o">=</span><span class="default_value">360</span></em>, <em class="sig-param"><span class="n">minHue</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">sat</span><span class="o">=</span><span class="default_value">255</span></em>, <em class="sig-param"><span class="n">alpha</span><span class="o">=</span><span class="default_value">255</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.functions.intColor" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.graphics.functions.intColor">
+<span class="sig-prename descclassname"><span class="pre">gdesk.graphics.functions.</span></span><span class="sig-name descname"><span class="pre">intColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hues</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">9</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxValue</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">255</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minValue</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">150</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxHue</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">360</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minHue</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">255</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">255</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.functions.intColor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a QColor from a single index. Useful for stepping through a predefined list of colors.</p>
 <p>The argument <em>index</em> determines which color from the set will be returned. All other arguments determine what the set of predefined colors will be</p>
 <p>Colors are chosen by cycling across hues while varying the value (brightness).
@@ -68,8 +68,8 @@ By default, this selects from a list of 9 hues.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="gdesk.graphics.functions.mkBrush">
-<code class="sig-prename descclassname">gdesk.graphics.functions.</code><code class="sig-name descname">mkBrush</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.functions.mkBrush" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.graphics.functions.mkBrush">
+<span class="sig-prename descclassname"><span class="pre">gdesk.graphics.functions.</span></span><span class="sig-name descname"><span class="pre">mkBrush</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.functions.mkBrush" title="Permalink to this definition">¶</a></dt>
 <dd><div class="line-block">
 <div class="line">Convenience function for constructing Brush.</div>
 <div class="line">This function always constructs a solid brush and accepts the same arguments as <code class="xref py py-func docutils literal notranslate"><span class="pre">mkColor()</span></code></div>
@@ -78,8 +78,8 @@ By default, this selects from a list of 9 hues.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="gdesk.graphics.functions.mkColor">
-<code class="sig-prename descclassname">gdesk.graphics.functions.</code><code class="sig-name descname">mkColor</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.functions.mkColor" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.graphics.functions.mkColor">
+<span class="sig-prename descclassname"><span class="pre">gdesk.graphics.functions.</span></span><span class="sig-name descname"><span class="pre">mkColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.graphics.functions.mkColor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convenience function for constructing QColor from a variety of argument types. Accepted arguments are:</p>
 <table class="docutils align-default">
 <colgroup>
@@ -124,7 +124,7 @@ By default, this selects from a list of 9 hues.</p>
 </table>
 </dd></dl>
 
-</div>
+</section>
 
 
             <div class="clearer"></div>
@@ -175,7 +175,7 @@ By default, this selects from a list of 9 hues.</p>
         <li class="right" >
           <a href="gdesk.graphics.html" title="gdesk.graphics package"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="gdesk.graphics.html" >gdesk.graphics package</a> &#187;</li>
@@ -184,7 +184,7 @@ By default, this selects from a list of 9 hues.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2021, Thomas Cools.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.1.
     </div>
   </body>
 </html>

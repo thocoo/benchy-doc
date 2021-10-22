@@ -4,15 +4,15 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Release Notes &#8212; gdesk 0.1.1 documentation</title>
-    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Release Notes &#8212; gdesk 0.1.4 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="gdesk.version module" href="gdesk.version.html" /> 
@@ -29,7 +29,7 @@
         <li class="right" >
           <a href="gdesk.version.html" title="gdesk.version module"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Release Notes</a></li> 
       </ul>
     </div>  
@@ -39,10 +39,64 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="release-notes">
+  <section id="release-notes">
 <h1>Release Notes<a class="headerlink" href="#release-notes" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2>0.1.1<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<section id="v0-1-4">
+<h2>v0.1.4<a class="headerlink" href="#v0-1-4" title="Permalink to this headline">¶</a></h2>
+<p>date: 2021-10-22</p>
+<ul class="simple">
+<li><p>add as_default argument to gui.img.set_offset_gain()</p></li>
+<li><p>On functional call in console, switch to running mode</p></li>
+<li><p>Inherit panel size to new window</p></li>
+<li><p>Reorder buttons on histogram panel</p></li>
+<li><p>Improve internal panel selection</p></li>
+<li><p>Extend contrast options</p></li>
+<li><p>Replace sqrt scale in semilog on histogram panel</p></li>
+</ul>
+</section>
+<section id="v0-1-3">
+<h2>v0.1.3<a class="headerlink" href="#v0-1-3" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Add menu item close other panels of same category</p></li>
+<li><p>New raw image import featues:</p>
+<ul>
+<li><p>guess of resolution based of file size</p></li>
+<li><p>Little or big endian pixels</p></li>
+</ul>
+</li>
+<li><p>new definition and system of which config files to load</p>
+<ul>
+<li><p>config item “next_config_files” replaced by “path_config_files”</p></li>
+<li><p>is now a list of files to load in order</p></li>
+<li><p>by default: [“%USERPROFILE%/AppData/Local/Gamma-Desk/gdconf.json”, “gdconf.json”]</p></li>
+</ul>
+</li>
+<li><p>More conservative panel drop policy</p></li>
+<li><p>Matplotlib backend for child processes
+Use <code class="docutils literal notranslate"><span class="pre">pylab.switch_backend('module://gdesk.matplotbe')</span></code> in child process to activate</p></li>
+<li><p>Bug fixes</p></li>
+</ul>
+</section>
+<section id="v0-1-2">
+<h2>v0.1.2<a class="headerlink" href="#v0-1-2" title="Permalink to this headline">¶</a></h2>
+<p>date: 2021-05-04</p>
+<ul class="simple">
+<li><p>Add options to disable auto scroll down on new text added to console output</p></li>
+<li><p>Fix Ctrl+O shortcut for console</p></li>
+<li><p>Using Ctrl+Shift+Z or Ctrl+Shift+Y for prior or next image</p></li>
+<li><p>On StdInput: using maximum block count disables undo history, removing the set of maximum block count</p></li>
+<li><p>Fix bad returned part causing doubling ‘ in some cases</p></li>
+<li><p>Add loglevels to logfile and console logging handlers</p></li>
+<li><p>Use TIFF FI format by default on save image dialog</p></li>
+<li><p>Add menu items on image panel: to 8-bit, to 16-bit</p></li>
+<li><p>Save the selected figure to a file</p></li>
+<li><p>Adding hist size policy to config</p></li>
+<li><p>Support for different versions of matplotlib: 3.2, 3.3 and 3.4</p></li>
+<li><p>Add multiple shortcuts on plot menu</p></li>
+</ul>
+</section>
+<section id="v0-1-1">
+<h2>v0.1.1<a class="headerlink" href="#v0-1-1" title="Permalink to this headline">¶</a></h2>
 <p>date: 2021-03-30</p>
 <ul class="simple">
 <li><p>Console: Open file with suitable panel class</p></li>
@@ -52,9 +106,9 @@
 <li><p>Code clean-up</p></li>
 <li><p>Bug fixes</p></li>
 </ul>
-</div>
-<div class="section" id="id2">
-<h2>0.1.0<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="v0-1-0">
+<h2>v0.1.0<a class="headerlink" href="#v0-1-0" title="Permalink to this headline">¶</a></h2>
 <p>date: 2021-03-23</p>
 <ul class="simple">
 <li><p>Add bindmenu to image viewer</p></li>
@@ -62,15 +116,15 @@
 <li><p>Add command history panel</p></li>
 <li><p>Add HTML panel</p></li>
 </ul>
-</div>
-<div class="section" id="id3">
-<h2>0.0.1<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="v0-0-1">
+<h2>v0.0.1<a class="headerlink" href="#v0-0-1" title="Permalink to this headline">¶</a></h2>
 <p>date: 2021-03-22</p>
 <ul class="simple">
 <li><p>First release</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
             <div class="clearer"></div>
@@ -82,9 +136,12 @@
   <h3><a href="index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Release Notes</a><ul>
-<li><a class="reference internal" href="#id1">0.1.1</a></li>
-<li><a class="reference internal" href="#id2">0.1.0</a></li>
-<li><a class="reference internal" href="#id3">0.0.1</a></li>
+<li><a class="reference internal" href="#v0-1-4">v0.1.4</a></li>
+<li><a class="reference internal" href="#v0-1-3">v0.1.3</a></li>
+<li><a class="reference internal" href="#v0-1-2">v0.1.2</a></li>
+<li><a class="reference internal" href="#v0-1-1">v0.1.1</a></li>
+<li><a class="reference internal" href="#v0-1-0">v0.1.0</a></li>
+<li><a class="reference internal" href="#v0-0-1">v0.0.1</a></li>
 </ul>
 </li>
 </ul>
@@ -125,13 +182,13 @@
         <li class="right" >
           <a href="gdesk.version.html" title="gdesk.version module"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Release Notes</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2021, Thomas Cools.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.1.
     </div>
   </body>
 </html>

@@ -4,15 +4,15 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>gdesk.utils.shared module &#8212; gdesk 0.1.1 documentation</title>
-    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>gdesk.utils.shared module &#8212; gdesk 0.1.4 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="gdesk.utils.syntax_light module" href="gdesk.utils.syntax_light.html" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="gdesk.utils.numba_func.html" title="gdesk.utils.numba_func module"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="gdesk.utils.html" accesskey="U">gdesk.utils package</a> &#187;</li>
@@ -46,42 +46,42 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="module-gdesk.utils.shared">
+  <section id="module-gdesk.utils.shared">
 <span id="gdesk-utils-shared-module"></span><h1>gdesk.utils.shared module<a class="headerlink" href="#module-gdesk.utils.shared" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="gdesk.utils.shared.SharedArray">
-<em class="property">class </em><code class="sig-prename descclassname">gdesk.utils.shared.</code><code class="sig-name descname">SharedArray</code><span class="sig-paren">(</span><em class="sig-param">shape</em>, <em class="sig-param">dtype=&lt;class 'float'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.shared.SharedArray" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.utils.shared.SharedArray">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">gdesk.utils.shared.</span></span><span class="sig-name descname"><span class="pre">SharedArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">shape</span></em>, <em class="sig-param"><span class="pre">dtype=&lt;class</span> <span class="pre">'float'&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.shared.SharedArray" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Using shared memory.
 If pickled to another process, the memory is not copied.</p>
-<dl class="py method">
-<dt id="gdesk.utils.shared.SharedArray.bytesize">
-<em class="property">property </em><code class="sig-name descname">bytesize</code><a class="headerlink" href="#gdesk.utils.shared.SharedArray.bytesize" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="gdesk.utils.shared.SharedArray.bytesize">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">bytesize</span></span><a class="headerlink" href="#gdesk.utils.shared.SharedArray.bytesize" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.utils.shared.SharedArray.from_ndarray">
-<em class="property">static </em><code class="sig-name descname">from_ndarray</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">array</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.shared.SharedArray.from_ndarray" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.utils.shared.SharedArray.from_ndarray">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">from_ndarray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.utils.shared.SharedArray.from_ndarray" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
-<dt id="gdesk.utils.shared.SharedArray.ndarray">
-<em class="property">property </em><code class="sig-name descname">ndarray</code><a class="headerlink" href="#gdesk.utils.shared.SharedArray.ndarray" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="gdesk.utils.shared.SharedArray.ndarray">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">ndarray</span></span><a class="headerlink" href="#gdesk.utils.shared.SharedArray.ndarray" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
-<dt id="gdesk.utils.shared.SharedArray.ndim">
-<em class="property">property </em><code class="sig-name descname">ndim</code><a class="headerlink" href="#gdesk.utils.shared.SharedArray.ndim" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="gdesk.utils.shared.SharedArray.ndim">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">ndim</span></span><a class="headerlink" href="#gdesk.utils.shared.SharedArray.ndim" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="py method">
-<dt id="gdesk.utils.shared.SharedArray.size">
-<em class="property">property </em><code class="sig-name descname">size</code><a class="headerlink" href="#gdesk.utils.shared.SharedArray.size" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="gdesk.utils.shared.SharedArray.size">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#gdesk.utils.shared.SharedArray.size" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-</div>
+</section>
 
 
             <div class="clearer"></div>
@@ -132,7 +132,7 @@ If pickled to another process, the memory is not copied.</p>
         <li class="right" >
           <a href="gdesk.utils.numba_func.html" title="gdesk.utils.numba_func module"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="gdesk.utils.html" >gdesk.utils package</a> &#187;</li>
@@ -141,7 +141,7 @@ If pickled to another process, the memory is not copied.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2021, Thomas Cools.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.1.
     </div>
   </body>
 </html>

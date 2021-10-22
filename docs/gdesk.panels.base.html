@@ -4,15 +4,15 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>gdesk.panels.base module &#8212; gdesk 0.1.1 documentation</title>
-    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>gdesk.panels.base module &#8212; gdesk 0.1.4 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="gdesk.panels.panels module" href="gdesk.panels.panels.html" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="gdesk.panels.scriptwiz.proxy.html" title="gdesk.panels.scriptwiz.proxy module"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="gdesk.panels.html" accesskey="U">gdesk.panels package</a> &#187;</li>
@@ -46,240 +46,251 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="module-gdesk.panels.base">
+  <section id="module-gdesk.panels.base">
 <span id="gdesk-panels-base-module"></span><h1>gdesk.panels.base module<a class="headerlink" href="#module-gdesk.panels.base" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="gdesk.panels.base.BasePanel">
-<em class="property">class </em><code class="sig-prename descclassname">gdesk.panels.base.</code><code class="sig-name descname">BasePanel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span></em>, <em class="sig-param"><span class="n">panid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">category</span><span class="o">=</span><span class="default_value">'console'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.BasePanel">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">gdesk.panels.base.</span></span><span class="sig-name descname"><span class="pre">BasePanel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">panid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'console'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QMainWindow</span></code></p>
 <dl class="py method">
-<dt id="gdesk.panels.base.BasePanel.addBaseMenu">
-<code class="sig-name descname">addBaseMenu</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bindCategories</span><span class="o">=</span><span class="default_value">[]</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.addBaseMenu" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.BasePanel.addBaseMenu">
+<span class="sig-name descname"><span class="pre">addBaseMenu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bindCategories</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.addBaseMenu" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.panels.base.BasePanel.addBindingTo">
-<code class="sig-name descname">addBindingTo</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">category</span></em>, <em class="sig-param"><span class="n">panid</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.addBindingTo" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.BasePanel.addBindingTo">
+<span class="sig-name descname"><span class="pre">addBindingTo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">panid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.addBindingTo" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.panels.base.BasePanel.addMenuItem">
-<code class="sig-name descname">addMenuItem</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">menu</span></em>, <em class="sig-param"><span class="n">text</span></em>, <em class="sig-param"><span class="n">triggered</span></em>, <em class="sig-param"><span class="n">checkcall</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">statusTip</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">icon</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enablecall</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.addMenuItem" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.BasePanel.addMenuItem">
+<span class="sig-name descname"><span class="pre">addMenuItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">menu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">triggered</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">checkcall</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enabled</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">statusTip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">icon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enablecall</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.addMenuItem" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="gdesk.panels.base.BasePanel.baseWindow">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">baseWindow</span></span><a class="headerlink" href="#gdesk.panels.base.BasePanel.baseWindow" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.panels.base.BasePanel.baseWindow">
-<em class="property">property </em><code class="sig-name descname">baseWindow</code><a class="headerlink" href="#gdesk.panels.base.BasePanel.baseWindow" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.BasePanel.bindedPanel">
+<span class="sig-name descname"><span class="pre">bindedPanel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.bindedPanel" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.panels.base.BasePanel.bindedPanel">
-<code class="sig-name descname">bindedPanel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">category</span></em>, <em class="sig-param"><span class="n">pos</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.bindedPanel" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.BasePanel.close_panel">
+<span class="sig-name descname"><span class="pre">close_panel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.close_panel" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.panels.base.BasePanel.close_panel">
-<code class="sig-name descname">close_panel</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.close_panel" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.BasePanel.detach">
+<span class="sig-name descname"><span class="pre">detach</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.detach" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.panels.base.BasePanel.detach">
-<code class="sig-name descname">detach</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.detach" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.BasePanel.duplicate">
+<span class="sig-name descname"><span class="pre">duplicate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">floating</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.duplicate" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.panels.base.BasePanel.duplicate">
-<code class="sig-name descname">duplicate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">floating</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.duplicate" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.BasePanel.get_container">
+<span class="sig-name descname"><span class="pre">get_container</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.get_container" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.panels.base.BasePanel.get_container">
-<code class="sig-name descname">get_container</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.get_container" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.BasePanel.isSelected">
+<span class="sig-name descname"><span class="pre">isSelected</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.isSelected" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.panels.base.BasePanel.isSelected">
-<code class="sig-name descname">isSelected</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.isSelected" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.BasePanel.mousePressEvent">
+<span class="sig-name descname"><span class="pre">mousePressEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">PySide2.QtGui.QMouseEvent</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.mousePressEvent" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.panels.base.BasePanel.mousePressEvent">
-<code class="sig-name descname">mousePressEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">event</span><span class="p">:</span> <span class="n">PySide2.QtGui.QMouseEvent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.mousePressEvent" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="gdesk.panels.base.BasePanel.panIdsOfBounded">
-<code class="sig-name descname">panIdsOfBounded</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">category</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.panIdsOfBounded" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.BasePanel.panIdsOfBounded">
+<span class="sig-name descname"><span class="pre">panIdsOfBounded</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.panIdsOfBounded" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="gdesk.panels.base.BasePanel.panelCategory">
-<code class="sig-name descname">panelCategory</code><em class="property"> = None</em><a class="headerlink" href="#gdesk.panels.base.BasePanel.panelCategory" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.BasePanel.panelCategory">
+<span class="sig-name descname"><span class="pre">panelCategory</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#gdesk.panels.base.BasePanel.panelCategory" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="gdesk.panels.base.BasePanel.panelShortName">
-<code class="sig-name descname">panelShortName</code><em class="property"> = None</em><a class="headerlink" href="#gdesk.panels.base.BasePanel.panelShortName" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.BasePanel.panelShortName">
+<span class="sig-name descname"><span class="pre">panelShortName</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#gdesk.panels.base.BasePanel.panelShortName" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.panels.base.BasePanel.pull_menu_from_main">
-<code class="sig-name descname">pull_menu_from_main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.pull_menu_from_main" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.BasePanel.pull_menu_from_main">
+<span class="sig-name descname"><span class="pre">pull_menu_from_main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.pull_menu_from_main" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.panels.base.BasePanel.push_menu_to_main">
-<code class="sig-name descname">push_menu_to_main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.push_menu_to_main" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.BasePanel.push_menu_to_main">
+<span class="sig-name descname"><span class="pre">push_menu_to_main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.push_menu_to_main" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="gdesk.panels.base.BasePanel.qapp">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">qapp</span></span><a class="headerlink" href="#gdesk.panels.base.BasePanel.qapp" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.panels.base.BasePanel.qapp">
-<em class="property">property </em><code class="sig-name descname">qapp</code><a class="headerlink" href="#gdesk.panels.base.BasePanel.qapp" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.BasePanel.removeBindingTo">
+<span class="sig-name descname"><span class="pre">removeBindingTo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">panid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.removeBindingTo" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.panels.base.BasePanel.removeBindingTo">
-<code class="sig-name descname">removeBindingTo</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">category</span></em>, <em class="sig-param"><span class="n">panid</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.removeBindingTo" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.BasePanel.select">
+<span class="sig-name descname"><span class="pre">select</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.select" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="gdesk.panels.base.BasePanel.short_title">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">short_title</span></span><a class="headerlink" href="#gdesk.panels.base.BasePanel.short_title" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.panels.base.BasePanel.select">
-<code class="sig-name descname">select</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.select" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="gdesk.panels.base.BasePanel.short_title">
-<em class="property">property </em><code class="sig-name descname">short_title</code><a class="headerlink" href="#gdesk.panels.base.BasePanel.short_title" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="gdesk.panels.base.BasePanel.show_me">
-<code class="sig-name descname">show_me</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.show_me" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.BasePanel.show_me">
+<span class="sig-name descname"><span class="pre">show_me</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.show_me" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="gdesk.panels.base.BasePanel.staticMetaObject">
-<code class="sig-name descname">staticMetaObject</code><em class="property"> = &lt;PySide2.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#gdesk.panels.base.BasePanel.staticMetaObject" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.BasePanel.staticMetaObject">
+<span class="sig-name descname"><span class="pre">staticMetaObject</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;PySide2.QtCore.QMetaObject</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#gdesk.panels.base.BasePanel.staticMetaObject" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.panels.base.BasePanel.toggleBindingTo">
-<code class="sig-name descname">toggleBindingTo</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">category</span></em>, <em class="sig-param"><span class="n">panid</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.toggleBindingTo" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.BasePanel.targetPanels">
+<span class="sig-name descname"><span class="pre">targetPanels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.targetPanels" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.panels.base.BasePanel.toggleMenu">
-<code class="sig-name descname">toggleMenu</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.toggleMenu" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.BasePanel.toggleBindingTo">
+<span class="sig-name descname"><span class="pre">toggleBindingTo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">panid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.toggleBindingTo" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.panels.base.BasePanel.toggleStatusBar">
-<code class="sig-name descname">toggleStatusBar</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.toggleStatusBar" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.BasePanel.toggleMenu">
+<span class="sig-name descname"><span class="pre">toggleMenu</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.toggleMenu" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.panels.base.BasePanel.unregister">
-<code class="sig-name descname">unregister</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.unregister" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.BasePanel.toggleStatusBar">
+<span class="sig-name descname"><span class="pre">toggleStatusBar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.toggleStatusBar" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.panels.base.BasePanel.userPanelClasses">
-<em class="property">classmethod </em><code class="sig-name descname">userPanelClasses</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.userPanelClasses" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.BasePanel.unregister">
+<span class="sig-name descname"><span class="pre">unregister</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.unregister" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gdesk.panels.base.BasePanel.userPanelClasses">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">userPanelClasses</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.BasePanel.userPanelClasses" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="gdesk.panels.base.BasePanel.userVisible">
-<code class="sig-name descname">userVisible</code><em class="property"> = True</em><a class="headerlink" href="#gdesk.panels.base.BasePanel.userVisible" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.BasePanel.userVisible">
+<span class="sig-name descname"><span class="pre">userVisible</span></span><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#gdesk.panels.base.BasePanel.userVisible" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="gdesk.panels.base.CheckMenu">
-<em class="property">class </em><code class="sig-prename descclassname">gdesk.panels.base.</code><code class="sig-name descname">CheckMenu</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.CheckMenu" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.CheckMenu">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">gdesk.panels.base.</span></span><span class="sig-name descname"><span class="pre">CheckMenu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.CheckMenu" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QMenu</span></code></p>
 <dl class="py method">
-<dt id="gdesk.panels.base.CheckMenu.addAction">
-<code class="sig-name descname">addAction</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">arg__1</span><span class="p">:</span> <span class="n">PySide2.QtGui.QIcon</span></em>, <em class="sig-param"><span class="n">arg__2</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">arg__3</span><span class="p">:</span> <span class="n">object</span></em>, <em class="sig-param"><span class="n">arg__4</span><span class="p">:</span> <span class="n">typing.Union<span class="p">[</span>PySide2.QtGui.QKeySequence<span class="p">, </span>NoneType<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.CheckMenu.addAction" title="Permalink to this definition">¶</a></dt>
-<dd><p>addAction(self, arg__1:PySide2.QtWidgets.QAction)
-addAction(self, arg__1:str, arg__2:object, arg__3:typing.Union[PySide2.QtGui.QKeySequence, NoneType]=None)
-addAction(self, icon:PySide2.QtGui.QIcon, text:str) -&gt; PySide2.QtWidgets.QAction
-addAction(self, icon:PySide2.QtGui.QIcon, text:str, receiver:PySide2.QtCore.QObject, member:bytes, shortcut:typing.Union[PySide2.QtGui.QKeySequence, NoneType]=None) -&gt; PySide2.QtWidgets.QAction
-addAction(self, text:str) -&gt; PySide2.QtWidgets.QAction
-addAction(self, text:str, receiver:PySide2.QtCore.QObject, member:bytes, shortcut:typing.Union[PySide2.QtGui.QKeySequence, NoneType]=None) -&gt; PySide2.QtWidgets.QAction</p>
-</dd></dl>
+<dt class="sig sig-object py" id="gdesk.panels.base.CheckMenu.addAction">
+<span class="sig-name descname"><span class="pre">addAction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg__1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">PySide2.QtGui.QIcon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg__2</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg__3</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg__4</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">typing.Union</span><span class="p"><span class="pre">[</span></span><span class="pre">PySide2.QtGui.QKeySequence</span><span class="p"><span class="pre">,</span> </span><span class="pre">NoneType</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#gdesk.panels.base.CheckMenu.addAction" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">addAction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg__1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">PySide2.QtWidgets.QAction</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">addAction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg__1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg__2</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg__3</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">typing.Union</span><span class="p"><span class="pre">[</span></span><span class="pre">PySide2.QtGui.QKeySequence</span><span class="p"><span class="pre">,</span> </span><span class="pre">NoneType</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">addAction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">icon</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">PySide2.QtGui.QIcon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">PySide2.QtWidgets.QAction</span></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">addAction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">icon</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">PySide2.QtGui.QIcon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">receiver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">PySide2.QtCore.QObject</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">member</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shortcut</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">typing.Union</span><span class="p"><span class="pre">[</span></span><span class="pre">PySide2.QtGui.QKeySequence</span><span class="p"><span class="pre">,</span> </span><span class="pre">NoneType</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">PySide2.QtWidgets.QAction</span></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">addAction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">PySide2.QtWidgets.QAction</span></dt>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">addAction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">receiver</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">PySide2.QtCore.QObject</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">member</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shortcut</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">typing.Union</span><span class="p"><span class="pre">[</span></span><span class="pre">PySide2.QtGui.QKeySequence</span><span class="p"><span class="pre">,</span> </span><span class="pre">NoneType</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">PySide2.QtWidgets.QAction</span></dt>
+<dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.panels.base.CheckMenu.showEvent">
-<code class="sig-name descname">showEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">event</span><span class="p">:</span> <span class="n">PySide2.QtGui.QShowEvent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.CheckMenu.showEvent" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.CheckMenu.showEvent">
+<span class="sig-name descname"><span class="pre">showEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">PySide2.QtGui.QShowEvent</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#gdesk.panels.base.CheckMenu.showEvent" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="gdesk.panels.base.CheckMenu.staticMetaObject">
-<code class="sig-name descname">staticMetaObject</code><em class="property"> = &lt;PySide2.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#gdesk.panels.base.CheckMenu.staticMetaObject" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.CheckMenu.staticMetaObject">
+<span class="sig-name descname"><span class="pre">staticMetaObject</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;PySide2.QtCore.QMetaObject</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#gdesk.panels.base.CheckMenu.staticMetaObject" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="gdesk.panels.base.FuncToPanel">
-<em class="property">class </em><code class="sig-prename descclassname">gdesk.panels.base.</code><code class="sig-name descname">FuncToPanel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">func</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.FuncToPanel" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.FuncToPanel">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">gdesk.panels.base.</span></span><span class="sig-name descname"><span class="pre">FuncToPanel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.FuncToPanel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="gdesk.panels.base.MyStatusBar">
-<em class="property">class </em><code class="sig-prename descclassname">gdesk.panels.base.</code><code class="sig-name descname">MyStatusBar</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.MyStatusBar" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.MyStatusBar">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">gdesk.panels.base.</span></span><span class="sig-name descname"><span class="pre">MyStatusBar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.MyStatusBar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></p>
 <dl class="py method">
-<dt id="gdesk.panels.base.MyStatusBar.addWidget">
-<code class="sig-name descname">addWidget</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">widget</span></em>, <em class="sig-param"><span class="n">stretch</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">alignment</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.MyStatusBar.addWidget" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.MyStatusBar.addWidget">
+<span class="sig-name descname"><span class="pre">addWidget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stretch</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alignment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.MyStatusBar.addWidget" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.panels.base.MyStatusBar.removeWidget">
-<code class="sig-name descname">removeWidget</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">widget</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.MyStatusBar.removeWidget" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.MyStatusBar.removeWidget">
+<span class="sig-name descname"><span class="pre">removeWidget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.MyStatusBar.removeWidget" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="gdesk.panels.base.MyStatusBar.staticMetaObject">
-<code class="sig-name descname">staticMetaObject</code><em class="property"> = &lt;PySide2.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#gdesk.panels.base.MyStatusBar.staticMetaObject" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.MyStatusBar.staticMetaObject">
+<span class="sig-name descname"><span class="pre">staticMetaObject</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;PySide2.QtCore.QMetaObject</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#gdesk.panels.base.MyStatusBar.staticMetaObject" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="gdesk.panels.base.PanelsMenu">
-<em class="property">class </em><code class="sig-prename descclassname">gdesk.panels.base.</code><code class="sig-name descname">PanelsMenu</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span></em>, <em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">categories</span></em>, <em class="sig-param"><span class="n">func</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.PanelsMenu" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.PanelsMenu">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">gdesk.panels.base.</span></span><span class="sig-name descname"><span class="pre">PanelsMenu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">categories</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.PanelsMenu" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QMenu</span></code></p>
 <dl class="py method">
-<dt id="gdesk.panels.base.PanelsMenu.initactions">
-<code class="sig-name descname">initactions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.PanelsMenu.initactions" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.PanelsMenu.initactions">
+<span class="sig-name descname"><span class="pre">initactions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.PanelsMenu.initactions" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="gdesk.panels.base.PanelsMenu.showEvent">
-<code class="sig-name descname">showEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">event</span><span class="p">:</span> <span class="n">PySide2.QtGui.QShowEvent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.PanelsMenu.showEvent" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.PanelsMenu.showEvent">
+<span class="sig-name descname"><span class="pre">showEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">PySide2.QtGui.QShowEvent</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#gdesk.panels.base.PanelsMenu.showEvent" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="gdesk.panels.base.PanelsMenu.staticMetaObject">
-<code class="sig-name descname">staticMetaObject</code><em class="property"> = &lt;PySide2.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#gdesk.panels.base.PanelsMenu.staticMetaObject" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.PanelsMenu.staticMetaObject">
+<span class="sig-name descname"><span class="pre">staticMetaObject</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;PySide2.QtCore.QMetaObject</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#gdesk.panels.base.PanelsMenu.staticMetaObject" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py function">
-<dt id="gdesk.panels.base.selectThisPanel">
-<code class="sig-prename descclassname">gdesk.panels.base.</code><code class="sig-name descname">selectThisPanel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">widget</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.selectThisPanel" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.selectThisPanel">
+<span class="sig-prename descclassname"><span class="pre">gdesk.panels.base.</span></span><span class="sig-name descname"><span class="pre">selectThisPanel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.selectThisPanel" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="gdesk.panels.base.thisPanel">
-<code class="sig-prename descclassname">gdesk.panels.base.</code><code class="sig-name descname">thisPanel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">widget</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.thisPanel" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="gdesk.panels.base.thisPanel">
+<span class="sig-prename descclassname"><span class="pre">gdesk.panels.base.</span></span><span class="sig-name descname"><span class="pre">thisPanel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gdesk.panels.base.thisPanel" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-</div>
+</section>
 
 
             <div class="clearer"></div>
@@ -330,7 +341,7 @@ addAction(self, text:str, receiver:PySide2.QtCore.QObject, member:bytes, shortcu
         <li class="right" >
           <a href="gdesk.panels.scriptwiz.proxy.html" title="gdesk.panels.scriptwiz.proxy module"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">gdesk 0.1.4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="modules.html" >gdesk</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="gdesk.html" >gdesk package</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="gdesk.panels.html" >gdesk.panels package</a> &#187;</li>
@@ -339,7 +350,7 @@ addAction(self, text:str, receiver:PySide2.QtCore.QObject, member:bytes, shortcu
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2021, Thomas Cools.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.1.
     </div>
   </body>
 </html>
